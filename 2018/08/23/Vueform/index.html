@@ -1,0 +1,39 @@
+<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>Vue项目v-for、v-model的使用</title><meta name="description" content="精诚致志，求仁存心"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="V-forv-for既可以在data内的一个对象列表中循环，也可以在一个对象中循环
+
+当作为一个对象列表循环的时候，每个对象是一个字典，字典中的内容可以作为:key的循环索引
+当对一个对象进行循环的时候，会对对想的属性的内容依次循环展示（并不算有什么价值）
+
+v-for 响应的内容更新 可以使用vm.$set(vm.items, indexOfItem, newValue)对items第i个内容进行修改，并且v-for会实时响应更新，如果是items[i]则不行
+利用过滤创立新数组 可以建立以下method
+methods: &amp;#123;
+  even: function (numbers) &amp;#123;
+    return numbers.filter(function (number) &amp;#123;
+.."><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Yanjian Zhang's Blog" type="application/atom+xml">
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Yanjian Zhang's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Vue项目v-for、v-model的使用</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#V-for"><span class="toc-text">V-for</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#v-for-%E5%93%8D%E5%BA%94%E7%9A%84%E5%86%85%E5%AE%B9%E6%9B%B4%E6%96%B0"><span class="toc-text">v-for 响应的内容更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E8%BF%87%E6%BB%A4%E5%88%9B%E7%AB%8B%E6%96%B0%E6%95%B0%E7%BB%84"><span class="toc-text">利用过滤创立新数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-for-%E4%B8%8E-v-if-%E7%9A%84%E5%90%88%E5%B9%B6%E4%BD%BF%E7%94%A8"><span class="toc-text">v-for 与 v-if 的合并使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V-model"><span class="toc-text">V-model</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Vue"><i class="tag post-item-tag">Vue</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">Vue项目v-for、v-model的使用</h1><time class="has-text-grey" datetime="2018-08-23T13:44:02.000Z">2018-08-23</time><article class="mt-2 post-content"><h2 id="V-for"><a href="#V-for" class="headerlink" title="V-for"></a>V-for</h2><p>v-for既可以在data内的一个对象列表中循环，也可以在一个对象中循环</p>
+<ol>
+<li>当作为一个对象列表循环的时候，每个对象是一个字典，字典中的内容可以作为:key的循环索引</li>
+<li>当对一个对象进行循环的时候，会对对想的属性的内容依次循环展示（并不算有什么价值）</li>
+</ol>
+<h3 id="v-for-响应的内容更新"><a href="#v-for-响应的内容更新" class="headerlink" title="v-for 响应的内容更新"></a>v-for 响应的内容更新</h3><p> 可以使用vm.$set(vm.items, indexOfItem, newValue)对items第i个内容进行修改，并且v-for会实时响应更新，如果是items[i]则不行</p>
+<h3 id="利用过滤创立新数组"><a href="#利用过滤创立新数组" class="headerlink" title="利用过滤创立新数组"></a>利用过滤创立新数组</h3><p> 可以建立以下method</p>
+<pre><code class="lang-js">methods: &#123;
+  even: function (numbers) &#123;
+    return numbers.filter(function (number) &#123;
+      return number % 2 === 0
+    &#125;)
+  &#125;
+&#125;
+</code></pre>
+<p>当进行引用的时候就使用even(numbers)来代表新数组</p>
+<h3 id="v-for-与-v-if-的合并使用"><a href="#v-for-与-v-if-的合并使用" class="headerlink" title="v-for 与 v-if 的合并使用"></a>v-for 与 v-if 的合并使用</h3><p>v-for 的优先级比 v-if 更高，这意味着 v-if 将分别重复运行于每个 v-for 循环中。也可以达到如上过滤效果。</p>
+<h2 id="V-model"><a href="#V-model" class="headerlink" title="V-model"></a>V-model</h2><p>v-model对数据进行动态绑定。</p>
+<ol>
+<li>特别的，对于特定的小组件比如列表中的某个选项，可以通过value来绑定的值，当它被选定时就会加入数组列表之中</li>
+<li>更特别的，对于checkbox来说，value就包含true和false</li>
+</ol>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2018/08/23/Vue-router/" title="Vue项目router注意事项"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: Vue项目router注意事项</span></a><a class="button is-default" href="/2018/08/14/malloclab/" title="CS APP malloclab"><span class="has-text-weight-semibold">Next: CS APP malloclab</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/dongfanker"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/zhangyanjian"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/yanjian-zhang-154975154"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/zhang.yanjian.7"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Yanjian Zhang 2021</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>

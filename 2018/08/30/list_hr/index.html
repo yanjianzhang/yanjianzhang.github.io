@@ -1,0 +1,182 @@
+<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>Hackerrank Arrays 解题记录</title><meta name="description" content="精诚致志，求仁存心"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="New Year Chaos看到这道题目最初使用了冒泡排序的方法，发现在第6-9组测试中出现了超时
+def minimumBribes(q):
+    time = 0
+    for i,v in enumerate(q):
+        if (v-1)-i &amp;gt; 2:    
+            print(&amp;quot;Too chaotic&amp;quot;)
+            return
+    lastIndex =  len(q)-1
+    for j in range(0,lastIndex):
+        for i in range(0,lastIndex):
+            if q[i]&amp;gt;q[i+1]:
+                q[i+1],q.."><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Yanjian Zhang's Blog" type="application/atom+xml">
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Yanjian Zhang's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Hackerrank Arrays 解题记录</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#New-Year-Chaos"><span class="toc-text">New Year Chaos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Minimum-Swaps-2"><span class="toc-text">Minimum Swaps 2</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/hackerrank"><i class="tag post-item-tag">hackerrank</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">Hackerrank Arrays 解题记录</h1><time class="has-text-grey" datetime="2018-08-30T09:44:02.000Z">2018-08-30</time><article class="mt-2 post-content"><h3 id="New-Year-Chaos"><a href="#New-Year-Chaos" class="headerlink" title="New Year Chaos"></a><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/new-year-chaos/">New Year Chaos</a></h3><p>看到这道题目最初使用了冒泡排序的方法，发现在第6-9组测试中出现了超时</p>
+<pre><code class="lang-python">def minimumBribes(q):
+    time = 0
+    for i,v in enumerate(q):
+        if (v-1)-i &gt; 2:    
+            print(&quot;Too chaotic&quot;)
+            return
+    lastIndex =  len(q)-1
+    for j in range(0,lastIndex):
+        for i in range(0,lastIndex):
+            if q[i]&gt;q[i+1]:
+                q[i+1],q[i] = q[i],q[i+1]
+                time = time+1
+    if q ==list(range(1,lastIndex+2)):
+        print(str(time))
+        return
+</code></pre>
+<p>回头观察发现数据的复杂度达到了10<sup>5</sup>，时间仅仅允许为10秒，而cpu最快能够达到每秒操作1亿次，因此至少需要100秒才能执行完毕，明显超时</p>
+<p>之后尝试使用归并排序来计算，当右边先添加到序列中的时候会统计左边还剩下的元素，这一样会出现有时左边的元素出现得过多然后直接移动很多位的情况，此时算法因为没有考虑两位的限制而出错。结果出现小的样本都通过了，大的样本却没有通过的情况</p>
+<pre><code class="lang-python">def merge(a,b):
+    c = []
+    h = j = 0
+    global time
+    while j &lt; len(a) and h &lt; len(b):
+        if a[j] &lt; b[h]:
+            c.append(a[j])
+            j += 1   
+            time = time + (len(a)-j)
+            c.append(b[h])
+            h += 1
+    if j == len(a):
+        for i in b[h:]:
+            c.append(i)
+    else:
+        for i in a[j:]:
+            c.append(i)
+    return c
+def merge_sort(lists):
+    if len(lists) &lt;= 1:
+        return lists
+    middle = int(len(lists)/2)
+    left = merge_sort(lists[:middle])
+    right = merge_sort(lists[middle:])
+    return merge(left, right)
+def minimumBribes(q):
+    global time
+    for i,v in enumerate(q):
+        if (v-1)-i &gt; 2:    
+            print(&quot;Too chaotic&quot;)
+            return
+    merge_sort(q)
+    print(str(time))
+    return
+</code></pre>
+<p>尝试解题失败，以下是对正确答案的观察，令我非常惊奇的是在数据量非常大的情况下python的字典依然正常运行而且没有出现Runtime Error<br>以下解题的思路是当存在可以交换的项的时候，继续保持大循环的执行，而不是使用外层n的大循环来绑定。导致了循环复杂度不再是n<sup>2</sup>,这属于什么排序我说不清楚，应该来说，这个算法利用了元素本身并没有过大位移的特征降下了复杂度</p>
+<pre><code class="lang-python">b = &#123;&#125;
+r = 0
+cont = True
+while cont:
+    cont = False
+    for i in range(len(q)-1):
+        if q[i] &gt; q[i+1]:
+            if not q[i] in b:
+                b[q[i]] = 0
+            b[q[i]] += 1
+            if b[q[i]] &gt; 2:
+                cont = False
+                r = &quot;Too chaotic&quot;
+                break
+            print(q)
+            q[i], q[i+1] = q[i+1], q[i]
+            r += 1
+            cont = True
+
+            print(b)
+print(r)
+#对其结果进行打印观察如下
+[1, 2, 5, 3, 7, 8, 6, 4]
+&#123;5: 1&#125;
+[1, 2, 3, 5, 7, 8, 6, 4]
+&#123;5: 1, 8: 1&#125;
+[1, 2, 3, 5, 7, 6, 8, 4]
+&#123;5: 1, 8: 2&#125;
+[1, 2, 3, 5, 7, 6, 4, 8]
+&#123;5: 1, 8: 2, 7: 1&#125;
+[1, 2, 3, 5, 6, 7, 4, 8]
+&#123;5: 1, 8: 2, 7: 2&#125;
+[1, 2, 3, 5, 6, 4, 7, 8]
+&#123;5: 1, 8: 2, 7: 2, 6: 1&#125;
+[1, 2, 3, 5, 4, 6, 7, 8]
+&#123;5: 2, 8: 2, 7: 2, 6: 1&#125;
+7
+</code></pre>
+<p>python标准答案给出的逻辑就比较难以看懂,而C++的代码就是利用BIT(二叉索引树)的方法来解决，具体二叉索引树是什么来日再研究<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gangding/articles/4765885.html">区间信息的维护与查询（一）——二叉索引树（Fenwick树、树状数组）</a></p>
+<pre><code class="lang-C">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+const int maxN=2e5+5;
+
+int n,a[maxN],ans,T,k;
+int bit[maxN];
+int invalid;
+
+void del() &#123;
+    for (k=0;k&lt;maxN;k++) &#123;
+        bit[k]=0;        
+    &#125;
+    ans = 0;
+    invalid = 0;
+&#125;
+
+void upd(int x) &#123;
+    for (k = x; k &lt; maxN; k += (k &amp; (-k))) &#123;
+        bit[k]++;
+    &#125;
+&#125;
+
+int get_sum(int x) &#123;
+    int p = 0;
+    for (k = x; k &gt; 0; k -= (k &amp; (-k)))
+        p += bit[k];
+        return p;
+&#125;
+
+int main() &#123;
+    scanf(&quot;%d&quot;, &amp;T);
+    while (T--) &#123;
+        del();
+        scanf(&quot;%d&quot;, &amp;n);
+
+        for (int i = 0; i &lt; n; i++) &#123;
+            scanf(&quot;%d&quot;, &amp;a[i]);
+        &#125;
+
+        for (int i = n - 1; i &gt;= 0; i--) &#123;
+            if (get_sum(a[i]) &gt; 2)
+                invalid++;
+
+            ans += get_sum(a[i]);
+            upd(a[i]);
+        &#125;
+        if (invalid &gt; 0) &#123;
+            printf(&quot;Too chaotic\n&quot;);
+        &#125; else &#123;
+            printf(&quot;%d\n&quot;, ans);
+        &#125;
+   &#125;
+   return 0;
+&#125;
+</code></pre>
+<hr>
+<h3 id="Minimum-Swaps-2"><a href="#Minimum-Swaps-2" class="headerlink" title="Minimum Swaps 2"></a><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/minimum-swaps-2">Minimum Swaps 2</a></h3><p>本题需要找到最少的交换方式，可以知道，在正确的排序下，如果一个元素不在正确的排序的索引位置，那么它正确的索引位置上元素肯定是不正确的。<br>那么只需要去和这个位置的元素交换，就能够逐步将每个位置排好了<br>需要注意的点是，在每次交换元素时，相应的索引需要立即交换</p>
+<pre><code class="lang-python">def minimumSwaps(arr):
+    rightArr = sorted(arr)
+    Idx = &#123;v: i for i,v in enumerate(arr)&#125;
+    count = 0
+    for i,v in enumerate(arr):
+        rightNum = rightArr[i]
+        if v != rightNum:
+            arr[i],arr[Idx[rightNum]] = arr[Idx[rightNum]],arr[i]
+            Idx[v],Idx[rightNum] = Idx[rightNum],Idx[v]
+            count = count + 1
+    return count
+</code></pre>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2018/08/31/dict_hr/" title="Hackerrank Dicts 解题记录"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: Hackerrank Dicts 解题记录</span></a><a class="button is-default" href="/2018/08/24/connectlb/" title="Vue、Loopback、mysql"><span class="has-text-weight-semibold">Next: Vue、Loopback、mysql</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/dongfanker"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/zhangyanjian"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/yanjian-zhang-154975154"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/zhang.yanjian.7"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Yanjian Zhang 2021</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/post.js"></script></body></html>

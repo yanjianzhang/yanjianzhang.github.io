@@ -272,6 +272,13 @@
 
   
   <url>
+    <loc>https://dongfanker.github.io/tags/Reinforcement-Learning/</loc>
+    <lastmod>2021-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://dongfanker.github.io/tags/AI/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -293,21 +300,14 @@
   </url>
   
   <url>
-    <loc>https://dongfanker.github.io/tags/Natural-Language-Processing/</loc>
-    <lastmod>2021-12-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://dongfanker.github.io/tags/Reinforcement-Learning/</loc>
-    <lastmod>2021-12-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dongfanker.github.io/tags/Adversarial-Learning/</loc>
+    <lastmod>2021-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dongfanker.github.io/tags/Natural-Language-Processing/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -335,14 +335,28 @@
   </url>
   
   <url>
-    <loc>https://dongfanker.github.io/tags/P-h-D/</loc>
+    <loc>https://dongfanker.github.io/tags/string-process/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://dongfanker.github.io/tags/string-process/</loc>
+    <loc>https://dongfanker.github.io/tags/RNN/</loc>
+    <lastmod>2021-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dongfanker.github.io/tags/Dropout/</loc>
+    <lastmod>2021-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dongfanker.github.io/tags/P-h-D/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -412,6 +426,13 @@
   </url>
   
   <url>
+    <loc>https://dongfanker.github.io/tags/Machine-Learing/</loc>
+    <lastmod>2021-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://dongfanker.github.io/tags/Spring/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -433,27 +454,6 @@
   </url>
   
   <url>
-    <loc>https://dongfanker.github.io/tags/Trie/</loc>
-    <lastmod>2021-12-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://dongfanker.github.io/tags/RNN/</loc>
-    <lastmod>2021-12-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://dongfanker.github.io/tags/Dropout/</loc>
-    <lastmod>2021-12-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dongfanker.github.io/tags/tensorboard/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -461,13 +461,20 @@
   </url>
   
   <url>
-    <loc>https://dongfanker.github.io/tags/Machine-Learing/</loc>
+    <loc>https://dongfanker.github.io/tags/Trie/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://dongfanker.github.io/categories/Reinforcement-Learning/</loc>
+    <lastmod>2021-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://dongfanker.github.io/categories/Natural-Language-Processing/</loc>
@@ -484,13 +491,6 @@
   </url>
   
   <url>
-    <loc>https://dongfanker.github.io/categories/Reinforcement-Learning/</loc>
-    <lastmod>2021-12-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dongfanker.github.io/categories/Vue/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -499,6 +499,13 @@
   
   <url>
     <loc>https://dongfanker.github.io/categories/hackerrank/</loc>
+    <lastmod>2021-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dongfanker.github.io/categories/Deep-Learning/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -533,6 +540,13 @@
   </url>
   
   <url>
+    <loc>https://dongfanker.github.io/categories/Machine-Learing/</loc>
+    <lastmod>2021-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://dongfanker.github.io/categories/Spring/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -540,21 +554,7 @@
   </url>
   
   <url>
-    <loc>https://dongfanker.github.io/categories/Deep-Learning/</loc>
-    <lastmod>2021-12-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dongfanker.github.io/categories/Data-Structure/</loc>
-    <lastmod>2021-12-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://dongfanker.github.io/categories/Machine-Learing/</loc>
     <lastmod>2021-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

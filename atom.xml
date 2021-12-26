@@ -100,11 +100,11 @@
     <category term="Reinforcement Learning" scheme="https://dongfanker.github.io/categories/Reinforcement-Learning/"/>
     
     
-    <category term="Natural Language Processing" scheme="https://dongfanker.github.io/tags/Natural-Language-Processing/"/>
-    
     <category term="Reinforcement Learning" scheme="https://dongfanker.github.io/tags/Reinforcement-Learning/"/>
     
     <category term="Adversarial Learning" scheme="https://dongfanker.github.io/tags/Adversarial-Learning/"/>
+    
+    <category term="Natural Language Processing" scheme="https://dongfanker.github.io/tags/Natural-Language-Processing/"/>
     
   </entry>
   
@@ -174,29 +174,6 @@
   </entry>
   
   <entry>
-    <title>Indent problem! Latex and Python</title>
-    <link href="https://dongfanker.github.io/2019/12/04/indent/"/>
-    <id>https://dongfanker.github.io/2019/12/04/indent/</id>
-    <published>2019-12-03T23:00:00.000Z</published>
-    <updated>2021-12-26T22:50:53.987Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>When we cooperation with other within python, like in <a href="https://studio.dev.tencent.com/">Cloud studio</a> of tencent. We may find our indent is different with our friend when we input the code. You may make a file name  “.editorconfig” in the root directory.</p><pre><code>root = true[*]charset = utf-8indent_style = tabtab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>However, when the python code are already mixed with tabs and spaces. Don’t worry.<br>Select Pycharm -&gt; Edit -&gt; Convert Indents. You will transform the whole file quickly without manually do it.</p><h3 id="Matlab"><a href="#Matlab" class="headerlink" title="Matlab"></a>Matlab</h3><p>When you copy the code to texstudio(seems not happend in Overleaf), the indent will vanish. It is the problem of default setting of Texstudio.<br>Select Options -&gt; Configure Texstudio -&gt; Editor -&gt; Indentation mode. And choose Keep Indentation.<br>That will solve the problem.</p><p>&nbsp; &nbsp;<br>&nbsp; &nbsp;<br>&nbsp; &nbsp;</p><h5 id="Reference-Version-in-Chinese-from-Google-translation"><a href="#Reference-Version-in-Chinese-from-Google-translation" class="headerlink" title="Reference Version in Chinese from Google translation:"></a>Reference Version in Chinese from Google translation:</h5><h3 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h3><p>当我们在python中与其他人合作时，例如腾讯的[Cloud studio]（<a href="https://studio.dev.tencent.com/）。">https://studio.dev.tencent.com/）。</a> 输入代码时，我们可能会发现缩进与我们的朋友有所不同。 您可以在根目录创建一个文件名“ .editorconfig”。</p><pre><code>根=真[*]字符集= utf-8indent_style =制表符tab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>但是，当python代码已经与制表符和空格混合在一起时。 不用担心<br>选择Pycharm-&gt;编辑-&gt;转换缩进。 您无需手动进行操作即可快速转换整个文件。</p><h3 id="Matlab-1"><a href="#Matlab-1" class="headerlink" title="Matlab"></a>Matlab</h3><p>当您将代码复制到texstudio时（似乎在Overleaf中没有发生），缩进将消失。 这是Texstudio默认设置的问题。<br>选择选项-&gt;配置Texstudio-&gt;编辑器-&gt;缩进模式。 然后选择“保持缩进”。<br>这样可以解决问题。</p>]]></content>
-    
-    
-    <summary type="html">快速解决python的tab-space转换和latex复制代码时indent消失的问题</summary>
-    
-    
-    
-    <category term="Latex" scheme="https://dongfanker.github.io/categories/Latex/"/>
-    
-    
-    <category term="Python" scheme="https://dongfanker.github.io/tags/Python/"/>
-    
-    <category term="Latex" scheme="https://dongfanker.github.io/tags/Latex/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Dropout of RNN, batch size, accumulation steps</title>
     <link href="https://dongfanker.github.io/2019/12/04/encoder-decoder/"/>
     <id>https://dongfanker.github.io/2019/12/04/encoder-decoder/</id>
@@ -216,6 +193,29 @@
     <category term="RNN" scheme="https://dongfanker.github.io/tags/RNN/"/>
     
     <category term="Dropout" scheme="https://dongfanker.github.io/tags/Dropout/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Indent problem! Latex and Python</title>
+    <link href="https://dongfanker.github.io/2019/12/04/indent/"/>
+    <id>https://dongfanker.github.io/2019/12/04/indent/</id>
+    <published>2019-12-03T23:00:00.000Z</published>
+    <updated>2021-12-26T22:50:53.987Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>When we cooperation with other within python, like in <a href="https://studio.dev.tencent.com/">Cloud studio</a> of tencent. We may find our indent is different with our friend when we input the code. You may make a file name  “.editorconfig” in the root directory.</p><pre><code>root = true[*]charset = utf-8indent_style = tabtab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>However, when the python code are already mixed with tabs and spaces. Don’t worry.<br>Select Pycharm -&gt; Edit -&gt; Convert Indents. You will transform the whole file quickly without manually do it.</p><h3 id="Matlab"><a href="#Matlab" class="headerlink" title="Matlab"></a>Matlab</h3><p>When you copy the code to texstudio(seems not happend in Overleaf), the indent will vanish. It is the problem of default setting of Texstudio.<br>Select Options -&gt; Configure Texstudio -&gt; Editor -&gt; Indentation mode. And choose Keep Indentation.<br>That will solve the problem.</p><p>&nbsp; &nbsp;<br>&nbsp; &nbsp;<br>&nbsp; &nbsp;</p><h5 id="Reference-Version-in-Chinese-from-Google-translation"><a href="#Reference-Version-in-Chinese-from-Google-translation" class="headerlink" title="Reference Version in Chinese from Google translation:"></a>Reference Version in Chinese from Google translation:</h5><h3 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h3><p>当我们在python中与其他人合作时，例如腾讯的[Cloud studio]（<a href="https://studio.dev.tencent.com/）。">https://studio.dev.tencent.com/）。</a> 输入代码时，我们可能会发现缩进与我们的朋友有所不同。 您可以在根目录创建一个文件名“ .editorconfig”。</p><pre><code>根=真[*]字符集= utf-8indent_style =制表符tab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>但是，当python代码已经与制表符和空格混合在一起时。 不用担心<br>选择Pycharm-&gt;编辑-&gt;转换缩进。 您无需手动进行操作即可快速转换整个文件。</p><h3 id="Matlab-1"><a href="#Matlab-1" class="headerlink" title="Matlab"></a>Matlab</h3><p>当您将代码复制到texstudio时（似乎在Overleaf中没有发生），缩进将消失。 这是Texstudio默认设置的问题。<br>选择选项-&gt;配置Texstudio-&gt;编辑器-&gt;缩进模式。 然后选择“保持缩进”。<br>这样可以解决问题。</p>]]></content>
+    
+    
+    <summary type="html">快速解决python的tab-space转换和latex复制代码时indent消失的问题</summary>
+    
+    
+    
+    <category term="Latex" scheme="https://dongfanker.github.io/categories/Latex/"/>
+    
+    
+    <category term="Python" scheme="https://dongfanker.github.io/tags/Python/"/>
+    
+    <category term="Latex" scheme="https://dongfanker.github.io/tags/Latex/"/>
     
   </entry>
   
@@ -241,6 +241,27 @@
   </entry>
   
   <entry>
+    <title>机器学习评价指标</title>
+    <link href="https://dongfanker.github.io/2018/11/09/measure/"/>
+    <id>https://dongfanker.github.io/2018/11/09/measure/</id>
+    <published>2018-11-08T23:44:02.000Z</published>
+    <updated>2021-12-26T22:47:29.149Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="分类问题的评价指标"><a href="#分类问题的评价指标" class="headerlink" title="分类问题的评价指标"></a>分类问题的评价指标</h4><div class="table-container"><table><thead><tr><th>*</th><th>Relevant，正类</th><th>Nonrelevent，负类</th></tr></thead><tbody><tr><td>Retrieved 被检索到</td><td>TP</td><td>FP</td></tr><tr><td>Notretrieved未检索到</td><td>FN</td><td>TN</td></tr></tbody></table></div><p>准确率是：对于给定的测试数据集，分类器正确分类的样本数与总样本数之比</p><script type="math/tex; mode=display">A(accurate) = \frac{TP+TN}{TP+TN+FP+FN}</script><p>精确率是：它计算的是所有被检索到的item中,”应该被检索到”的item占的比例。</p><script type="math/tex; mode=display">P(percision) = \frac{TP}{TP+FP}</script><p>召回率是：它计算的是所有检索到的item占所有”应该检索到的item”的比例。</p><script type="math/tex; mode=display">R(recall) = \frac{TP}{TP+FN}</script><p>综合评价指标F-measure是精确度和召回率的综合</p><script type="math/tex; mode=display">F = \frac{(a^2+1)PR}{(a^2)P+R}</script><p>当a = 0时，为F1:</p><script type="math/tex; mode=display">F = \frac{PR}{P+R}</script><h4 id="机器翻译质量评测算法"><a href="#机器翻译质量评测算法" class="headerlink" title="机器翻译质量评测算法"></a>机器翻译质量评测算法</h4><p>使用BLEU来衡量算法的准确程度<br>计算公式如下</p><script type="math/tex; mode=display">BLEU = BP·exp(\sum_1^N w_nlog(p_n))</script><p>其中BP = $\begin{cases}1\space\space\space\space\space\space\space\space\space\space\space\space\space\space if \space c&gt;r \\e^{(1-r/c)}\space\space\space\space if \space c \le r\end{cases}<br>$<br>c = len(word of machine)<br>r = len(word of reference)<br>而 <script type="math/tex">p_n = \frac{\sum_{C\in Candidate}\sum_{n-gram\in C}Count_{clip}(n-gram)}{\sum_{C^{'}\in Candidate}\sum_{n-gram\in C'}Count_(n-gram)}</script></p>]]></content>
+    
+    
+    <summary type="html">机器学习中的准确率、精确率、召回率以及F度量</summary>
+    
+    
+    
+    <category term="Machine Learing" scheme="https://dongfanker.github.io/categories/Machine-Learing/"/>
+    
+    
+    <category term="Machine Learing" scheme="https://dongfanker.github.io/tags/Machine-Learing/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Tensorboard的使用</title>
     <link href="https://dongfanker.github.io/2018/11/09/tensorboard/"/>
     <id>https://dongfanker.github.io/2018/11/09/tensorboard/</id>
@@ -260,27 +281,6 @@
     <category term="tensorflow" scheme="https://dongfanker.github.io/tags/tensorflow/"/>
     
     <category term="tensorboard" scheme="https://dongfanker.github.io/tags/tensorboard/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习评价指标</title>
-    <link href="https://dongfanker.github.io/2018/11/09/measure/"/>
-    <id>https://dongfanker.github.io/2018/11/09/measure/</id>
-    <published>2018-11-08T23:44:02.000Z</published>
-    <updated>2021-12-26T22:47:29.149Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="分类问题的评价指标"><a href="#分类问题的评价指标" class="headerlink" title="分类问题的评价指标"></a>分类问题的评价指标</h4><div class="table-container"><table><thead><tr><th>*</th><th>Relevant，正类</th><th>Nonrelevent，负类</th></tr></thead><tbody><tr><td>Retrieved 被检索到</td><td>TP</td><td>FP</td></tr><tr><td>Notretrieved未检索到</td><td>FN</td><td>TN</td></tr></tbody></table></div><p>准确率是：对于给定的测试数据集，分类器正确分类的样本数与总样本数之比</p><script type="math/tex; mode=display">A(accurate) = \frac{TP+TN}{TP+TN+FP+FN}</script><p>精确率是：它计算的是所有被检索到的item中,”应该被检索到”的item占的比例。</p><script type="math/tex; mode=display">P(percision) = \frac{TP}{TP+FP}</script><p>召回率是：它计算的是所有检索到的item占所有”应该检索到的item”的比例。</p><script type="math/tex; mode=display">R(recall) = \frac{TP}{TP+FN}</script><p>综合评价指标F-measure是精确度和召回率的综合</p><script type="math/tex; mode=display">F = \frac{(a^2+1)PR}{(a^2)P+R}</script><p>当a = 0时，为F1:</p><script type="math/tex; mode=display">F = \frac{PR}{P+R}</script><h4 id="机器翻译质量评测算法"><a href="#机器翻译质量评测算法" class="headerlink" title="机器翻译质量评测算法"></a>机器翻译质量评测算法</h4><p>使用BLEU来衡量算法的准确程度<br>计算公式如下</p><script type="math/tex; mode=display">BLEU = BP·exp(\sum_1^N w_nlog(p_n))</script><p>其中BP = $\begin{cases}1\space\space\space\space\space\space\space\space\space\space\space\space\space\space if \space c&gt;r \\e^{(1-r/c)}\space\space\space\space if \space c \le r\end{cases}<br>$<br>c = len(word of machine)<br>r = len(word of reference)<br>而 <script type="math/tex">p_n = \frac{\sum_{C\in Candidate}\sum_{n-gram\in C}Count_{clip}(n-gram)}{\sum_{C^{'}\in Candidate}\sum_{n-gram\in C'}Count_(n-gram)}</script></p>]]></content>
-    
-    
-    <summary type="html">机器学习中的准确率、精确率、召回率以及F度量</summary>
-    
-    
-    
-    <category term="Machine Learing" scheme="https://dongfanker.github.io/categories/Machine-Learing/"/>
-    
-    
-    <category term="Machine Learing" scheme="https://dongfanker.github.io/tags/Machine-Learing/"/>
     
   </entry>
   

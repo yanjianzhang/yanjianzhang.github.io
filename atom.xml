@@ -174,29 +174,6 @@
   </entry>
   
   <entry>
-    <title>Dropout of RNN, batch size, accumulation steps</title>
-    <link href="https://dongfanker.github.io/2019/12/04/encoder-decoder/"/>
-    <id>https://dongfanker.github.io/2019/12/04/encoder-decoder/</id>
-    <published>2019-12-03T23:00:00.000Z</published>
-    <updated>2021-12-26T22:48:52.876Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>Srivastava et al. (2014) applied dropout to feed forward neural network’s and RBM’s and noted a probability of dropout around <strong>0.5 for hidden units and 0.2 for inputs</strong> worked well for a variety of tasks.</p><p>Reference: <a href="https://medium.com/@bingobee01/a-review-of-dropout-as-applied-to-rnns-72e79ecd5b7b">A review of Dropout as applied to RNNs</a></p><p>When I apply the 0.5 for hidden units and 0.2 for inputs, it works well. But it is not the case in decoder. <strong>In decoder, I would suggest not to use dropout</strong>.</p><h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><p>Suggest &lt;=32， See <a href="https://www.cs.cmu.edu/~muli/file/minibatch_sgd.pdf">Efficient Mini-batch Training for Stochastic Optimization</a> and <a href="https://svail.github.io/rnn_perf/">this RNN study</a></p><h3 id="Accumulation-steps"><a href="#Accumulation-steps" class="headerlink" title="Accumulation_steps"></a>Accumulation_steps</h3><p>Have the same function like batch size, but it can be use when Graphics memory is not enough.</p>]]></content>
-    
-    
-    <summary type="html">The selection of dropout rate for encoder-decoder mechanism</summary>
-    
-    
-    
-    <category term="Deep Learning" scheme="https://dongfanker.github.io/categories/Deep-Learning/"/>
-    
-    
-    <category term="RNN" scheme="https://dongfanker.github.io/tags/RNN/"/>
-    
-    <category term="Dropout" scheme="https://dongfanker.github.io/tags/Dropout/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Indent problem! Latex and Python</title>
     <link href="https://dongfanker.github.io/2019/12/04/indent/"/>
     <id>https://dongfanker.github.io/2019/12/04/indent/</id>
@@ -216,6 +193,29 @@
     <category term="Python" scheme="https://dongfanker.github.io/tags/Python/"/>
     
     <category term="Latex" scheme="https://dongfanker.github.io/tags/Latex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dropout of RNN, batch size, accumulation steps</title>
+    <link href="https://dongfanker.github.io/2019/12/04/encoder-decoder/"/>
+    <id>https://dongfanker.github.io/2019/12/04/encoder-decoder/</id>
+    <published>2019-12-03T23:00:00.000Z</published>
+    <updated>2021-12-26T22:48:52.876Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>Srivastava et al. (2014) applied dropout to feed forward neural network’s and RBM’s and noted a probability of dropout around <strong>0.5 for hidden units and 0.2 for inputs</strong> worked well for a variety of tasks.</p><p>Reference: <a href="https://medium.com/@bingobee01/a-review-of-dropout-as-applied-to-rnns-72e79ecd5b7b">A review of Dropout as applied to RNNs</a></p><p>When I apply the 0.5 for hidden units and 0.2 for inputs, it works well. But it is not the case in decoder. <strong>In decoder, I would suggest not to use dropout</strong>.</p><h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><p>Suggest &lt;=32， See <a href="https://www.cs.cmu.edu/~muli/file/minibatch_sgd.pdf">Efficient Mini-batch Training for Stochastic Optimization</a> and <a href="https://svail.github.io/rnn_perf/">this RNN study</a></p><h3 id="Accumulation-steps"><a href="#Accumulation-steps" class="headerlink" title="Accumulation_steps"></a>Accumulation_steps</h3><p>Have the same function like batch size, but it can be use when Graphics memory is not enough.</p>]]></content>
+    
+    
+    <summary type="html">The selection of dropout rate for encoder-decoder mechanism</summary>
+    
+    
+    
+    <category term="Deep Learning" scheme="https://dongfanker.github.io/categories/Deep-Learning/"/>
+    
+    
+    <category term="RNN" scheme="https://dongfanker.github.io/tags/RNN/"/>
+    
+    <category term="Dropout" scheme="https://dongfanker.github.io/tags/Dropout/"/>
     
   </entry>
   
@@ -241,27 +241,6 @@
   </entry>
   
   <entry>
-    <title>机器学习评价指标</title>
-    <link href="https://dongfanker.github.io/2018/11/09/measure/"/>
-    <id>https://dongfanker.github.io/2018/11/09/measure/</id>
-    <published>2018-11-08T23:44:02.000Z</published>
-    <updated>2021-12-26T22:47:29.149Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="分类问题的评价指标"><a href="#分类问题的评价指标" class="headerlink" title="分类问题的评价指标"></a>分类问题的评价指标</h4><div class="table-container"><table><thead><tr><th>*</th><th>Relevant，正类</th><th>Nonrelevent，负类</th></tr></thead><tbody><tr><td>Retrieved 被检索到</td><td>TP</td><td>FP</td></tr><tr><td>Notretrieved未检索到</td><td>FN</td><td>TN</td></tr></tbody></table></div><p>准确率是：对于给定的测试数据集，分类器正确分类的样本数与总样本数之比</p><script type="math/tex; mode=display">A(accurate) = \frac{TP+TN}{TP+TN+FP+FN}</script><p>精确率是：它计算的是所有被检索到的item中,”应该被检索到”的item占的比例。</p><script type="math/tex; mode=display">P(percision) = \frac{TP}{TP+FP}</script><p>召回率是：它计算的是所有检索到的item占所有”应该检索到的item”的比例。</p><script type="math/tex; mode=display">R(recall) = \frac{TP}{TP+FN}</script><p>综合评价指标F-measure是精确度和召回率的综合</p><script type="math/tex; mode=display">F = \frac{(a^2+1)PR}{(a^2)P+R}</script><p>当a = 0时，为F1:</p><script type="math/tex; mode=display">F = \frac{PR}{P+R}</script><h4 id="机器翻译质量评测算法"><a href="#机器翻译质量评测算法" class="headerlink" title="机器翻译质量评测算法"></a>机器翻译质量评测算法</h4><p>使用BLEU来衡量算法的准确程度<br>计算公式如下</p><script type="math/tex; mode=display">BLEU = BP·exp(\sum_1^N w_nlog(p_n))</script><p>其中BP = $\begin{cases}1\space\space\space\space\space\space\space\space\space\space\space\space\space\space if \space c&gt;r \\e^{(1-r/c)}\space\space\space\space if \space c \le r\end{cases}<br>$<br>c = len(word of machine)<br>r = len(word of reference)<br>而 <script type="math/tex">p_n = \frac{\sum_{C\in Candidate}\sum_{n-gram\in C}Count_{clip}(n-gram)}{\sum_{C^{'}\in Candidate}\sum_{n-gram\in C'}Count_(n-gram)}</script></p>]]></content>
-    
-    
-    <summary type="html">机器学习中的准确率、精确率、召回率以及F度量</summary>
-    
-    
-    
-    <category term="Machine Learing" scheme="https://dongfanker.github.io/categories/Machine-Learing/"/>
-    
-    
-    <category term="Machine Learing" scheme="https://dongfanker.github.io/tags/Machine-Learing/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Tensorboard的使用</title>
     <link href="https://dongfanker.github.io/2018/11/09/tensorboard/"/>
     <id>https://dongfanker.github.io/2018/11/09/tensorboard/</id>
@@ -281,6 +260,27 @@
     <category term="tensorflow" scheme="https://dongfanker.github.io/tags/tensorflow/"/>
     
     <category term="tensorboard" scheme="https://dongfanker.github.io/tags/tensorboard/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习评价指标</title>
+    <link href="https://dongfanker.github.io/2018/11/09/measure/"/>
+    <id>https://dongfanker.github.io/2018/11/09/measure/</id>
+    <published>2018-11-08T23:44:02.000Z</published>
+    <updated>2021-12-26T22:47:29.149Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="分类问题的评价指标"><a href="#分类问题的评价指标" class="headerlink" title="分类问题的评价指标"></a>分类问题的评价指标</h4><div class="table-container"><table><thead><tr><th>*</th><th>Relevant，正类</th><th>Nonrelevent，负类</th></tr></thead><tbody><tr><td>Retrieved 被检索到</td><td>TP</td><td>FP</td></tr><tr><td>Notretrieved未检索到</td><td>FN</td><td>TN</td></tr></tbody></table></div><p>准确率是：对于给定的测试数据集，分类器正确分类的样本数与总样本数之比</p><script type="math/tex; mode=display">A(accurate) = \frac{TP+TN}{TP+TN+FP+FN}</script><p>精确率是：它计算的是所有被检索到的item中,”应该被检索到”的item占的比例。</p><script type="math/tex; mode=display">P(percision) = \frac{TP}{TP+FP}</script><p>召回率是：它计算的是所有检索到的item占所有”应该检索到的item”的比例。</p><script type="math/tex; mode=display">R(recall) = \frac{TP}{TP+FN}</script><p>综合评价指标F-measure是精确度和召回率的综合</p><script type="math/tex; mode=display">F = \frac{(a^2+1)PR}{(a^2)P+R}</script><p>当a = 0时，为F1:</p><script type="math/tex; mode=display">F = \frac{PR}{P+R}</script><h4 id="机器翻译质量评测算法"><a href="#机器翻译质量评测算法" class="headerlink" title="机器翻译质量评测算法"></a>机器翻译质量评测算法</h4><p>使用BLEU来衡量算法的准确程度<br>计算公式如下</p><script type="math/tex; mode=display">BLEU = BP·exp(\sum_1^N w_nlog(p_n))</script><p>其中BP = $\begin{cases}1\space\space\space\space\space\space\space\space\space\space\space\space\space\space if \space c&gt;r \\e^{(1-r/c)}\space\space\space\space if \space c \le r\end{cases}<br>$<br>c = len(word of machine)<br>r = len(word of reference)<br>而 <script type="math/tex">p_n = \frac{\sum_{C\in Candidate}\sum_{n-gram\in C}Count_{clip}(n-gram)}{\sum_{C^{'}\in Candidate}\sum_{n-gram\in C'}Count_(n-gram)}</script></p>]]></content>
+    
+    
+    <summary type="html">机器学习中的准确率、精确率、召回率以及F度量</summary>
+    
+    
+    
+    <category term="Machine Learing" scheme="https://dongfanker.github.io/categories/Machine-Learing/"/>
+    
+    
+    <category term="Machine Learing" scheme="https://dongfanker.github.io/tags/Machine-Learing/"/>
     
   </entry>
   

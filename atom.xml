@@ -3,11 +3,11 @@
   <title>Yanjian Zhang&#39;s Blog</title>
   
   
-  <link href="https://dongfanker.github.io/atom.xml" rel="self"/>
+  <link href="https://yanjianzhang.github.io/atom.xml" rel="self"/>
   
-  <link href="https://dongfanker.github.io/"/>
+  <link href="https://yanjianzhang.github.io/"/>
   <updated>2019-04-27T12:21:10.000Z</updated>
-  <id>https://dongfanker.github.io/</id>
+  <id>https://yanjianzhang.github.io/</id>
   
   <author>
     <name>Yanjian Zhang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Spring, Spring Boot, Restful, Docker</title>
-    <link href="https://dongfanker.github.io/2021/12/26/spring/"/>
-    <id>https://dongfanker.github.io/2021/12/26/spring/</id>
+    <link href="https://yanjianzhang.github.io/2021/12/26/spring/"/>
+    <id>https://yanjianzhang.github.io/2021/12/26/spring/</id>
     <published>2021-12-26T13:57:58.000Z</published>
     <updated>2019-04-27T12:21:10.000Z</updated>
     
@@ -30,19 +30,19 @@
     
     
     
-    <category term="Spring" scheme="https://dongfanker.github.io/categories/Spring/"/>
+    <category term="Spring" scheme="https://yanjianzhang.github.io/categories/Spring/"/>
     
     
-    <category term="Spring" scheme="https://dongfanker.github.io/tags/Spring/"/>
+    <category term="Spring" scheme="https://yanjianzhang.github.io/tags/Spring/"/>
     
-    <category term="Spring Boot" scheme="https://dongfanker.github.io/tags/Spring-Boot/"/>
+    <category term="Spring Boot" scheme="https://yanjianzhang.github.io/tags/Spring-Boot/"/>
     
   </entry>
   
   <entry>
     <title>常见NLP工具包</title>
-    <link href="https://dongfanker.github.io/2020/02/19/NLP_toolkit/"/>
-    <id>https://dongfanker.github.io/2020/02/19/NLP_toolkit/</id>
+    <link href="https://yanjianzhang.github.io/2020/02/19/NLP_toolkit/"/>
+    <id>https://yanjianzhang.github.io/2020/02/19/NLP_toolkit/</id>
     <published>2020-02-18T23:00:00.000Z</published>
     <updated>2020-02-19T08:58:44.000Z</updated>
     
@@ -53,17 +53,17 @@
     
     
     
-    <category term="Natural Language Processing" scheme="https://dongfanker.github.io/categories/Natural-Language-Processing/"/>
+    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/categories/Natural-Language-Processing/"/>
     
     
-    <category term="Natural Language Processing" scheme="https://dongfanker.github.io/tags/Natural-Language-Processing/"/>
+    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/tags/Natural-Language-Processing/"/>
     
   </entry>
   
   <entry>
     <title>jupyter notebook 中配置 conda python kernel</title>
-    <link href="https://dongfanker.github.io/2020/02/19/ipykernel/"/>
-    <id>https://dongfanker.github.io/2020/02/19/ipykernel/</id>
+    <link href="https://yanjianzhang.github.io/2020/02/19/ipykernel/"/>
+    <id>https://yanjianzhang.github.io/2020/02/19/ipykernel/</id>
     <published>2020-02-18T23:00:00.000Z</published>
     <updated>2020-02-19T07:40:26.000Z</updated>
     
@@ -74,19 +74,19 @@
     
     
     
-    <category term="jupyter notebook" scheme="https://dongfanker.github.io/categories/jupyter-notebook/"/>
+    <category term="jupyter notebook" scheme="https://yanjianzhang.github.io/categories/jupyter-notebook/"/>
     
     
-    <category term="jupyter notebook" scheme="https://dongfanker.github.io/tags/jupyter-notebook/"/>
+    <category term="jupyter notebook" scheme="https://yanjianzhang.github.io/tags/jupyter-notebook/"/>
     
-    <category term="Conda" scheme="https://dongfanker.github.io/tags/Conda/"/>
+    <category term="Conda" scheme="https://yanjianzhang.github.io/tags/Conda/"/>
     
   </entry>
   
   <entry>
     <title>NLG里的强化与对抗</title>
-    <link href="https://dongfanker.github.io/2020/02/11/RLSeq2Seq/"/>
-    <id>https://dongfanker.github.io/2020/02/11/RLSeq2Seq/</id>
+    <link href="https://yanjianzhang.github.io/2020/02/11/RLSeq2Seq/"/>
+    <id>https://yanjianzhang.github.io/2020/02/11/RLSeq2Seq/</id>
     <published>2020-02-10T23:00:00.000Z</published>
     <updated>2021-12-26T22:45:08.612Z</updated>
     
@@ -97,21 +97,21 @@
     
     
     
-    <category term="Reinforcement Learning" scheme="https://dongfanker.github.io/categories/Reinforcement-Learning/"/>
+    <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/categories/Reinforcement-Learning/"/>
     
     
-    <category term="Natural Language Processing" scheme="https://dongfanker.github.io/tags/Natural-Language-Processing/"/>
+    <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/tags/Reinforcement-Learning/"/>
     
-    <category term="Reinforcement Learning" scheme="https://dongfanker.github.io/tags/Reinforcement-Learning/"/>
+    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/tags/Natural-Language-Processing/"/>
     
-    <category term="Adversarial Learning" scheme="https://dongfanker.github.io/tags/Adversarial-Learning/"/>
+    <category term="Adversarial Learning" scheme="https://yanjianzhang.github.io/tags/Adversarial-Learning/"/>
     
   </entry>
   
   <entry>
     <title>强化学习精要总结（基础）</title>
-    <link href="https://dongfanker.github.io/2019/12/29/RL/"/>
-    <id>https://dongfanker.github.io/2019/12/29/RL/</id>
+    <link href="https://yanjianzhang.github.io/2019/12/29/RL/"/>
+    <id>https://yanjianzhang.github.io/2019/12/29/RL/</id>
     <published>2019-12-28T23:00:00.000Z</published>
     <updated>2020-02-19T07:41:44.000Z</updated>
     
@@ -122,17 +122,17 @@
     
     
     
-    <category term="Reinforcement Learning" scheme="https://dongfanker.github.io/categories/Reinforcement-Learning/"/>
+    <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/categories/Reinforcement-Learning/"/>
     
     
-    <category term="Reinforcement Learning" scheme="https://dongfanker.github.io/tags/Reinforcement-Learning/"/>
+    <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/tags/Reinforcement-Learning/"/>
     
   </entry>
   
   <entry>
     <title>Top essays by scientists in 2019</title>
-    <link href="https://dongfanker.github.io/2019/12/27/doctor/"/>
-    <id>https://dongfanker.github.io/2019/12/27/doctor/</id>
+    <link href="https://yanjianzhang.github.io/2019/12/27/doctor/"/>
+    <id>https://yanjianzhang.github.io/2019/12/27/doctor/</id>
     <published>2019-12-26T23:00:00.000Z</published>
     <updated>2019-12-27T06:00:36.000Z</updated>
     
@@ -143,17 +143,17 @@
     
     
     
-    <category term="P.h.D. career" scheme="https://dongfanker.github.io/categories/P-h-D-career/"/>
+    <category term="P.h.D. career" scheme="https://yanjianzhang.github.io/categories/P-h-D-career/"/>
     
     
-    <category term="P.h.D." scheme="https://dongfanker.github.io/tags/P-h-D/"/>
+    <category term="P.h.D." scheme="https://yanjianzhang.github.io/tags/P-h-D/"/>
     
   </entry>
   
   <entry>
     <title>Commonsense Validation and Explanation</title>
-    <link href="https://dongfanker.github.io/2019/12/21/Commonsence/"/>
-    <id>https://dongfanker.github.io/2019/12/21/Commonsence/</id>
+    <link href="https://yanjianzhang.github.io/2019/12/21/Commonsence/"/>
+    <id>https://yanjianzhang.github.io/2019/12/21/Commonsence/</id>
     <published>2019-12-20T23:00:00.000Z</published>
     <updated>2021-12-26T22:45:49.318Z</updated>
     
@@ -164,42 +164,19 @@
     
     
     
-    <category term="Natural Language Processing" scheme="https://dongfanker.github.io/categories/Natural-Language-Processing/"/>
+    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/categories/Natural-Language-Processing/"/>
     
     
-    <category term="AI" scheme="https://dongfanker.github.io/tags/AI/"/>
+    <category term="AI" scheme="https://yanjianzhang.github.io/tags/AI/"/>
     
-    <category term="Commonsense" scheme="https://dongfanker.github.io/tags/Commonsense/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dropout of RNN, batch size, accumulation steps</title>
-    <link href="https://dongfanker.github.io/2019/12/04/encoder-decoder/"/>
-    <id>https://dongfanker.github.io/2019/12/04/encoder-decoder/</id>
-    <published>2019-12-03T23:00:00.000Z</published>
-    <updated>2021-12-26T22:48:52.876Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>Srivastava et al. (2014) applied dropout to feed forward neural network’s and RBM’s and noted a probability of dropout around <strong>0.5 for hidden units and 0.2 for inputs</strong> worked well for a variety of tasks.</p><p>Reference: <a href="https://medium.com/@bingobee01/a-review-of-dropout-as-applied-to-rnns-72e79ecd5b7b">A review of Dropout as applied to RNNs</a></p><p>When I apply the 0.5 for hidden units and 0.2 for inputs, it works well. But it is not the case in decoder. <strong>In decoder, I would suggest not to use dropout</strong>.</p><h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><p>Suggest &lt;=32， See <a href="https://www.cs.cmu.edu/~muli/file/minibatch_sgd.pdf">Efficient Mini-batch Training for Stochastic Optimization</a> and <a href="https://svail.github.io/rnn_perf/">this RNN study</a></p><h3 id="Accumulation-steps"><a href="#Accumulation-steps" class="headerlink" title="Accumulation_steps"></a>Accumulation_steps</h3><p>Have the same function like batch size, but it can be use when Graphics memory is not enough.</p>]]></content>
-    
-    
-    <summary type="html">The selection of dropout rate for encoder-decoder mechanism</summary>
-    
-    
-    
-    <category term="Deep Learning" scheme="https://dongfanker.github.io/categories/Deep-Learning/"/>
-    
-    
-    <category term="RNN" scheme="https://dongfanker.github.io/tags/RNN/"/>
-    
-    <category term="Dropout" scheme="https://dongfanker.github.io/tags/Dropout/"/>
+    <category term="Commonsense" scheme="https://yanjianzhang.github.io/tags/Commonsense/"/>
     
   </entry>
   
   <entry>
     <title>Indent problem! Latex and Python</title>
-    <link href="https://dongfanker.github.io/2019/12/04/indent/"/>
-    <id>https://dongfanker.github.io/2019/12/04/indent/</id>
+    <link href="https://yanjianzhang.github.io/2019/12/04/indent/"/>
+    <id>https://yanjianzhang.github.io/2019/12/04/indent/</id>
     <published>2019-12-03T23:00:00.000Z</published>
     <updated>2021-12-26T22:50:53.987Z</updated>
     
@@ -210,19 +187,42 @@
     
     
     
-    <category term="Latex" scheme="https://dongfanker.github.io/categories/Latex/"/>
+    <category term="Latex" scheme="https://yanjianzhang.github.io/categories/Latex/"/>
     
     
-    <category term="Python" scheme="https://dongfanker.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://yanjianzhang.github.io/tags/Python/"/>
     
-    <category term="Latex" scheme="https://dongfanker.github.io/tags/Latex/"/>
+    <category term="Latex" scheme="https://yanjianzhang.github.io/tags/Latex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dropout of RNN, batch size, accumulation steps</title>
+    <link href="https://yanjianzhang.github.io/2019/12/04/encoder-decoder/"/>
+    <id>https://yanjianzhang.github.io/2019/12/04/encoder-decoder/</id>
+    <published>2019-12-03T23:00:00.000Z</published>
+    <updated>2021-12-26T22:48:52.876Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>Srivastava et al. (2014) applied dropout to feed forward neural network’s and RBM’s and noted a probability of dropout around <strong>0.5 for hidden units and 0.2 for inputs</strong> worked well for a variety of tasks.</p><p>Reference: <a href="https://medium.com/@bingobee01/a-review-of-dropout-as-applied-to-rnns-72e79ecd5b7b">A review of Dropout as applied to RNNs</a></p><p>When I apply the 0.5 for hidden units and 0.2 for inputs, it works well. But it is not the case in decoder. <strong>In decoder, I would suggest not to use dropout</strong>.</p><h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><p>Suggest &lt;=32， See <a href="https://www.cs.cmu.edu/~muli/file/minibatch_sgd.pdf">Efficient Mini-batch Training for Stochastic Optimization</a> and <a href="https://svail.github.io/rnn_perf/">this RNN study</a></p><h3 id="Accumulation-steps"><a href="#Accumulation-steps" class="headerlink" title="Accumulation_steps"></a>Accumulation_steps</h3><p>Have the same function like batch size, but it can be use when Graphics memory is not enough.</p>]]></content>
+    
+    
+    <summary type="html">The selection of dropout rate for encoder-decoder mechanism</summary>
+    
+    
+    
+    <category term="Deep Learning" scheme="https://yanjianzhang.github.io/categories/Deep-Learning/"/>
+    
+    
+    <category term="RNN" scheme="https://yanjianzhang.github.io/tags/RNN/"/>
+    
+    <category term="Dropout" scheme="https://yanjianzhang.github.io/tags/Dropout/"/>
     
   </entry>
   
   <entry>
     <title>Matlab的使用笔记</title>
-    <link href="https://dongfanker.github.io/2018/11/15/Matlab/"/>
-    <id>https://dongfanker.github.io/2018/11/15/Matlab/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/15/Matlab/"/>
+    <id>https://yanjianzhang.github.io/2018/11/15/Matlab/</id>
     <published>2018-11-14T23:44:02.000Z</published>
     <updated>2018-11-15T16:59:48.000Z</updated>
     
@@ -233,17 +233,17 @@
     
     
     
-    <category term="Matlab" scheme="https://dongfanker.github.io/categories/Matlab/"/>
+    <category term="Matlab" scheme="https://yanjianzhang.github.io/categories/Matlab/"/>
     
     
-    <category term="Matlab" scheme="https://dongfanker.github.io/tags/Matlab/"/>
+    <category term="Matlab" scheme="https://yanjianzhang.github.io/tags/Matlab/"/>
     
   </entry>
   
   <entry>
     <title>机器学习评价指标</title>
-    <link href="https://dongfanker.github.io/2018/11/09/measure/"/>
-    <id>https://dongfanker.github.io/2018/11/09/measure/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/09/measure/"/>
+    <id>https://yanjianzhang.github.io/2018/11/09/measure/</id>
     <published>2018-11-08T23:44:02.000Z</published>
     <updated>2021-12-26T22:47:29.149Z</updated>
     
@@ -254,17 +254,17 @@
     
     
     
-    <category term="Machine Learing" scheme="https://dongfanker.github.io/categories/Machine-Learing/"/>
+    <category term="Machine Learing" scheme="https://yanjianzhang.github.io/categories/Machine-Learing/"/>
     
     
-    <category term="Machine Learing" scheme="https://dongfanker.github.io/tags/Machine-Learing/"/>
+    <category term="Machine Learing" scheme="https://yanjianzhang.github.io/tags/Machine-Learing/"/>
     
   </entry>
   
   <entry>
     <title>Tensorboard的使用</title>
-    <link href="https://dongfanker.github.io/2018/11/09/tensorboard/"/>
-    <id>https://dongfanker.github.io/2018/11/09/tensorboard/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/09/tensorboard/"/>
+    <id>https://yanjianzhang.github.io/2018/11/09/tensorboard/</id>
     <published>2018-11-08T23:44:02.000Z</published>
     <updated>2021-12-26T22:47:01.471Z</updated>
     
@@ -275,19 +275,19 @@
     
     
     
-    <category term="Deep Learning" scheme="https://dongfanker.github.io/categories/Deep-Learning/"/>
+    <category term="Deep Learning" scheme="https://yanjianzhang.github.io/categories/Deep-Learning/"/>
     
     
-    <category term="tensorflow" scheme="https://dongfanker.github.io/tags/tensorflow/"/>
+    <category term="tensorflow" scheme="https://yanjianzhang.github.io/tags/tensorflow/"/>
     
-    <category term="tensorboard" scheme="https://dongfanker.github.io/tags/tensorboard/"/>
+    <category term="tensorboard" scheme="https://yanjianzhang.github.io/tags/tensorboard/"/>
     
   </entry>
   
   <entry>
     <title>Tensorflow 基本概念</title>
-    <link href="https://dongfanker.github.io/2018/11/08/tfbase/"/>
-    <id>https://dongfanker.github.io/2018/11/08/tfbase/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/08/tfbase/"/>
+    <id>https://yanjianzhang.github.io/2018/11/08/tfbase/</id>
     <published>2018-11-07T23:44:02.000Z</published>
     <updated>2021-12-26T22:47:16.172Z</updated>
     
@@ -298,17 +298,17 @@
     
     
     
-    <category term="Deep Learning" scheme="https://dongfanker.github.io/categories/Deep-Learning/"/>
+    <category term="Deep Learning" scheme="https://yanjianzhang.github.io/categories/Deep-Learning/"/>
     
     
-    <category term="tensorflow" scheme="https://dongfanker.github.io/tags/tensorflow/"/>
+    <category term="tensorflow" scheme="https://yanjianzhang.github.io/tags/tensorflow/"/>
     
   </entry>
   
   <entry>
     <title>字符串和文本处理</title>
-    <link href="https://dongfanker.github.io/2018/11/07/cookbookString/"/>
-    <id>https://dongfanker.github.io/2018/11/07/cookbookString/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/07/cookbookString/"/>
+    <id>https://yanjianzhang.github.io/2018/11/07/cookbookString/</id>
     <published>2018-11-06T23:44:02.000Z</published>
     <updated>2021-12-26T22:46:42.727Z</updated>
     
@@ -319,17 +319,17 @@
     
     
     
-    <category term="Natural Language Processing" scheme="https://dongfanker.github.io/categories/Natural-Language-Processing/"/>
+    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/categories/Natural-Language-Processing/"/>
     
     
-    <category term="string process" scheme="https://dongfanker.github.io/tags/string-process/"/>
+    <category term="string process" scheme="https://yanjianzhang.github.io/tags/string-process/"/>
     
   </entry>
   
   <entry>
     <title>Good-Turing、Absolute、kneser-ney smooth</title>
-    <link href="https://dongfanker.github.io/2018/11/04/kneser-ney/"/>
-    <id>https://dongfanker.github.io/2018/11/04/kneser-ney/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/04/kneser-ney/"/>
+    <id>https://yanjianzhang.github.io/2018/11/04/kneser-ney/</id>
     <published>2018-11-03T23:44:02.000Z</published>
     <updated>2021-12-26T23:13:47.090Z</updated>
     
@@ -340,19 +340,19 @@
     
     
     
-    <category term="Natural Language Processing" scheme="https://dongfanker.github.io/categories/Natural-Language-Processing/"/>
+    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/categories/Natural-Language-Processing/"/>
     
     
-    <category term="smooth" scheme="https://dongfanker.github.io/tags/smooth/"/>
+    <category term="smooth" scheme="https://yanjianzhang.github.io/tags/smooth/"/>
     
-    <category term="kneser-ney" scheme="https://dongfanker.github.io/tags/kneser-ney/"/>
+    <category term="kneser-ney" scheme="https://yanjianzhang.github.io/tags/kneser-ney/"/>
     
   </entry>
   
   <entry>
     <title>Trie树</title>
-    <link href="https://dongfanker.github.io/2018/11/04/trie/"/>
-    <id>https://dongfanker.github.io/2018/11/04/trie/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/04/trie/"/>
+    <id>https://yanjianzhang.github.io/2018/11/04/trie/</id>
     <published>2018-11-03T23:44:02.000Z</published>
     <updated>2021-12-26T22:46:11.461Z</updated>
     
@@ -363,17 +363,17 @@
     
     
     
-    <category term="Data Structure" scheme="https://dongfanker.github.io/categories/Data-Structure/"/>
+    <category term="Data Structure" scheme="https://yanjianzhang.github.io/categories/Data-Structure/"/>
     
     
-    <category term="Trie" scheme="https://dongfanker.github.io/tags/Trie/"/>
+    <category term="Trie" scheme="https://yanjianzhang.github.io/tags/Trie/"/>
     
   </entry>
   
   <entry>
     <title>Vue项目bus与vuex的使用</title>
-    <link href="https://dongfanker.github.io/2018/09/03/vue-bus/"/>
-    <id>https://dongfanker.github.io/2018/09/03/vue-bus/</id>
+    <link href="https://yanjianzhang.github.io/2018/09/03/vue-bus/"/>
+    <id>https://yanjianzhang.github.io/2018/09/03/vue-bus/</id>
     <published>2018-09-02T22:44:02.000Z</published>
     <updated>2018-09-02T17:39:46.000Z</updated>
     
@@ -384,19 +384,19 @@
     
     
     
-    <category term="Vue" scheme="https://dongfanker.github.io/categories/Vue/"/>
+    <category term="Vue" scheme="https://yanjianzhang.github.io/categories/Vue/"/>
     
     
-    <category term="Vue" scheme="https://dongfanker.github.io/tags/Vue/"/>
+    <category term="Vue" scheme="https://yanjianzhang.github.io/tags/Vue/"/>
     
-    <category term="router" scheme="https://dongfanker.github.io/tags/router/"/>
+    <category term="router" scheme="https://yanjianzhang.github.io/tags/router/"/>
     
   </entry>
   
   <entry>
     <title>Vue项目路由传参</title>
-    <link href="https://dongfanker.github.io/2018/09/01/Vue-route-pamas/"/>
-    <id>https://dongfanker.github.io/2018/09/01/Vue-route-pamas/</id>
+    <link href="https://yanjianzhang.github.io/2018/09/01/Vue-route-pamas/"/>
+    <id>https://yanjianzhang.github.io/2018/09/01/Vue-route-pamas/</id>
     <published>2018-09-01T13:44:02.000Z</published>
     <updated>2018-09-01T11:22:38.000Z</updated>
     
@@ -407,19 +407,19 @@
     
     
     
-    <category term="Vue" scheme="https://dongfanker.github.io/categories/Vue/"/>
+    <category term="Vue" scheme="https://yanjianzhang.github.io/categories/Vue/"/>
     
     
-    <category term="Vue" scheme="https://dongfanker.github.io/tags/Vue/"/>
+    <category term="Vue" scheme="https://yanjianzhang.github.io/tags/Vue/"/>
     
-    <category term="router" scheme="https://dongfanker.github.io/tags/router/"/>
+    <category term="router" scheme="https://yanjianzhang.github.io/tags/router/"/>
     
   </entry>
   
   <entry>
     <title>Hackerrank Dicts 解题记录</title>
-    <link href="https://dongfanker.github.io/2018/08/31/dict_hr/"/>
-    <id>https://dongfanker.github.io/2018/08/31/dict_hr/</id>
+    <link href="https://yanjianzhang.github.io/2018/08/31/dict_hr/"/>
+    <id>https://yanjianzhang.github.io/2018/08/31/dict_hr/</id>
     <published>2018-08-31T00:44:02.000Z</published>
     <updated>2018-08-31T07:42:50.000Z</updated>
     
@@ -430,17 +430,17 @@
     
     
     
-    <category term="hackerrank" scheme="https://dongfanker.github.io/categories/hackerrank/"/>
+    <category term="hackerrank" scheme="https://yanjianzhang.github.io/categories/hackerrank/"/>
     
     
-    <category term="hackerrank" scheme="https://dongfanker.github.io/tags/hackerrank/"/>
+    <category term="hackerrank" scheme="https://yanjianzhang.github.io/tags/hackerrank/"/>
     
   </entry>
   
   <entry>
     <title>Hackerrank Arrays 解题记录</title>
-    <link href="https://dongfanker.github.io/2018/08/30/list_hr/"/>
-    <id>https://dongfanker.github.io/2018/08/30/list_hr/</id>
+    <link href="https://yanjianzhang.github.io/2018/08/30/list_hr/"/>
+    <id>https://yanjianzhang.github.io/2018/08/30/list_hr/</id>
     <published>2018-08-30T09:44:02.000Z</published>
     <updated>2018-08-31T06:07:22.000Z</updated>
     
@@ -451,10 +451,10 @@
     
     
     
-    <category term="hackerrank" scheme="https://dongfanker.github.io/categories/hackerrank/"/>
+    <category term="hackerrank" scheme="https://yanjianzhang.github.io/categories/hackerrank/"/>
     
     
-    <category term="hackerrank" scheme="https://dongfanker.github.io/tags/hackerrank/"/>
+    <category term="hackerrank" scheme="https://yanjianzhang.github.io/tags/hackerrank/"/>
     
   </entry>
   

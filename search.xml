@@ -99,9 +99,9 @@
       
         <tags>
             
-            <tag> Reinforcement Learning </tag>
-            
             <tag> Natural Language Processing </tag>
+            
+            <tag> Reinforcement Learning </tag>
             
             <tag> Adversarial Learning </tag>
             
@@ -189,33 +189,6 @@
     
     
     <entry>
-      <title>Indent problem! Latex and Python</title>
-      <link href="/2019/12/04/indent/"/>
-      <url>/2019/12/04/indent/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>When we cooperation with other within python, like in <a href="https://studio.dev.tencent.com/">Cloud studio</a> of tencent. We may find our indent is different with our friend when we input the code. You may make a file name  “.editorconfig” in the root directory.</p><pre><code>root = true[*]charset = utf-8indent_style = tabtab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>However, when the python code are already mixed with tabs and spaces. Don’t worry.<br>Select Pycharm -&gt; Edit -&gt; Convert Indents. You will transform the whole file quickly without manually do it.</p><h3 id="Matlab"><a href="#Matlab" class="headerlink" title="Matlab"></a>Matlab</h3><p>When you copy the code to texstudio(seems not happend in Overleaf), the indent will vanish. It is the problem of default setting of Texstudio.<br>Select Options -&gt; Configure Texstudio -&gt; Editor -&gt; Indentation mode. And choose Keep Indentation.<br>That will solve the problem.</p><p>&nbsp; &nbsp;<br>&nbsp; &nbsp;<br>&nbsp; &nbsp;</p><h5 id="Reference-Version-in-Chinese-from-Google-translation"><a href="#Reference-Version-in-Chinese-from-Google-translation" class="headerlink" title="Reference Version in Chinese from Google translation:"></a>Reference Version in Chinese from Google translation:</h5><h3 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h3><p>当我们在python中与其他人合作时，例如腾讯的[Cloud studio]（<a href="https://studio.dev.tencent.com/）。">https://studio.dev.tencent.com/）。</a> 输入代码时，我们可能会发现缩进与我们的朋友有所不同。 您可以在根目录创建一个文件名“ .editorconfig”。</p><pre><code>根=真[*]字符集= utf-8indent_style =制表符tab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>但是，当python代码已经与制表符和空格混合在一起时。 不用担心<br>选择Pycharm-&gt;编辑-&gt;转换缩进。 您无需手动进行操作即可快速转换整个文件。</p><h3 id="Matlab-1"><a href="#Matlab-1" class="headerlink" title="Matlab"></a>Matlab</h3><p>当您将代码复制到texstudio时（似乎在Overleaf中没有发生），缩进将消失。 这是Texstudio默认设置的问题。<br>选择选项-&gt;配置Texstudio-&gt;编辑器-&gt;缩进模式。 然后选择“保持缩进”。<br>这样可以解决问题。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Latex </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-            <tag> Latex </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Dropout of RNN, batch size, accumulation steps</title>
       <link href="/2019/12/04/encoder-decoder/"/>
       <url>/2019/12/04/encoder-decoder/</url>
@@ -235,6 +208,33 @@
             <tag> RNN </tag>
             
             <tag> Dropout </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Indent problem! Latex and Python</title>
+      <link href="/2019/12/04/indent/"/>
+      <url>/2019/12/04/indent/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>When we cooperation with other within python, like in <a href="https://studio.dev.tencent.com/">Cloud studio</a> of tencent. We may find our indent is different with our friend when we input the code. You may make a file name  “.editorconfig” in the root directory.</p><pre><code>root = true[*]charset = utf-8indent_style = tabtab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>However, when the python code are already mixed with tabs and spaces. Don’t worry.<br>Select Pycharm -&gt; Edit -&gt; Convert Indents. You will transform the whole file quickly without manually do it.</p><h3 id="Matlab"><a href="#Matlab" class="headerlink" title="Matlab"></a>Matlab</h3><p>When you copy the code to texstudio(seems not happend in Overleaf), the indent will vanish. It is the problem of default setting of Texstudio.<br>Select Options -&gt; Configure Texstudio -&gt; Editor -&gt; Indentation mode. And choose Keep Indentation.<br>That will solve the problem.</p><p>&nbsp; &nbsp;<br>&nbsp; &nbsp;<br>&nbsp; &nbsp;</p><h5 id="Reference-Version-in-Chinese-from-Google-translation"><a href="#Reference-Version-in-Chinese-from-Google-translation" class="headerlink" title="Reference Version in Chinese from Google translation:"></a>Reference Version in Chinese from Google translation:</h5><h3 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h3><p>当我们在python中与其他人合作时，例如腾讯的[Cloud studio]（<a href="https://studio.dev.tencent.com/）。">https://studio.dev.tencent.com/）。</a> 输入代码时，我们可能会发现缩进与我们的朋友有所不同。 您可以在根目录创建一个文件名“ .editorconfig”。</p><pre><code>根=真[*]字符集= utf-8indent_style =制表符tab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>但是，当python代码已经与制表符和空格混合在一起时。 不用担心<br>选择Pycharm-&gt;编辑-&gt;转换缩进。 您无需手动进行操作即可快速转换整个文件。</p><h3 id="Matlab-1"><a href="#Matlab-1" class="headerlink" title="Matlab"></a>Matlab</h3><p>当您将代码复制到texstudio时（似乎在Overleaf中没有发生），缩进将消失。 这是Texstudio默认设置的问题。<br>选择选项-&gt;配置Texstudio-&gt;编辑器-&gt;缩进模式。 然后选择“保持缩进”。<br>这样可以解决问题。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Latex </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Latex </tag>
             
         </tags>
       
@@ -576,31 +576,6 @@
     
     
     <entry>
-      <title>Vue项目v-for、v-model的使用</title>
-      <link href="/2018/08/23/Vueform/"/>
-      <url>/2018/08/23/Vueform/</url>
-      
-        <content type="html"><![CDATA[<h2 id="V-for"><a href="#V-for" class="headerlink" title="V-for"></a>V-for</h2><p>v-for既可以在data内的一个对象列表中循环，也可以在一个对象中循环</p><ol><li>当作为一个对象列表循环的时候，每个对象是一个字典，字典中的内容可以作为:key的循环索引</li><li>当对一个对象进行循环的时候，会对对想的属性的内容依次循环展示（并不算有什么价值）</li></ol><h3 id="v-for-响应的内容更新"><a href="#v-for-响应的内容更新" class="headerlink" title="v-for 响应的内容更新"></a>v-for 响应的内容更新</h3><p> 可以使用vm.$set(vm.items, indexOfItem, newValue)对items第i个内容进行修改，并且v-for会实时响应更新，如果是items[i]则不行</p><h3 id="利用过滤创立新数组"><a href="#利用过滤创立新数组" class="headerlink" title="利用过滤创立新数组"></a>利用过滤创立新数组</h3><p> 可以建立以下method</p><pre><code class="lang-js">methods: &#123;  even: function (numbers) &#123;    return numbers.filter(function (number) &#123;      return number % 2 === 0    &#125;)  &#125;&#125;</code></pre><p>当进行引用的时候就使用even(numbers)来代表新数组</p><h3 id="v-for-与-v-if-的合并使用"><a href="#v-for-与-v-if-的合并使用" class="headerlink" title="v-for 与 v-if 的合并使用"></a>v-for 与 v-if 的合并使用</h3><p>v-for 的优先级比 v-if 更高，这意味着 v-if 将分别重复运行于每个 v-for 循环中。也可以达到如上过滤效果。</p><h2 id="V-model"><a href="#V-model" class="headerlink" title="V-model"></a>V-model</h2><p>v-model对数据进行动态绑定。</p><ol><li>特别的，对于特定的小组件比如列表中的某个选项，可以通过value来绑定的值，当它被选定时就会加入数组列表之中</li><li>更特别的，对于checkbox来说，value就包含true和false</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Vue项目router注意事项</title>
       <link href="/2018/08/23/Vue-router/"/>
       <url>/2018/08/23/Vue-router/</url>
@@ -620,6 +595,31 @@
             <tag> Vue </tag>
             
             <tag> router </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue项目v-for、v-model的使用</title>
+      <link href="/2018/08/23/Vueform/"/>
+      <url>/2018/08/23/Vueform/</url>
+      
+        <content type="html"><![CDATA[<h2 id="V-for"><a href="#V-for" class="headerlink" title="V-for"></a>V-for</h2><p>v-for既可以在data内的一个对象列表中循环，也可以在一个对象中循环</p><ol><li>当作为一个对象列表循环的时候，每个对象是一个字典，字典中的内容可以作为:key的循环索引</li><li>当对一个对象进行循环的时候，会对对想的属性的内容依次循环展示（并不算有什么价值）</li></ol><h3 id="v-for-响应的内容更新"><a href="#v-for-响应的内容更新" class="headerlink" title="v-for 响应的内容更新"></a>v-for 响应的内容更新</h3><p> 可以使用vm.$set(vm.items, indexOfItem, newValue)对items第i个内容进行修改，并且v-for会实时响应更新，如果是items[i]则不行</p><h3 id="利用过滤创立新数组"><a href="#利用过滤创立新数组" class="headerlink" title="利用过滤创立新数组"></a>利用过滤创立新数组</h3><p> 可以建立以下method</p><pre><code class="lang-js">methods: &#123;  even: function (numbers) &#123;    return numbers.filter(function (number) &#123;      return number % 2 === 0    &#125;)  &#125;&#125;</code></pre><p>当进行引用的时候就使用even(numbers)来代表新数组</p><h3 id="v-for-与-v-if-的合并使用"><a href="#v-for-与-v-if-的合并使用" class="headerlink" title="v-for 与 v-if 的合并使用"></a>v-for 与 v-if 的合并使用</h3><p>v-for 的优先级比 v-if 更高，这意味着 v-if 将分别重复运行于每个 v-for 循环中。也可以达到如上过滤效果。</p><h2 id="V-model"><a href="#V-model" class="headerlink" title="V-model"></a>V-model</h2><p>v-model对数据进行动态绑定。</p><ol><li>特别的，对于特定的小组件比如列表中的某个选项，可以通过value来绑定的值，当它被选定时就会加入数组列表之中</li><li>更特别的，对于checkbox来说，value就包含true和false</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
             
         </tags>
       

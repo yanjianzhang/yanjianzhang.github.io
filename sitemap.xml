@@ -286,6 +286,13 @@
   </url>
   
   <url>
+    <loc>https://yanjianzhang.github.io/tags/Matlab/</loc>
+    <lastmod>2021-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://yanjianzhang.github.io/tags/Natural-Language-Processing/</loc>
     <lastmod>2021-12-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -294,13 +301,6 @@
   
   <url>
     <loc>https://yanjianzhang.github.io/tags/Reinforcement-Learning/</loc>
-    <lastmod>2021-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanjianzhang.github.io/tags/Matlab/</loc>
     <lastmod>2021-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -477,14 +477,14 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/categories/Reinforcement-Learning/</loc>
+    <loc>https://yanjianzhang.github.io/categories/Matlab/</loc>
     <lastmod>2021-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/categories/Matlab/</loc>
+    <loc>https://yanjianzhang.github.io/categories/Reinforcement-Learning/</loc>
     <lastmod>2021-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

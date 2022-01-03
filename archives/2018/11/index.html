@@ -9,7 +9,15 @@
 矩阵的转置使用单引号’A’标准矩阵乘法Ainv(A)元素级乘法.元素级运算.^3,.3,./3
 Matlab优先处理矩阵的列，如下幻方矩阵A = [16 3 2 13; 5 10 11 8; 9 6 7 12; 4 15 14 1]sum(A),为列相加得到的行向量结果为：ans =    34    34    34    34
 数组横向串联A = [A,A]纵向串联A = [A;A]复数i = sqrt(-1),可以直接写作i
-文本和..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/15/Matlab/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Machine%20Learing"><i class="tag post-item-tag">Machine Learing</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/09/measure/">机器学习评价指标</a></h2><time class="has-text-grey" datetime="2018-11-08T23:44:02.000Z">2018-11-09</time><p class="is-flex-grow-2 mt-2">分类问题的评价指标
+文本和..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/15/Matlab/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/tensorflow"><i class="tag post-item-tag">tensorflow</i></a><a href="/tags/tensorboard"><i class="tag post-item-tag">tensorboard</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/09/tensorboard/">Tensorboard的使用</a></h2><time class="has-text-grey" datetime="2018-11-08T23:44:02.000Z">2018-11-09</time><p class="is-flex-grow-2 mt-2">其中summary.image生成新的图像用于验证输入结果的准确与否summary.scalar用于记录准确率、损失等信息得到的结果需要进行 merged = tf.summary.merge_all()最后要sess.run([train_step,merged])
+import tensorflow as tf
+from tensorflow.examples.tutorials.mnist import input_data
+max_steps = 1000
+learning_rate = 0.001
+dropout = 0.9
+data_dir = &amp;quot;&amp;quot;
+log_dir = &amp;quot;C:/Users/dongfanker/Desktop/log&amp;quot;
+mnist = i..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/09/tensorboard/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Machine%20Learing"><i class="tag post-item-tag">Machine Learing</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/09/measure/">机器学习评价指标</a></h2><time class="has-text-grey" datetime="2018-11-08T23:44:02.000Z">2018-11-09</time><p class="is-flex-grow-2 mt-2">分类问题的评价指标
 
 
 
@@ -36,15 +44,7 @@ TN
 A(accurate) = \frac{TP+TN}{TP+TN+FP+FN}精确率是：它计算的是所有被检索到的item中,”应该被检索到”的item占的比例。
 P(percision) = \frac{TP}{TP+FP}召回率是：它计算的是所有检索到的item占所有”应该检索到的item”的比例。
 R(recall) = \frac{TP}{TP+FN}综合评价指标F-measure是精确度和召回率的综合
-F = \frac{(a^2+1)PR}..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/09/measure/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/tensorflow"><i class="tag post-item-tag">tensorflow</i></a><a href="/tags/tensorboard"><i class="tag post-item-tag">tensorboard</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/09/tensorboard/">Tensorboard的使用</a></h2><time class="has-text-grey" datetime="2018-11-08T23:44:02.000Z">2018-11-09</time><p class="is-flex-grow-2 mt-2">其中summary.image生成新的图像用于验证输入结果的准确与否summary.scalar用于记录准确率、损失等信息得到的结果需要进行 merged = tf.summary.merge_all()最后要sess.run([train_step,merged])
-import tensorflow as tf
-from tensorflow.examples.tutorials.mnist import input_data
-max_steps = 1000
-learning_rate = 0.001
-dropout = 0.9
-data_dir = &amp;quot;&amp;quot;
-log_dir = &amp;quot;C:/Users/dongfanker/Desktop/log&amp;quot;
-mnist = i..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/09/tensorboard/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/tensorflow"><i class="tag post-item-tag">tensorflow</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/08/tfbase/">Tensorflow 基本概念</a></h2><time class="has-text-grey" datetime="2018-11-07T23:44:02.000Z">2018-11-08</time><p class="is-flex-grow-2 mt-2">计算图Tensorflow程序的计算可分为两个阶段，在第一个阶段定义所有计算图中的计算，第二阶段为执行计算。下面定义一个计算，生成计算图
+F = \frac{(a^2+1)PR}..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/09/measure/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/tensorflow"><i class="tag post-item-tag">tensorflow</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/08/tfbase/">Tensorflow 基本概念</a></h2><time class="has-text-grey" datetime="2018-11-07T23:44:02.000Z">2018-11-08</time><p class="is-flex-grow-2 mt-2">计算图Tensorflow程序的计算可分为两个阶段，在第一个阶段定义所有计算图中的计算，第二阶段为执行计算。下面定义一个计算，生成计算图
 import tensorflow as tf
 a = tf.constant([1.0, 2.0], name=&amp;quot;a&amp;quot;)
 b = tf.constant([2.0, 3.0], name=&amp;quot;b&amp;quot;)
@@ -88,7 +88,7 @@ window.addEventListener('resize', $claudia.throttle(function () {
     var images = document.querySelectorAll('.js-img-fadeIn')
 
     images.forEach($claudia.blurBackdropImg)
-}, 150))</script></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/yanjianzhang"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/zhangyanjian"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/yanjianzhang"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/zhang.yanjian.7"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Yanjian Zhang 2022</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
+}, 150))</script></main><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
 
 window.addEventListener('resize', $claudia.throttle(function () {
     var images = document.querySelectorAll('.js-img-fadeIn')

@@ -99,9 +99,9 @@
       
         <tags>
             
-            <tag> Reinforcement Learning </tag>
-            
             <tag> Natural Language Processing </tag>
+            
+            <tag> Reinforcement Learning </tag>
             
             <tag> Adversarial Learning </tag>
             
@@ -189,33 +189,6 @@
     
     
     <entry>
-      <title>Dropout of RNN, batch size, accumulation steps</title>
-      <link href="/2019/12/04/encoder-decoder/"/>
-      <url>/2019/12/04/encoder-decoder/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>Srivastava et al. (2014) applied dropout to feed forward neural network’s and RBM’s and noted a probability of dropout around <strong>0.5 for hidden units and 0.2 for inputs</strong> worked well for a variety of tasks.</p><p>Reference: <a href="https://medium.com/@bingobee01/a-review-of-dropout-as-applied-to-rnns-72e79ecd5b7b">A review of Dropout as applied to RNNs</a></p><p>When I apply the 0.5 for hidden units and 0.2 for inputs, it works well. But it is not the case in decoder. <strong>In decoder, I would suggest not to use dropout</strong>.</p><h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><p>Suggest &lt;=32， See <a href="https://www.cs.cmu.edu/~muli/file/minibatch_sgd.pdf">Efficient Mini-batch Training for Stochastic Optimization</a> and <a href="https://svail.github.io/rnn_perf/">this RNN study</a></p><h3 id="Accumulation-steps"><a href="#Accumulation-steps" class="headerlink" title="Accumulation_steps"></a>Accumulation_steps</h3><p>Have the same function like batch size, but it can be use when Graphics memory is not enough.</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Deep Learning </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> RNN </tag>
-            
-            <tag> Dropout </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Indent problem! Latex and Python</title>
       <link href="/2019/12/04/indent/"/>
       <url>/2019/12/04/indent/</url>
@@ -235,6 +208,33 @@
             <tag> Python </tag>
             
             <tag> Latex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Dropout of RNN, batch size, accumulation steps</title>
+      <link href="/2019/12/04/encoder-decoder/"/>
+      <url>/2019/12/04/encoder-decoder/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>Srivastava et al. (2014) applied dropout to feed forward neural network’s and RBM’s and noted a probability of dropout around <strong>0.5 for hidden units and 0.2 for inputs</strong> worked well for a variety of tasks.</p><p>Reference: <a href="https://medium.com/@bingobee01/a-review-of-dropout-as-applied-to-rnns-72e79ecd5b7b">A review of Dropout as applied to RNNs</a></p><p>When I apply the 0.5 for hidden units and 0.2 for inputs, it works well. But it is not the case in decoder. <strong>In decoder, I would suggest not to use dropout</strong>.</p><h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><p>Suggest &lt;=32， See <a href="https://www.cs.cmu.edu/~muli/file/minibatch_sgd.pdf">Efficient Mini-batch Training for Stochastic Optimization</a> and <a href="https://svail.github.io/rnn_perf/">this RNN study</a></p><h3 id="Accumulation-steps"><a href="#Accumulation-steps" class="headerlink" title="Accumulation_steps"></a>Accumulation_steps</h3><p>Have the same function like batch size, but it can be use when Graphics memory is not enough.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Deep Learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RNN </tag>
+            
+            <tag> Dropout </tag>
             
         </tags>
       

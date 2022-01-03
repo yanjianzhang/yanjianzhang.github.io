@@ -279,28 +279,7 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/tags/AI/</loc>
-    <lastmod>2022-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanjianzhang.github.io/tags/Commonsense/</loc>
-    <lastmod>2022-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://yanjianzhang.github.io/tags/Natural-Language-Processing/</loc>
-    <lastmod>2022-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanjianzhang.github.io/tags/Reinforcement-Learning/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -321,7 +300,28 @@
   </url>
   
   <url>
+    <loc>https://yanjianzhang.github.io/tags/Reinforcement-Learning/</loc>
+    <lastmod>2022-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://yanjianzhang.github.io/tags/Adversarial-Learning/</loc>
+    <lastmod>2022-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjianzhang.github.io/tags/AI/</loc>
+    <lastmod>2022-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjianzhang.github.io/tags/Commonsense/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -349,14 +349,14 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/tags/RNN/</loc>
+    <loc>https://yanjianzhang.github.io/tags/jupyter-notebook/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/tags/Dropout/</loc>
+    <loc>https://yanjianzhang.github.io/tags/Conda/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -377,42 +377,21 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/tags/jupyter-notebook/</loc>
+    <loc>https://yanjianzhang.github.io/tags/RNN/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/tags/Conda/</loc>
+    <loc>https://yanjianzhang.github.io/tags/Dropout/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/tags/smooth/</loc>
-    <lastmod>2022-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanjianzhang.github.io/tags/kneser-ney/</loc>
-    <lastmod>2022-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanjianzhang.github.io/tags/Spring/</loc>
-    <lastmod>2022-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanjianzhang.github.io/tags/Spring-Boot/</loc>
+    <loc>https://yanjianzhang.github.io/tags/Machine-Learing/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -433,6 +412,27 @@
   </url>
   
   <url>
+    <loc>https://yanjianzhang.github.io/tags/proxy/</loc>
+    <lastmod>2022-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjianzhang.github.io/tags/smooth/</loc>
+    <lastmod>2022-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjianzhang.github.io/tags/kneser-ney/</loc>
+    <lastmod>2022-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://yanjianzhang.github.io/tags/tensorflow/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -447,13 +447,6 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/tags/proxy/</loc>
-    <lastmod>2022-01-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://yanjianzhang.github.io/tags/Trie/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -461,7 +454,14 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/tags/Machine-Learing/</loc>
+    <loc>https://yanjianzhang.github.io/tags/Spring/</loc>
+    <lastmod>2022-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjianzhang.github.io/tags/Spring-Boot/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -484,14 +484,14 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/categories/Reinforcement-Learning/</loc>
+    <loc>https://yanjianzhang.github.io/categories/Vue/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/categories/Vue/</loc>
+    <loc>https://yanjianzhang.github.io/categories/Reinforcement-Learning/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -512,7 +512,7 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/categories/Deep-Learning/</loc>
+    <loc>https://yanjianzhang.github.io/categories/jupyter-notebook/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -526,14 +526,14 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/categories/jupyter-notebook/</loc>
+    <loc>https://yanjianzhang.github.io/categories/Deep-Learning/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/categories/Spring/</loc>
+    <loc>https://yanjianzhang.github.io/categories/Machine-Learing/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -554,7 +554,7 @@
   </url>
   
   <url>
-    <loc>https://yanjianzhang.github.io/categories/Machine-Learing/</loc>
+    <loc>https://yanjianzhang.github.io/categories/Spring/</loc>
     <lastmod>2022-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

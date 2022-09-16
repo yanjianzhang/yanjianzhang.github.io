@@ -6,7 +6,7 @@
   <link href="https://yanjianzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://yanjianzhang.github.io/"/>
-  <updated>2019-04-27T12:21:10.000Z</updated>
+  <updated>2022-09-16T09:21:33.673Z</updated>
   <id>https://yanjianzhang.github.io/</id>
   
   <author>
@@ -17,32 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Spring, Spring Boot, Restful, Docker</title>
-    <link href="https://yanjianzhang.github.io/2021/12/26/spring/"/>
-    <id>https://yanjianzhang.github.io/2021/12/26/spring/</id>
-    <published>2021-12-26T13:57:58.000Z</published>
-    <updated>2019-04-27T12:21:10.000Z</updated>
+    <title>Pre-order traversal and Recursive</title>
+    <link href="https://yanjianzhang.github.io/2022/09/16/recursive_20220916/"/>
+    <id>https://yanjianzhang.github.io/2022/09/16/recursive_20220916/</id>
+    <published>2022-09-15T22:00:00.000Z</published>
+    <updated>2022-09-16T09:21:33.673Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="一、Restful"><a href="#一、Restful" class="headerlink" title="一、Restful"></a>一、Restful</h3><p>一个程序规范，一般会与http联系在一起。能够增加url的复用性，降低url的复杂性。<br>与GET、POST、PUT、DELETE等操作配合实现交互。</p><h3 id="二、Spring"><a href="#二、Spring" class="headerlink" title="二、Spring"></a>二、Spring</h3><p>一个JAVA框架, 通过高内聚的代码细节的隐藏，使得用户代码更加松耦合。</p><h4 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h4><p>Spring的重要逻辑之一，<strong>反转控制</strong>，将对象实例化的控制转移到外部代码中实现。常见的实现为DI(依赖注入)，外部代码将依赖对象产生后注入到内部代码里。<br>可以通过注解@autowired实现。</p><h4 id="Bean"><a href="#Bean" class="headerlink" title="Bean"></a>Bean</h4><p>Spring的重要概念之一，是<strong>能够暴露给Spring框架的特殊的类</strong>。可以通过注解@Controller、@Service、@repository产生，反转控制都是由Bean来完成的</p><h4 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h4><p>Spring的重要程序设计思想，<strong>面向切片编程</strong>，就是将一系列通用逻辑提取出来，进行复用。</p><h3 id="三、Spring-Boot"><a href="#三、Spring-Boot" class="headerlink" title="三、Spring Boot"></a>三、Spring Boot</h3><p>将Tomcat，Jetty等容器封装起来，使用application.yml文件控制，免去了大量使用中的初始化操作，使得Spring更易于使用。</p><h3 id="四、Docker"><a href="#四、Docker" class="headerlink" title="四、Docker"></a>四、Docker</h3><p>与虚拟机相比，虚拟机是将虚拟机系统与宿主操作系统分离，使用虚拟监视器来分隔，而Docker共用宿主的操作系统，因而不支持跨平台，但提供相对隔离的环境，同时有更高的效率。</p>]]></content>
-    
-    
-    <summary type="html">Spring, Spring Boot, Restful，Docker的要点梳理</summary>
+    <content type="html"><![CDATA[<p>今天重新回顾了深度优先搜索和递归，<br>突然发现递归过程可以看成是对于程序数的先序遍历,中序遍历和后序遍历<br>比方说以下例子</p><pre><code class="lang-python">def DFS()    print(1)        # node itself    DFS()           # left tree    DFS()           # right tree</code></pre><p>以上例子就可以看成先序遍历的二叉树</p><pre><code class="lang-python">def DFS()    DFS()           # left tree    print(1)        # node itself    DFS()           # right tree</code></pre><p>以上例子就可以看成中序遍历的二叉树</p><p>同理还可以有多叉树等等，用这样的思路思考递归运算的程序复杂度就可以参考遍历树的复杂度来求解了</p>]]></content>
     
     
+    <summary type="html">先序遍历与递归调用的关系</summary>
     
-    <category term="Spring" scheme="https://yanjianzhang.github.io/categories/Spring/"/>
     
     
-    <category term="Spring" scheme="https://yanjianzhang.github.io/tags/Spring/"/>
+    <category term="Programming" scheme="https://yanjianzhang.github.io/categories/Programming/"/>
     
-    <category term="Spring Boot" scheme="https://yanjianzhang.github.io/tags/Spring-Boot/"/>
+    
+    <category term="Programming" scheme="https://yanjianzhang.github.io/tags/Programming/"/>
     
   </entry>
   
   <entry>
     <title>常见NLP工具包</title>
-    <link href="https://yanjianzhang.github.io/2020/02/19/NLP_toolkit/"/>
-    <id>https://yanjianzhang.github.io/2020/02/19/NLP_toolkit/</id>
+    <link href="https://yanjianzhang.github.io/2020/02/18/NLP_toolkit/"/>
+    <id>https://yanjianzhang.github.io/2020/02/18/NLP_toolkit/</id>
     <published>2020-02-18T16:00:00.000Z</published>
     <updated>2020-02-19T08:58:44.000Z</updated>
     
@@ -62,8 +60,8 @@
   
   <entry>
     <title>jupyter notebook 中配置 conda python kernel</title>
-    <link href="https://yanjianzhang.github.io/2020/02/19/ipykernel/"/>
-    <id>https://yanjianzhang.github.io/2020/02/19/ipykernel/</id>
+    <link href="https://yanjianzhang.github.io/2020/02/18/ipykernel/"/>
+    <id>https://yanjianzhang.github.io/2020/02/18/ipykernel/</id>
     <published>2020-02-18T16:00:00.000Z</published>
     <updated>2020-02-19T07:40:26.000Z</updated>
     
@@ -85,8 +83,8 @@
   
   <entry>
     <title>NLG里的强化与对抗</title>
-    <link href="https://yanjianzhang.github.io/2020/02/11/RLSeq2Seq/"/>
-    <id>https://yanjianzhang.github.io/2020/02/11/RLSeq2Seq/</id>
+    <link href="https://yanjianzhang.github.io/2020/02/10/RLSeq2Seq/"/>
+    <id>https://yanjianzhang.github.io/2020/02/10/RLSeq2Seq/</id>
     <published>2020-02-10T16:00:00.000Z</published>
     <updated>2021-12-26T22:45:08.612Z</updated>
     
@@ -110,8 +108,8 @@
   
   <entry>
     <title>强化学习精要总结（基础）</title>
-    <link href="https://yanjianzhang.github.io/2019/12/29/RL/"/>
-    <id>https://yanjianzhang.github.io/2019/12/29/RL/</id>
+    <link href="https://yanjianzhang.github.io/2019/12/28/RL/"/>
+    <id>https://yanjianzhang.github.io/2019/12/28/RL/</id>
     <published>2019-12-28T16:00:00.000Z</published>
     <updated>2020-02-19T07:41:44.000Z</updated>
     
@@ -131,8 +129,8 @@
   
   <entry>
     <title>Top essays by scientists in 2019</title>
-    <link href="https://yanjianzhang.github.io/2019/12/27/doctor/"/>
-    <id>https://yanjianzhang.github.io/2019/12/27/doctor/</id>
+    <link href="https://yanjianzhang.github.io/2019/12/26/doctor/"/>
+    <id>https://yanjianzhang.github.io/2019/12/26/doctor/</id>
     <published>2019-12-26T16:00:00.000Z</published>
     <updated>2019-12-27T06:00:36.000Z</updated>
     
@@ -152,8 +150,8 @@
   
   <entry>
     <title>Commonsense Validation and Explanation</title>
-    <link href="https://yanjianzhang.github.io/2019/12/21/Commonsence/"/>
-    <id>https://yanjianzhang.github.io/2019/12/21/Commonsence/</id>
+    <link href="https://yanjianzhang.github.io/2019/12/20/Commonsence/"/>
+    <id>https://yanjianzhang.github.io/2019/12/20/Commonsence/</id>
     <published>2019-12-20T16:00:00.000Z</published>
     <updated>2021-12-26T22:45:49.318Z</updated>
     
@@ -175,8 +173,8 @@
   
   <entry>
     <title>Dropout of RNN, batch size, accumulation steps</title>
-    <link href="https://yanjianzhang.github.io/2019/12/04/encoder-decoder/"/>
-    <id>https://yanjianzhang.github.io/2019/12/04/encoder-decoder/</id>
+    <link href="https://yanjianzhang.github.io/2019/12/03/encoder-decoder/"/>
+    <id>https://yanjianzhang.github.io/2019/12/03/encoder-decoder/</id>
     <published>2019-12-03T16:00:00.000Z</published>
     <updated>2021-12-26T22:48:52.876Z</updated>
     
@@ -198,8 +196,8 @@
   
   <entry>
     <title>Indent problem! Latex and Python</title>
-    <link href="https://yanjianzhang.github.io/2019/12/04/indent/"/>
-    <id>https://yanjianzhang.github.io/2019/12/04/indent/</id>
+    <link href="https://yanjianzhang.github.io/2019/12/03/indent/"/>
+    <id>https://yanjianzhang.github.io/2019/12/03/indent/</id>
     <published>2019-12-03T16:00:00.000Z</published>
     <updated>2021-12-26T22:50:53.987Z</updated>
     
@@ -221,8 +219,8 @@
   
   <entry>
     <title>Matlab的使用笔记</title>
-    <link href="https://yanjianzhang.github.io/2018/11/15/Matlab/"/>
-    <id>https://yanjianzhang.github.io/2018/11/15/Matlab/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/14/Matlab/"/>
+    <id>https://yanjianzhang.github.io/2018/11/14/Matlab/</id>
     <published>2018-11-14T16:44:02.000Z</published>
     <updated>2018-11-15T16:59:48.000Z</updated>
     
@@ -242,8 +240,8 @@
   
   <entry>
     <title>机器学习评价指标</title>
-    <link href="https://yanjianzhang.github.io/2018/11/09/measure/"/>
-    <id>https://yanjianzhang.github.io/2018/11/09/measure/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/08/measure/"/>
+    <id>https://yanjianzhang.github.io/2018/11/08/measure/</id>
     <published>2018-11-08T16:44:02.000Z</published>
     <updated>2021-12-26T22:47:29.149Z</updated>
     
@@ -263,8 +261,8 @@
   
   <entry>
     <title>Tensorboard的使用</title>
-    <link href="https://yanjianzhang.github.io/2018/11/09/tensorboard/"/>
-    <id>https://yanjianzhang.github.io/2018/11/09/tensorboard/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/08/tensorboard/"/>
+    <id>https://yanjianzhang.github.io/2018/11/08/tensorboard/</id>
     <published>2018-11-08T16:44:02.000Z</published>
     <updated>2021-12-26T22:47:01.471Z</updated>
     
@@ -286,8 +284,8 @@
   
   <entry>
     <title>Tensorflow 基本概念</title>
-    <link href="https://yanjianzhang.github.io/2018/11/08/tfbase/"/>
-    <id>https://yanjianzhang.github.io/2018/11/08/tfbase/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/07/tfbase/"/>
+    <id>https://yanjianzhang.github.io/2018/11/07/tfbase/</id>
     <published>2018-11-07T16:44:02.000Z</published>
     <updated>2021-12-26T22:47:16.172Z</updated>
     
@@ -307,8 +305,8 @@
   
   <entry>
     <title>字符串和文本处理</title>
-    <link href="https://yanjianzhang.github.io/2018/11/07/cookbookString/"/>
-    <id>https://yanjianzhang.github.io/2018/11/07/cookbookString/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/06/cookbookString/"/>
+    <id>https://yanjianzhang.github.io/2018/11/06/cookbookString/</id>
     <published>2018-11-06T16:44:02.000Z</published>
     <updated>2021-12-26T22:46:42.727Z</updated>
     
@@ -328,8 +326,8 @@
   
   <entry>
     <title>Trie树</title>
-    <link href="https://yanjianzhang.github.io/2018/11/04/trie/"/>
-    <id>https://yanjianzhang.github.io/2018/11/04/trie/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/03/trie/"/>
+    <id>https://yanjianzhang.github.io/2018/11/03/trie/</id>
     <published>2018-11-03T16:44:02.000Z</published>
     <updated>2021-12-26T22:46:11.461Z</updated>
     
@@ -349,8 +347,8 @@
   
   <entry>
     <title>Good-Turing、Absolute、kneser-ney smooth</title>
-    <link href="https://yanjianzhang.github.io/2018/11/04/kneser-ney/"/>
-    <id>https://yanjianzhang.github.io/2018/11/04/kneser-ney/</id>
+    <link href="https://yanjianzhang.github.io/2018/11/03/kneser-ney/"/>
+    <id>https://yanjianzhang.github.io/2018/11/03/kneser-ney/</id>
     <published>2018-11-03T16:44:02.000Z</published>
     <updated>2021-12-26T23:13:47.090Z</updated>
     
@@ -371,9 +369,32 @@
   </entry>
   
   <entry>
+    <title>Spring, Spring Boot, Restful, Docker</title>
+    <link href="https://yanjianzhang.github.io/2018/09/16/spring/"/>
+    <id>https://yanjianzhang.github.io/2018/09/16/spring/</id>
+    <published>2018-09-15T22:00:00.000Z</published>
+    <updated>2022-09-16T09:22:48.677Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、Restful"><a href="#一、Restful" class="headerlink" title="一、Restful"></a>一、Restful</h3><p>一个程序规范，一般会与http联系在一起。能够增加url的复用性，降低url的复杂性。<br>与GET、POST、PUT、DELETE等操作配合实现交互。</p><h3 id="二、Spring"><a href="#二、Spring" class="headerlink" title="二、Spring"></a>二、Spring</h3><p>一个JAVA框架, 通过高内聚的代码细节的隐藏，使得用户代码更加松耦合。</p><h4 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h4><p>Spring的重要逻辑之一，<strong>反转控制</strong>，将对象实例化的控制转移到外部代码中实现。常见的实现为DI(依赖注入)，外部代码将依赖对象产生后注入到内部代码里。<br>可以通过注解@autowired实现。</p><h4 id="Bean"><a href="#Bean" class="headerlink" title="Bean"></a>Bean</h4><p>Spring的重要概念之一，是<strong>能够暴露给Spring框架的特殊的类</strong>。可以通过注解@Controller、@Service、@repository产生，反转控制都是由Bean来完成的</p><h4 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h4><p>Spring的重要程序设计思想，<strong>面向切片编程</strong>，就是将一系列通用逻辑提取出来，进行复用。</p><h3 id="三、Spring-Boot"><a href="#三、Spring-Boot" class="headerlink" title="三、Spring Boot"></a>三、Spring Boot</h3><p>将Tomcat，Jetty等容器封装起来，使用application.yml文件控制，免去了大量使用中的初始化操作，使得Spring更易于使用。</p><h3 id="四、Docker"><a href="#四、Docker" class="headerlink" title="四、Docker"></a>四、Docker</h3><p>与虚拟机相比，虚拟机是将虚拟机系统与宿主操作系统分离，使用虚拟监视器来分隔，而Docker共用宿主的操作系统，因而不支持跨平台，但提供相对隔离的环境，同时有更高的效率。</p>]]></content>
+    
+    
+    <summary type="html">Spring, Spring Boot, Restful，Docker的要点梳理</summary>
+    
+    
+    
+    <category term="Spring" scheme="https://yanjianzhang.github.io/categories/Spring/"/>
+    
+    
+    <category term="Spring" scheme="https://yanjianzhang.github.io/tags/Spring/"/>
+    
+    <category term="Spring Boot" scheme="https://yanjianzhang.github.io/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue项目bus与vuex的使用</title>
-    <link href="https://yanjianzhang.github.io/2018/09/03/vue-bus/"/>
-    <id>https://yanjianzhang.github.io/2018/09/03/vue-bus/</id>
+    <link href="https://yanjianzhang.github.io/2018/09/02/vue-bus/"/>
+    <id>https://yanjianzhang.github.io/2018/09/02/vue-bus/</id>
     <published>2018-09-02T16:44:02.000Z</published>
     <updated>2018-09-02T17:39:46.000Z</updated>
     
@@ -418,8 +439,8 @@
   
   <entry>
     <title>Hackerrank Dicts 解题记录</title>
-    <link href="https://yanjianzhang.github.io/2018/08/31/dict_hr/"/>
-    <id>https://yanjianzhang.github.io/2018/08/31/dict_hr/</id>
+    <link href="https://yanjianzhang.github.io/2018/08/30/dict_hr/"/>
+    <id>https://yanjianzhang.github.io/2018/08/30/dict_hr/</id>
     <published>2018-08-30T18:44:02.000Z</published>
     <updated>2018-08-31T07:42:50.000Z</updated>
     
@@ -427,27 +448,6 @@
     
     
     <summary type="html">对HackerRank Interview preparation中Dict组中的题目进行分析记录</summary>
-    
-    
-    
-    <category term="hackerrank" scheme="https://yanjianzhang.github.io/categories/hackerrank/"/>
-    
-    
-    <category term="hackerrank" scheme="https://yanjianzhang.github.io/tags/hackerrank/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hackerrank Arrays 解题记录</title>
-    <link href="https://yanjianzhang.github.io/2018/08/30/list_hr/"/>
-    <id>https://yanjianzhang.github.io/2018/08/30/list_hr/</id>
-    <published>2018-08-30T03:44:02.000Z</published>
-    <updated>2018-08-31T06:07:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="New-Year-Chaos"><a href="#New-Year-Chaos" class="headerlink" title="New Year Chaos"></a><a href="https://www.hackerrank.com/challenges/new-year-chaos/">New Year Chaos</a></h3><p>看到这道题目最初使用了冒泡排序的方法，发现在第6-9组测试中出现了超时</p><pre><code class="lang-python">def minimumBribes(q):    time = 0    for i,v in enumerate(q):        if (v-1)-i &gt; 2:                print(&quot;Too chaotic&quot;)            return    lastIndex =  len(q)-1    for j in range(0,lastIndex):        for i in range(0,lastIndex):            if q[i]&gt;q[i+1]:                q[i+1],q[i] = q[i],q[i+1]                time = time+1    if q ==list(range(1,lastIndex+2)):        print(str(time))        return</code></pre><p>回头观察发现数据的复杂度达到了10<sup>5</sup>，时间仅仅允许为10秒，而cpu最快能够达到每秒操作1亿次，因此至少需要100秒才能执行完毕，明显超时</p><p>之后尝试使用归并排序来计算，当右边先添加到序列中的时候会统计左边还剩下的元素，这一样会出现有时左边的元素出现得过多然后直接移动很多位的情况，此时算法因为没有考虑两位的限制而出错。结果出现小的样本都通过了，大的样本却没有通过的情况</p><pre><code class="lang-python">def merge(a,b):    c = []    h = j = 0    global time    while j &lt; len(a) and h &lt; len(b):        if a[j] &lt; b[h]:            c.append(a[j])            j += 1               time = time + (len(a)-j)            c.append(b[h])            h += 1    if j == len(a):        for i in b[h:]:            c.append(i)    else:        for i in a[j:]:            c.append(i)    return cdef merge_sort(lists):    if len(lists) &lt;= 1:        return lists    middle = int(len(lists)/2)    left = merge_sort(lists[:middle])    right = merge_sort(lists[middle:])    return merge(left, right)def minimumBribes(q):    global time    for i,v in enumerate(q):        if (v-1)-i &gt; 2:                print(&quot;Too chaotic&quot;)            return    merge_sort(q)    print(str(time))    return</code></pre><p>尝试解题失败，以下是对正确答案的观察，令我非常惊奇的是在数据量非常大的情况下python的字典依然正常运行而且没有出现Runtime Error<br>以下解题的思路是当存在可以交换的项的时候，继续保持大循环的执行，而不是使用外层n的大循环来绑定。导致了循环复杂度不再是n<sup>2</sup>,这属于什么排序我说不清楚，应该来说，这个算法利用了元素本身并没有过大位移的特征降下了复杂度</p><pre><code class="lang-python">b = &#123;&#125;r = 0cont = Truewhile cont:    cont = False    for i in range(len(q)-1):        if q[i] &gt; q[i+1]:            if not q[i] in b:                b[q[i]] = 0            b[q[i]] += 1            if b[q[i]] &gt; 2:                cont = False                r = &quot;Too chaotic&quot;                break            print(q)            q[i], q[i+1] = q[i+1], q[i]            r += 1            cont = True            print(b)print(r)#对其结果进行打印观察如下[1, 2, 5, 3, 7, 8, 6, 4]&#123;5: 1&#125;[1, 2, 3, 5, 7, 8, 6, 4]&#123;5: 1, 8: 1&#125;[1, 2, 3, 5, 7, 6, 8, 4]&#123;5: 1, 8: 2&#125;[1, 2, 3, 5, 7, 6, 4, 8]&#123;5: 1, 8: 2, 7: 1&#125;[1, 2, 3, 5, 6, 7, 4, 8]&#123;5: 1, 8: 2, 7: 2&#125;[1, 2, 3, 5, 6, 4, 7, 8]&#123;5: 1, 8: 2, 7: 2, 6: 1&#125;[1, 2, 3, 5, 4, 6, 7, 8]&#123;5: 2, 8: 2, 7: 2, 6: 1&#125;7</code></pre><p>python标准答案给出的逻辑就比较难以看懂,而C++的代码就是利用BIT(二叉索引树)的方法来解决，具体二叉索引树是什么来日再研究<br><a href="https://www.cnblogs.com/gangding/articles/4765885.html">区间信息的维护与查询（一）——二叉索引树（Fenwick树、树状数组）</a></p><pre><code class="lang-C">#include &lt;bits/stdc++.h&gt;using namespace std;const int maxN=2e5+5;int n,a[maxN],ans,T,k;int bit[maxN];int invalid;void del() &#123;    for (k=0;k&lt;maxN;k++) &#123;        bit[k]=0;            &#125;    ans = 0;    invalid = 0;&#125;void upd(int x) &#123;    for (k = x; k &lt; maxN; k += (k &amp; (-k))) &#123;        bit[k]++;    &#125;&#125;int get_sum(int x) &#123;    int p = 0;    for (k = x; k &gt; 0; k -= (k &amp; (-k)))        p += bit[k];        return p;&#125;int main() &#123;    scanf(&quot;%d&quot;, &amp;T);    while (T--) &#123;        del();        scanf(&quot;%d&quot;, &amp;n);        for (int i = 0; i &lt; n; i++) &#123;            scanf(&quot;%d&quot;, &amp;a[i]);        &#125;        for (int i = n - 1; i &gt;= 0; i--) &#123;            if (get_sum(a[i]) &gt; 2)                invalid++;            ans += get_sum(a[i]);            upd(a[i]);        &#125;        if (invalid &gt; 0) &#123;            printf(&quot;Too chaotic\n&quot;);        &#125; else &#123;            printf(&quot;%d\n&quot;, ans);        &#125;   &#125;   return 0;&#125;</code></pre><hr><h3 id="Minimum-Swaps-2"><a href="#Minimum-Swaps-2" class="headerlink" title="Minimum Swaps 2"></a><a href="https://www.hackerrank.com/challenges/minimum-swaps-2">Minimum Swaps 2</a></h3><p>本题需要找到最少的交换方式，可以知道，在正确的排序下，如果一个元素不在正确的排序的索引位置，那么它正确的索引位置上元素肯定是不正确的。<br>那么只需要去和这个位置的元素交换，就能够逐步将每个位置排好了<br>需要注意的点是，在每次交换元素时，相应的索引需要立即交换</p><pre><code class="lang-python">def minimumSwaps(arr):    rightArr = sorted(arr)    Idx = &#123;v: i for i,v in enumerate(arr)&#125;    count = 0    for i,v in enumerate(arr):        rightNum = rightArr[i]        if v != rightNum:            arr[i],arr[Idx[rightNum]] = arr[Idx[rightNum]],arr[i]            Idx[v],Idx[rightNum] = Idx[rightNum],Idx[v]            count = count + 1    return count</code></pre>]]></content>
-    
-    
-    <summary type="html">对HackerRank Interview preparation中Array组中的题目进行分析记录</summary>
     
     
     

@@ -38,6 +38,29 @@
   </entry>
   
   <entry>
+    <title>conda, pip, jupyter</title>
+    <link href="https://yanjianzhang.github.io/2021/02/19/ipykernel/"/>
+    <id>https://yanjianzhang.github.io/2021/02/19/ipykernel/</id>
+    <published>2021-02-18T23:00:00.000Z</published>
+    <updated>2022-10-24T08:15:12.364Z</updated>
+    
+    <content type="html"><![CDATA[<p>Conda 环境配置</p><pre><code class="lang-shell">conda create --name &lt;env_name&gt; &lt;package_name&gt;conda create --name tf python=3.6source activate tf</code></pre><p>Conda 环境中安装 jupyter notebook 内核</p><pre><code class="lang-shell">conda install nb_condapip install ipykernelpython -m ipykernel install --user --name tf --display-name tf</code></pre><p>pip 在 Mac Conda环境中 会出现与当前python不一致情况，使用</p><pre><code class="lang-shell">python -m pip install package_name</code></pre><p>而不是</p><pre><code class="lang-shell">pip install package_name</code></pre>]]></content>
+    
+    
+    <summary type="html">Conda python in jupyter notebook</summary>
+    
+    
+    
+    <category term="environment" scheme="https://yanjianzhang.github.io/categories/environment/"/>
+    
+    
+    <category term="Conda" scheme="https://yanjianzhang.github.io/tags/Conda/"/>
+    
+    <category term="Jupyter notebook" scheme="https://yanjianzhang.github.io/tags/Jupyter-notebook/"/>
+    
+  </entry>
+  
+  <entry>
     <title>常见NLP工具包</title>
     <link href="https://yanjianzhang.github.io/2020/02/19/NLP_toolkit/"/>
     <id>https://yanjianzhang.github.io/2020/02/19/NLP_toolkit/</id>
@@ -55,29 +78,6 @@
     
     
     <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/tags/Natural-Language-Processing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jupyter notebook 中配置 conda python kernel</title>
-    <link href="https://yanjianzhang.github.io/2020/02/19/ipykernel/"/>
-    <id>https://yanjianzhang.github.io/2020/02/19/ipykernel/</id>
-    <published>2020-02-18T23:00:00.000Z</published>
-    <updated>2020-02-19T07:40:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Conda 环境配置</p><pre><code class="lang-shell">conda create --name &lt;env_name&gt; &lt;package_name&gt;conda create --name tf python=3.6source activate tf</code></pre><p>Conda 环境中安装 jupyter notebook 内核</p><pre><code class="lang-shell">conda install nb_condapip install ipykernelpython -m ipykernel install --user --name tf --display-name tf</code></pre>]]></content>
-    
-    
-    <summary type="html">Conda python in jupyter notebook</summary>
-    
-    
-    
-    <category term="jupyter notebook" scheme="https://yanjianzhang.github.io/categories/jupyter-notebook/"/>
-    
-    
-    <category term="jupyter notebook" scheme="https://yanjianzhang.github.io/tags/jupyter-notebook/"/>
-    
-    <category term="Conda" scheme="https://yanjianzhang.github.io/tags/Conda/"/>
     
   </entry>
   

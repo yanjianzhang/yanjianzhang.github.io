@@ -29,6 +29,33 @@
     
     
     <entry>
+      <title>conda, pip, jupyter</title>
+      <link href="/2021/02/19/ipykernel/"/>
+      <url>/2021/02/19/ipykernel/</url>
+      
+        <content type="html"><![CDATA[<p>Conda 环境配置</p><pre><code class="lang-shell">conda create --name &lt;env_name&gt; &lt;package_name&gt;conda create --name tf python=3.6source activate tf</code></pre><p>Conda 环境中安装 jupyter notebook 内核</p><pre><code class="lang-shell">conda install nb_condapip install ipykernelpython -m ipykernel install --user --name tf --display-name tf</code></pre><p>pip 在 Mac Conda环境中 会出现与当前python不一致情况，使用</p><pre><code class="lang-shell">python -m pip install package_name</code></pre><p>而不是</p><pre><code class="lang-shell">pip install package_name</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> environment </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Conda </tag>
+            
+            <tag> Jupyter notebook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常见NLP工具包</title>
       <link href="/2020/02/19/NLP_toolkit/"/>
       <url>/2020/02/19/NLP_toolkit/</url>
@@ -46,33 +73,6 @@
         <tags>
             
             <tag> Natural Language Processing </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>jupyter notebook 中配置 conda python kernel</title>
-      <link href="/2020/02/19/ipykernel/"/>
-      <url>/2020/02/19/ipykernel/</url>
-      
-        <content type="html"><![CDATA[<p>Conda 环境配置</p><pre><code class="lang-shell">conda create --name &lt;env_name&gt; &lt;package_name&gt;conda create --name tf python=3.6source activate tf</code></pre><p>Conda 环境中安装 jupyter notebook 内核</p><pre><code class="lang-shell">conda install nb_condapip install ipykernelpython -m ipykernel install --user --name tf --display-name tf</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> jupyter notebook </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> jupyter notebook </tag>
-            
-            <tag> Conda </tag>
             
         </tags>
       

@@ -392,52 +392,6 @@
   </entry>
   
   <entry>
-    <title>Vue项目bus与vuex的使用</title>
-    <link href="https://yanjianzhang.github.io/2018/09/03/vue-bus/"/>
-    <id>https://yanjianzhang.github.io/2018/09/03/vue-bus/</id>
-    <published>2018-09-02T22:44:02.000Z</published>
-    <updated>2018-09-02T17:39:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="为什么需要Bus"><a href="#为什么需要Bus" class="headerlink" title="为什么需要Bus"></a>为什么需要Bus</h3><p>一般来说，都是利用父组件给子组件使用query或者params传递参数来实现子组件的数据显示<br>不过，当出现子组件需要向父组件传递数据的时候，就需要用到bus，bus可以自己创建，也可以通过装包来实现</p><h3 id="直接创建Bus"><a href="#直接创建Bus" class="headerlink" title="直接创建Bus"></a>直接创建Bus</h3><p>在此处直接将Bus注入Vue对象中，成为全局的组件。<br>在子组件中通过this.$root.Bus.$on(key,method),this.$root.Bus.$emit(key,data)来调用<br>将$on放在mounted，created这些钩子函数中，相应的函数使用(e)=&gt;{function}比较便捷         </p><pre><code class="lang-js">import Vue from &#39;vue&#39;const Bus = new Vue()var app= new Vue(&#123;    el:&#39;#app&#39;,　　 data:&#123;　　　　Bus    &#125;　　&#125;)</code></pre><h3 id="使用vue-bus"><a href="#使用vue-bus" class="headerlink" title="使用vue-bus"></a>使用vue-bus</h3><p>使用yarn或者npm安装vue-bus之后，在main.js中引用它</p><pre><code class="lang-js">import VueBus from &#39;vue-bus&#39;;Vue.use(VueBus);</code></pre><p>于是调用直接可以写为 this.$bus.on(key, this.method)，this.$bus.emit(key, { text: …… }<br>其中第一个字符串参数代表key，每个key都能够实现自己的独立传输，this.method为事先定义好的method，用于对传入的数据进行处理</p><h3 id="为什么使用vuex"><a href="#为什么使用vuex" class="headerlink" title="为什么使用vuex"></a>为什么使用vuex</h3><p>当我们的应用遇到多个组件共享状态时，会需要：</p><ol><li>多个组件依赖于同一状态。</li><li>来自不同组件的行为需要变更同一状态。</li></ol><p>经过我的观察，vuex在其中的作用就是组件与状态的捆绑剥离开来，使得组件状态的改变依赖于某个行为，这使得代码变得易于调试。<br>Vuex采用集中式存储管理应用的所有组件的状态，这里的关键在于集中式存储管理。这意味着本来需要共享状态的更新是需要组件之间通讯的，而现在有了vuex，就组件就都和store通讯了。</p><h3 id="使用vuex"><a href="#使用vuex" class="headerlink" title="使用vuex"></a>使用vuex</h3><p>使用yarn或者npm安装vuex之后，在main.js中引用它</p><pre><code class="lang-js">import Vuex from &#39;vuex&#39;import store from &#39;./vuex/store&#39;Vue.use(Vuex)new Vue(&#123;  el: &#39;#app&#39;,  store&#125;)</code></pre><p>随后创建vuex目录,将store.js放在目录下,定义state和mutation</p><pre><code class="lang-js">import Vue from &#39;vue&#39;import Vuex from &#39;vuex&#39;Vue.use(Vuex)const store = new Vuex.Store(&#123;  state: &#123;    author: &#39;Wise Wrong&#39;  &#125;,  mutations:&#123;      newAuthor(state,msg)&#123;          state.author = msg      &#125;  &#125;&#125;)export default store</code></pre><p>在使用的时候，不直接修改this.$store.state.author，而是使用this.$store.commit()来提交，可以让我们更好的跟踪每一个状态的变化，在大型项目中更为适用</p>]]></content>
-    
-    
-    <summary type="html">Vue项目的全局传参与全项目状态管理</summary>
-    
-    
-    
-    <category term="Vue" scheme="https://yanjianzhang.github.io/categories/Vue/"/>
-    
-    
-    <category term="Vue" scheme="https://yanjianzhang.github.io/tags/Vue/"/>
-    
-    <category term="router" scheme="https://yanjianzhang.github.io/tags/router/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue项目路由传参</title>
-    <link href="https://yanjianzhang.github.io/2018/09/01/Vue-route-pamas/"/>
-    <id>https://yanjianzhang.github.io/2018/09/01/Vue-route-pamas/</id>
-    <published>2018-09-01T13:44:02.000Z</published>
-    <updated>2018-09-01T11:22:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="query传参"><a href="#query传参" class="headerlink" title="query传参"></a>query传参</h3><p>父组件通过path来配置路由，用query来传递参数</p><pre><code class="lang-js">    this.$router.push(&#123;          path: &#39;/describe&#39;,          query: &#123;            id: id          &#125;        &#125;)</code></pre><p>此时不需要在路由配置上做手脚，直接在子组件上使用params即可，注意此时是用route来表示，而不是用router<br>最终效果是query传递的参数会显示在url后面的?id=上</p><pre><code class="lang-js">this.$route.params.id</code></pre><h3 id="params传参"><a href="#params传参" class="headerlink" title="params传参"></a>params传参</h3><p>此时不过是用别名name来代替path，使用params代替query而已</p><pre><code class="lang-js">       this.$router.push(&#123;          name: &#39;Describe&#39;,          params: &#123;            id: id          &#125;        &#125;)</code></pre><p>同样的引用方式</p><pre><code class="lang-js">this.$route.params.id</code></pre><h3 id="router-push传参"><a href="#router-push传参" class="headerlink" title="$router.push传参"></a>$router.push传参</h3><p>父组件</p><pre><code class="lang-js">      getDescribe(id) &#123;//   直接调用$router.push 实现携带参数的跳转        this.$router.push(&#123;          path: `/describe/$&#123;id&#125;`,        &#125;)</code></pre><p>此时需要修改router中的index.js，需要在path中添加/:id来对应 $router.push 中path携带的参数</p><pre><code class="lang-js">&#123;     path: &#39;/describe/:id&#39;,     name: &#39;Describe&#39;,     component: Describe   &#125;</code></pre><p>同样的引用方式</p><pre><code class="lang-js">this.$route.params.id</code></pre>]]></content>
-    
-    
-    <summary type="html">Vue项目路由传参方法</summary>
-    
-    
-    
-    <category term="Vue" scheme="https://yanjianzhang.github.io/categories/Vue/"/>
-    
-    
-    <category term="Vue" scheme="https://yanjianzhang.github.io/tags/Vue/"/>
-    
-    <category term="router" scheme="https://yanjianzhang.github.io/tags/router/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hackerrank Dicts 解题记录</title>
     <link href="https://yanjianzhang.github.io/2018/08/31/dict_hr/"/>
     <id>https://yanjianzhang.github.io/2018/08/31/dict_hr/</id>
@@ -455,6 +409,48 @@
     
     
     <category term="hackerrank" scheme="https://yanjianzhang.github.io/tags/hackerrank/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hackerrank Arrays 解题记录</title>
+    <link href="https://yanjianzhang.github.io/2018/08/30/list_hr/"/>
+    <id>https://yanjianzhang.github.io/2018/08/30/list_hr/</id>
+    <published>2018-08-30T09:44:02.000Z</published>
+    <updated>2018-08-31T06:07:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="New-Year-Chaos"><a href="#New-Year-Chaos" class="headerlink" title="New Year Chaos"></a><a href="https://www.hackerrank.com/challenges/new-year-chaos/">New Year Chaos</a></h3><p>看到这道题目最初使用了冒泡排序的方法，发现在第6-9组测试中出现了超时</p><pre><code class="lang-python">def minimumBribes(q):    time = 0    for i,v in enumerate(q):        if (v-1)-i &gt; 2:                print(&quot;Too chaotic&quot;)            return    lastIndex =  len(q)-1    for j in range(0,lastIndex):        for i in range(0,lastIndex):            if q[i]&gt;q[i+1]:                q[i+1],q[i] = q[i],q[i+1]                time = time+1    if q ==list(range(1,lastIndex+2)):        print(str(time))        return</code></pre><p>回头观察发现数据的复杂度达到了10<sup>5</sup>，时间仅仅允许为10秒，而cpu最快能够达到每秒操作1亿次，因此至少需要100秒才能执行完毕，明显超时</p><p>之后尝试使用归并排序来计算，当右边先添加到序列中的时候会统计左边还剩下的元素，这一样会出现有时左边的元素出现得过多然后直接移动很多位的情况，此时算法因为没有考虑两位的限制而出错。结果出现小的样本都通过了，大的样本却没有通过的情况</p><pre><code class="lang-python">def merge(a,b):    c = []    h = j = 0    global time    while j &lt; len(a) and h &lt; len(b):        if a[j] &lt; b[h]:            c.append(a[j])            j += 1               time = time + (len(a)-j)            c.append(b[h])            h += 1    if j == len(a):        for i in b[h:]:            c.append(i)    else:        for i in a[j:]:            c.append(i)    return cdef merge_sort(lists):    if len(lists) &lt;= 1:        return lists    middle = int(len(lists)/2)    left = merge_sort(lists[:middle])    right = merge_sort(lists[middle:])    return merge(left, right)def minimumBribes(q):    global time    for i,v in enumerate(q):        if (v-1)-i &gt; 2:                print(&quot;Too chaotic&quot;)            return    merge_sort(q)    print(str(time))    return</code></pre><p>尝试解题失败，以下是对正确答案的观察，令我非常惊奇的是在数据量非常大的情况下python的字典依然正常运行而且没有出现Runtime Error<br>以下解题的思路是当存在可以交换的项的时候，继续保持大循环的执行，而不是使用外层n的大循环来绑定。导致了循环复杂度不再是n<sup>2</sup>,这属于什么排序我说不清楚，应该来说，这个算法利用了元素本身并没有过大位移的特征降下了复杂度</p><pre><code class="lang-python">b = &#123;&#125;r = 0cont = Truewhile cont:    cont = False    for i in range(len(q)-1):        if q[i] &gt; q[i+1]:            if not q[i] in b:                b[q[i]] = 0            b[q[i]] += 1            if b[q[i]] &gt; 2:                cont = False                r = &quot;Too chaotic&quot;                break            print(q)            q[i], q[i+1] = q[i+1], q[i]            r += 1            cont = True            print(b)print(r)#对其结果进行打印观察如下[1, 2, 5, 3, 7, 8, 6, 4]&#123;5: 1&#125;[1, 2, 3, 5, 7, 8, 6, 4]&#123;5: 1, 8: 1&#125;[1, 2, 3, 5, 7, 6, 8, 4]&#123;5: 1, 8: 2&#125;[1, 2, 3, 5, 7, 6, 4, 8]&#123;5: 1, 8: 2, 7: 1&#125;[1, 2, 3, 5, 6, 7, 4, 8]&#123;5: 1, 8: 2, 7: 2&#125;[1, 2, 3, 5, 6, 4, 7, 8]&#123;5: 1, 8: 2, 7: 2, 6: 1&#125;[1, 2, 3, 5, 4, 6, 7, 8]&#123;5: 2, 8: 2, 7: 2, 6: 1&#125;7</code></pre><p>python标准答案给出的逻辑就比较难以看懂,而C++的代码就是利用BIT(二叉索引树)的方法来解决，具体二叉索引树是什么来日再研究<br><a href="https://www.cnblogs.com/gangding/articles/4765885.html">区间信息的维护与查询（一）——二叉索引树（Fenwick树、树状数组）</a></p><pre><code class="lang-C">#include &lt;bits/stdc++.h&gt;using namespace std;const int maxN=2e5+5;int n,a[maxN],ans,T,k;int bit[maxN];int invalid;void del() &#123;    for (k=0;k&lt;maxN;k++) &#123;        bit[k]=0;            &#125;    ans = 0;    invalid = 0;&#125;void upd(int x) &#123;    for (k = x; k &lt; maxN; k += (k &amp; (-k))) &#123;        bit[k]++;    &#125;&#125;int get_sum(int x) &#123;    int p = 0;    for (k = x; k &gt; 0; k -= (k &amp; (-k)))        p += bit[k];        return p;&#125;int main() &#123;    scanf(&quot;%d&quot;, &amp;T);    while (T--) &#123;        del();        scanf(&quot;%d&quot;, &amp;n);        for (int i = 0; i &lt; n; i++) &#123;            scanf(&quot;%d&quot;, &amp;a[i]);        &#125;        for (int i = n - 1; i &gt;= 0; i--) &#123;            if (get_sum(a[i]) &gt; 2)                invalid++;            ans += get_sum(a[i]);            upd(a[i]);        &#125;        if (invalid &gt; 0) &#123;            printf(&quot;Too chaotic\n&quot;);        &#125; else &#123;            printf(&quot;%d\n&quot;, ans);        &#125;   &#125;   return 0;&#125;</code></pre><hr><h3 id="Minimum-Swaps-2"><a href="#Minimum-Swaps-2" class="headerlink" title="Minimum Swaps 2"></a><a href="https://www.hackerrank.com/challenges/minimum-swaps-2">Minimum Swaps 2</a></h3><p>本题需要找到最少的交换方式，可以知道，在正确的排序下，如果一个元素不在正确的排序的索引位置，那么它正确的索引位置上元素肯定是不正确的。<br>那么只需要去和这个位置的元素交换，就能够逐步将每个位置排好了<br>需要注意的点是，在每次交换元素时，相应的索引需要立即交换</p><pre><code class="lang-python">def minimumSwaps(arr):    rightArr = sorted(arr)    Idx = &#123;v: i for i,v in enumerate(arr)&#125;    count = 0    for i,v in enumerate(arr):        rightNum = rightArr[i]        if v != rightNum:            arr[i],arr[Idx[rightNum]] = arr[Idx[rightNum]],arr[i]            Idx[v],Idx[rightNum] = Idx[rightNum],Idx[v]            count = count + 1    return count</code></pre>]]></content>
+    
+    
+    <summary type="html">对HackerRank Interview preparation中Array组中的题目进行分析记录</summary>
+    
+    
+    
+    <category term="hackerrank" scheme="https://yanjianzhang.github.io/categories/hackerrank/"/>
+    
+    
+    <category term="hackerrank" scheme="https://yanjianzhang.github.io/tags/hackerrank/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue、Loopback、mysql</title>
+    <link href="https://yanjianzhang.github.io/2018/08/24/connectlb/"/>
+    <id>https://yanjianzhang.github.io/2018/08/24/connectlb/</id>
+    <published>2018-08-24T09:44:02.000Z</published>
+    <updated>2018-08-30T11:36:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Vue中调用Loopback进行增删改查"><a href="#Vue中调用Loopback进行增删改查" class="headerlink" title="Vue中调用Loopback进行增删改查"></a>Vue中调用Loopback进行增删改查</h3><p>使用npm或者yarn安装axios，然后利用axios.patch,axios.delete,axios.get调用Loopback后端api进行数据的显示和增删改查</p><h3 id="关于跨域访问的配置问题"><a href="#关于跨域访问的配置问题" class="headerlink" title="关于跨域访问的配置问题"></a>关于跨域访问的配置问题</h3><p>配置vue项目下的config/index.js<br>如要请求的地址是localhost:3000/api/1，可以对proxyTable进行如下配置：</p><pre><code class="lang-js">proxyTable: &#123;      &#39;/api&#39;: &#123;        target: &#39;http://localhost:3000&#39;,        changeOrigin: true,        pathRewrite: &#123;          &#39;^/api&#39;: &#39;/api&#39;        &#125;      &#125;    &#125;</code></pre><p>如此一来就可以用/api/1来代替localhost:3000/api/1</p><p>参考<a href="https://www.jianshu.com/p/75a9f9b5a1bb">使用vue.js的proxyTable解决跨域问题</a></p><h3 id="Vue连接mysql"><a href="#Vue连接mysql" class="headerlink" title="Vue连接mysql"></a>Vue连接mysql</h3><p>首先使用lb datasource来创建新的数据源，随后在server/datasource中修改数据源，name一般数据源同名，user为root，host为localhost，port为mysql的端口号</p><h3 id="将数据迁移到数据库中"><a href="#将数据迁移到数据库中" class="headerlink" title="将数据迁移到数据库中"></a>将数据迁移到数据库中</h3><p>查询server/model-config来查看有多少个表<br>随后在boot中新建migration.js进行数据迁移</p><pre><code class="lang-js">&#39;use strict&#39;;module.exports = function enableAuthentication(server) &#123;  let dataSources = server.dataSources  let db = dataSources.db  db.autoupdate([&#39;Note&#39;], function (err, result) &#123;       //此处将Note迁移到数据库中    console.log(&#39;migration success&#39;)        //迁移成功之后会在console中打印成功提示  &#125;);&#125;;</code></pre><h3 id="api复用"><a href="#api复用" class="headerlink" title="api复用"></a>api复用</h3><p>新建service文件夹，建立noteService.js等代码，建立Loopback接口的复用</p>]]></content>
+    
+    
+    <summary type="html">Vue、Loopback、mysql前后端以及api连接要点</summary>
+    
+    
+    
+    <category term="Vue" scheme="https://yanjianzhang.github.io/categories/Vue/"/>
+    
+    
+    <category term="Vue" scheme="https://yanjianzhang.github.io/tags/Vue/"/>
     
   </entry>
   

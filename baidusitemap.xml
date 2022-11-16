@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yanjianzhang.github.io/2018/08/23/Vue-all/</loc>
+    <lastmod>2022-11-16</lastmod>
+  </url>
+  <url>
     <loc>https://yanjianzhang.github.io/2019/12/29/RL/</loc>
     <lastmod>2022-11-16</lastmod>
   </url>
@@ -77,14 +81,6 @@
     <lastmod>2018-11-15</lastmod>
   </url>
   <url>
-    <loc>https://yanjianzhang.github.io/2018/09/03/vue-bus/</loc>
-    <lastmod>2018-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://yanjianzhang.github.io/2018/09/01/Vue-route-pamas/</loc>
-    <lastmod>2018-09-01</lastmod>
-  </url>
-  <url>
     <loc>https://yanjianzhang.github.io/2018/08/31/dict_hr/</loc>
     <lastmod>2018-08-31</lastmod>
   </url>
@@ -95,17 +91,5 @@
   <url>
     <loc>https://yanjianzhang.github.io/2018/08/24/connectlb/</loc>
     <lastmod>2018-08-30</lastmod>
-  </url>
-  <url>
-    <loc>https://yanjianzhang.github.io/2018/08/23/Vue_component/</loc>
-    <lastmod>2018-08-23</lastmod>
-  </url>
-  <url>
-    <loc>https://yanjianzhang.github.io/2018/08/23/Vueform/</loc>
-    <lastmod>2018-08-23</lastmod>
-  </url>
-  <url>
-    <loc>https://yanjianzhang.github.io/2018/08/23/Vue-router/</loc>
-    <lastmod>2018-08-23</lastmod>
   </url>
 </urlset> 

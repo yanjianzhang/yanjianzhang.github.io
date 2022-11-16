@@ -447,60 +447,6 @@
     
     
     <entry>
-      <title>Vue项目bus与vuex的使用</title>
-      <link href="/2018/09/03/vue-bus/"/>
-      <url>/2018/09/03/vue-bus/</url>
-      
-        <content type="html"><![CDATA[<h3 id="为什么需要Bus"><a href="#为什么需要Bus" class="headerlink" title="为什么需要Bus"></a>为什么需要Bus</h3><p>一般来说，都是利用父组件给子组件使用query或者params传递参数来实现子组件的数据显示<br>不过，当出现子组件需要向父组件传递数据的时候，就需要用到bus，bus可以自己创建，也可以通过装包来实现</p><h3 id="直接创建Bus"><a href="#直接创建Bus" class="headerlink" title="直接创建Bus"></a>直接创建Bus</h3><p>在此处直接将Bus注入Vue对象中，成为全局的组件。<br>在子组件中通过this.$root.Bus.$on(key,method),this.$root.Bus.$emit(key,data)来调用<br>将$on放在mounted，created这些钩子函数中，相应的函数使用(e)=&gt;{function}比较便捷         </p><pre><code class="lang-js">import Vue from &#39;vue&#39;const Bus = new Vue()var app= new Vue(&#123;    el:&#39;#app&#39;,　　 data:&#123;　　　　Bus    &#125;　　&#125;)</code></pre><h3 id="使用vue-bus"><a href="#使用vue-bus" class="headerlink" title="使用vue-bus"></a>使用vue-bus</h3><p>使用yarn或者npm安装vue-bus之后，在main.js中引用它</p><pre><code class="lang-js">import VueBus from &#39;vue-bus&#39;;Vue.use(VueBus);</code></pre><p>于是调用直接可以写为 this.$bus.on(key, this.method)，this.$bus.emit(key, { text: …… }<br>其中第一个字符串参数代表key，每个key都能够实现自己的独立传输，this.method为事先定义好的method，用于对传入的数据进行处理</p><h3 id="为什么使用vuex"><a href="#为什么使用vuex" class="headerlink" title="为什么使用vuex"></a>为什么使用vuex</h3><p>当我们的应用遇到多个组件共享状态时，会需要：</p><ol><li>多个组件依赖于同一状态。</li><li>来自不同组件的行为需要变更同一状态。</li></ol><p>经过我的观察，vuex在其中的作用就是组件与状态的捆绑剥离开来，使得组件状态的改变依赖于某个行为，这使得代码变得易于调试。<br>Vuex采用集中式存储管理应用的所有组件的状态，这里的关键在于集中式存储管理。这意味着本来需要共享状态的更新是需要组件之间通讯的，而现在有了vuex，就组件就都和store通讯了。</p><h3 id="使用vuex"><a href="#使用vuex" class="headerlink" title="使用vuex"></a>使用vuex</h3><p>使用yarn或者npm安装vuex之后，在main.js中引用它</p><pre><code class="lang-js">import Vuex from &#39;vuex&#39;import store from &#39;./vuex/store&#39;Vue.use(Vuex)new Vue(&#123;  el: &#39;#app&#39;,  store&#125;)</code></pre><p>随后创建vuex目录,将store.js放在目录下,定义state和mutation</p><pre><code class="lang-js">import Vue from &#39;vue&#39;import Vuex from &#39;vuex&#39;Vue.use(Vuex)const store = new Vuex.Store(&#123;  state: &#123;    author: &#39;Wise Wrong&#39;  &#125;,  mutations:&#123;      newAuthor(state,msg)&#123;          state.author = msg      &#125;  &#125;&#125;)export default store</code></pre><p>在使用的时候，不直接修改this.$store.state.author，而是使用this.$store.commit()来提交，可以让我们更好的跟踪每一个状态的变化，在大型项目中更为适用</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Vue </tag>
-            
-            <tag> router </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Vue项目路由传参</title>
-      <link href="/2018/09/01/Vue-route-pamas/"/>
-      <url>/2018/09/01/Vue-route-pamas/</url>
-      
-        <content type="html"><![CDATA[<h3 id="query传参"><a href="#query传参" class="headerlink" title="query传参"></a>query传参</h3><p>父组件通过path来配置路由，用query来传递参数</p><pre><code class="lang-js">    this.$router.push(&#123;          path: &#39;/describe&#39;,          query: &#123;            id: id          &#125;        &#125;)</code></pre><p>此时不需要在路由配置上做手脚，直接在子组件上使用params即可，注意此时是用route来表示，而不是用router<br>最终效果是query传递的参数会显示在url后面的?id=上</p><pre><code class="lang-js">this.$route.params.id</code></pre><h3 id="params传参"><a href="#params传参" class="headerlink" title="params传参"></a>params传参</h3><p>此时不过是用别名name来代替path，使用params代替query而已</p><pre><code class="lang-js">       this.$router.push(&#123;          name: &#39;Describe&#39;,          params: &#123;            id: id          &#125;        &#125;)</code></pre><p>同样的引用方式</p><pre><code class="lang-js">this.$route.params.id</code></pre><h3 id="router-push传参"><a href="#router-push传参" class="headerlink" title="$router.push传参"></a>$router.push传参</h3><p>父组件</p><pre><code class="lang-js">      getDescribe(id) &#123;//   直接调用$router.push 实现携带参数的跳转        this.$router.push(&#123;          path: `/describe/$&#123;id&#125;`,        &#125;)</code></pre><p>此时需要修改router中的index.js，需要在path中添加/:id来对应 $router.push 中path携带的参数</p><pre><code class="lang-js">&#123;     path: &#39;/describe/:id&#39;,     name: &#39;Describe&#39;,     component: Describe   &#125;</code></pre><p>同样的引用方式</p><pre><code class="lang-js">this.$route.params.id</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Vue </tag>
-            
-            <tag> router </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hackerrank Dicts 解题记录</title>
       <link href="/2018/08/31/dict_hr/"/>
       <url>/2018/08/31/dict_hr/</url>
@@ -576,63 +522,11 @@
     
     
     <entry>
-      <title>Vue组件的使用</title>
-      <link href="/2018/08/23/Vue_component/"/>
-      <url>/2018/08/23/Vue_component/</url>
+      <title>Vue项目的合集</title>
+      <link href="/2018/08/23/Vue-all/"/>
+      <url>/2018/08/23/Vue-all/</url>
       
-        <content type="html"><![CDATA[<h3 id="组件的复用"><a href="#组件的复用" class="headerlink" title="组件的复用"></a>组件的复用</h3><p>组件可以被复用，且复用组件的内容由每一个实例自己维护。但是复用组件的data选项必须是一个函数。</p><h3 id="子组件向复用组件触发事件"><a href="#子组件向复用组件触发事件" class="headerlink" title="子组件向复用组件触发事件"></a>子组件向复用组件触发事件</h3><p>我们在子组件中引用复用组件时，点击复用组件的按钮，我们希望能够将时间传递到复用组件中去，这时候我们需要用$emit方法传入事件，并且在复用组件的模板中使用v-on:来启动相应的方法</p><p>对于$emit方法的第二个参数,可以在复用组件里使用$event获取，当复用组件定义了相应的方法时，可以作为函数的参数使用</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Vue项目router注意事项</title>
-      <link href="/2018/08/23/Vue-router/"/>
-      <url>/2018/08/23/Vue-router/</url>
-      
-        <content type="html"><![CDATA[<h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><h4 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h4><p>在项目中唯一new了一次Vue，实现了App.vue的挂载，以及router与Vue的关联</p><h4 id="App-vue"><a href="#App-vue" class="headerlink" title="App.vue"></a>App.vue</h4><p>项目中的最外层的一个Vue，其中的router-view代表了可以变化和跳转的部分，如果内容写在router-view之外的话就无法跳转<br>并暴露了App接口，用于其他文件的引用</p><h4 id="route-index-js"><a href="#route-index-js" class="headerlink" title="route/index.js"></a>route/index.js</h4><p>用于在Vue中设置router，统一暴露所有的路由接口为router</p><h3 id="components-HelloWorld-vue"><a href="#components-HelloWorld-vue" class="headerlink" title="components/HelloWorld.vue"></a>components/HelloWorld.vue</h3><p>可以使用router-link to:=””来进行路由，其中的内容可以是button或者其他组件，对于components里的组件的引用，可以使用@/components/xxx来引用</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Vue </tag>
-            
-            <tag> router </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Vue项目v-for、v-model的使用</title>
-      <link href="/2018/08/23/Vueform/"/>
-      <url>/2018/08/23/Vueform/</url>
-      
-        <content type="html"><![CDATA[<h2 id="V-for"><a href="#V-for" class="headerlink" title="V-for"></a>V-for</h2><p>v-for既可以在data内的一个对象列表中循环，也可以在一个对象中循环</p><ol><li>当作为一个对象列表循环的时候，每个对象是一个字典，字典中的内容可以作为:key的循环索引</li><li>当对一个对象进行循环的时候，会对对想的属性的内容依次循环展示（并不算有什么价值）</li></ol><h3 id="v-for-响应的内容更新"><a href="#v-for-响应的内容更新" class="headerlink" title="v-for 响应的内容更新"></a>v-for 响应的内容更新</h3><p> 可以使用vm.$set(vm.items, indexOfItem, newValue)对items第i个内容进行修改，并且v-for会实时响应更新，如果是items[i]则不行</p><h3 id="利用过滤创立新数组"><a href="#利用过滤创立新数组" class="headerlink" title="利用过滤创立新数组"></a>利用过滤创立新数组</h3><p> 可以建立以下method</p><pre><code class="lang-js">methods: &#123;  even: function (numbers) &#123;    return numbers.filter(function (number) &#123;      return number % 2 === 0    &#125;)  &#125;&#125;</code></pre><p>当进行引用的时候就使用even(numbers)来代表新数组</p><h3 id="v-for-与-v-if-的合并使用"><a href="#v-for-与-v-if-的合并使用" class="headerlink" title="v-for 与 v-if 的合并使用"></a>v-for 与 v-if 的合并使用</h3><p>v-for 的优先级比 v-if 更高，这意味着 v-if 将分别重复运行于每个 v-for 循环中。也可以达到如上过滤效果。</p><h2 id="V-model"><a href="#V-model" class="headerlink" title="V-model"></a>V-model</h2><p>v-model对数据进行动态绑定。</p><ol><li>特别的，对于特定的小组件比如列表中的某个选项，可以通过value来绑定的值，当它被选定时就会加入数组列表之中</li><li>更特别的，对于checkbox来说，value就包含true和false</li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="Vue组件的使用"><a href="#Vue组件的使用" class="headerlink" title="Vue组件的使用"></a>Vue组件的使用</h1><h3 id="组件的复用"><a href="#组件的复用" class="headerlink" title="组件的复用"></a>组件的复用</h3><p>组件可以被复用，且复用组件的内容由每一个实例自己维护。但是复用组件的data选项必须是一个函数。</p><h3 id="子组件向复用组件触发事件"><a href="#子组件向复用组件触发事件" class="headerlink" title="子组件向复用组件触发事件"></a>子组件向复用组件触发事件</h3><p>我们在子组件中引用复用组件时，点击复用组件的按钮，我们希望能够将时间传递到复用组件中去，这时候我们需要用$emit方法传入事件，并且在复用组件的模板中使用v-on:来启动相应的方法</p><p>对于$emit方法的第二个参数,可以在复用组件里使用$event获取，当复用组件定义了相应的方法时，可以作为函数的参数使用</p><h1 id="Vue项目v-for、v-model的使用"><a href="#Vue项目v-for、v-model的使用" class="headerlink" title="Vue项目v-for、v-model的使用"></a>Vue项目v-for、v-model的使用</h1><h2 id="V-for"><a href="#V-for" class="headerlink" title="V-for"></a>V-for</h2><p>v-for既可以在data内的一个对象列表中循环，也可以在一个对象中循环</p><ol><li>当作为一个对象列表循环的时候，每个对象是一个字典，字典中的内容可以作为:key的循环索引</li><li>当对一个对象进行循环的时候，会对对想的属性的内容依次循环展示（并不算有什么价值）</li></ol><h3 id="v-for-响应的内容更新"><a href="#v-for-响应的内容更新" class="headerlink" title="v-for 响应的内容更新"></a>v-for 响应的内容更新</h3><p> 可以使用vm.$set(vm.items, indexOfItem, newValue)对items第i个内容进行修改，并且v-for会实时响应更新，如果是items[i]则不行</p><h3 id="利用过滤创立新数组"><a href="#利用过滤创立新数组" class="headerlink" title="利用过滤创立新数组"></a>利用过滤创立新数组</h3><p> 可以建立以下method</p><pre><code class="lang-js">methods: &#123;  even: function (numbers) &#123;    return numbers.filter(function (number) &#123;      return number % 2 === 0    &#125;)  &#125;&#125;</code></pre><p>当进行引用的时候就使用even(numbers)来代表新数组</p><h3 id="v-for-与-v-if-的合并使用"><a href="#v-for-与-v-if-的合并使用" class="headerlink" title="v-for 与 v-if 的合并使用"></a>v-for 与 v-if 的合并使用</h3><p>v-for 的优先级比 v-if 更高，这意味着 v-if 将分别重复运行于每个 v-for 循环中。也可以达到如上过滤效果。</p><h2 id="V-model"><a href="#V-model" class="headerlink" title="V-model"></a>V-model</h2><p>v-model对数据进行动态绑定。</p><ol><li>特别的，对于特定的小组件比如列表中的某个选项，可以通过value来绑定的值，当它被选定时就会加入数组列表之中</li><li>更特别的，对于checkbox来说，value就包含true和false</li></ol><h1 id="Vue项目bus与vuex的使用"><a href="#Vue项目bus与vuex的使用" class="headerlink" title="Vue项目bus与vuex的使用"></a>Vue项目bus与vuex的使用</h1><h3 id="为什么需要Bus"><a href="#为什么需要Bus" class="headerlink" title="为什么需要Bus"></a>为什么需要Bus</h3><p>一般来说，都是利用父组件给子组件使用query或者params传递参数来实现子组件的数据显示<br>不过，当出现子组件需要向父组件传递数据的时候，就需要用到bus，bus可以自己创建，也可以通过装包来实现</p><h3 id="直接创建Bus"><a href="#直接创建Bus" class="headerlink" title="直接创建Bus"></a>直接创建Bus</h3><p>在此处直接将Bus注入Vue对象中，成为全局的组件。<br>在子组件中通过this.$root.Bus.$on(key,method),this.$root.Bus.$emit(key,data)来调用<br>将$on放在mounted，created这些钩子函数中，相应的函数使用(e)=&gt;{function}比较便捷         </p><pre><code class="lang-js">import Vue from &#39;vue&#39;const Bus = new Vue()var app= new Vue(&#123;    el:&#39;#app&#39;,　　 data:&#123;　　　　Bus    &#125;　　&#125;)</code></pre><h3 id="使用vue-bus"><a href="#使用vue-bus" class="headerlink" title="使用vue-bus"></a>使用vue-bus</h3><p>使用yarn或者npm安装vue-bus之后，在main.js中引用它</p><pre><code class="lang-js">import VueBus from &#39;vue-bus&#39;;Vue.use(VueBus);</code></pre><p>于是调用直接可以写为 this.$bus.on(key, this.method)，this.$bus.emit(key, { text: …… }<br>其中第一个字符串参数代表key，每个key都能够实现自己的独立传输，this.method为事先定义好的method，用于对传入的数据进行处理</p><h3 id="为什么使用vuex"><a href="#为什么使用vuex" class="headerlink" title="为什么使用vuex"></a>为什么使用vuex</h3><p>当我们的应用遇到多个组件共享状态时，会需要：</p><ol><li>多个组件依赖于同一状态。</li><li>来自不同组件的行为需要变更同一状态。</li></ol><p>经过我的观察，vuex在其中的作用就是组件与状态的捆绑剥离开来，使得组件状态的改变依赖于某个行为，这使得代码变得易于调试。<br>Vuex采用集中式存储管理应用的所有组件的状态，这里的关键在于集中式存储管理。这意味着本来需要共享状态的更新是需要组件之间通讯的，而现在有了vuex，就组件就都和store通讯了。</p><h3 id="使用vuex"><a href="#使用vuex" class="headerlink" title="使用vuex"></a>使用vuex</h3><p>使用yarn或者npm安装vuex之后，在main.js中引用它</p><pre><code class="lang-js">import Vuex from &#39;vuex&#39;import store from &#39;./vuex/store&#39;Vue.use(Vuex)new Vue(&#123;  el: &#39;#app&#39;,  store&#125;)</code></pre><p>随后创建vuex目录,将store.js放在目录下,定义state和mutation</p><pre><code class="lang-js">import Vue from &#39;vue&#39;import Vuex from &#39;vuex&#39;Vue.use(Vuex)const store = new Vuex.Store(&#123;  state: &#123;    author: &#39;Wise Wrong&#39;  &#125;,  mutations:&#123;      newAuthor(state,msg)&#123;          state.author = msg      &#125;  &#125;&#125;)export default store</code></pre><p>在使用的时候，不直接修改this.$store.state.author，而是使用this.$store.commit()来提交，可以让我们更好的跟踪每一个状态的变化，在大型项目中更为适用</p><h1 id="Vue项目路由传参方法"><a href="#Vue项目路由传参方法" class="headerlink" title="Vue项目路由传参方法"></a>Vue项目路由传参方法</h1><h3 id="query传参"><a href="#query传参" class="headerlink" title="query传参"></a>query传参</h3><p>父组件通过path来配置路由，用query来传递参数</p><pre><code class="lang-js">    this.$router.push(&#123;          path: &#39;/describe&#39;,          query: &#123;            id: id          &#125;        &#125;)</code></pre><p>此时不需要在路由配置上做手脚，直接在子组件上使用params即可，注意此时是用route来表示，而不是用router<br>最终效果是query传递的参数会显示在url后面的?id=上</p><pre><code class="lang-js">this.$route.params.id</code></pre><h3 id="params传参"><a href="#params传参" class="headerlink" title="params传参"></a>params传参</h3><p>此时不过是用别名name来代替path，使用params代替query而已</p><pre><code class="lang-js">       this.$router.push(&#123;          name: &#39;Describe&#39;,          params: &#123;            id: id          &#125;        &#125;)</code></pre><p>同样的引用方式</p><pre><code class="lang-js">this.$route.params.id</code></pre><h3 id="router-push传参"><a href="#router-push传参" class="headerlink" title="$router.push传参"></a>$router.push传参</h3><p>父组件</p><pre><code class="lang-js">      getDescribe(id) &#123;//   直接调用$router.push 实现携带参数的跳转        this.$router.push(&#123;          path: `/describe/$&#123;id&#125;`,        &#125;)</code></pre><p>此时需要修改router中的index.js，需要在path中添加/:id来对应 $router.push 中path携带的参数</p><pre><code class="lang-js">&#123;     path: &#39;/describe/:id&#39;,     name: &#39;Describe&#39;,     component: Describe   &#125;</code></pre><p>同样的引用方式</p><pre><code class="lang-js">this.$route.params.id</code></pre><h1 id="Vue项目router注意事项"><a href="#Vue项目router注意事项" class="headerlink" title="Vue项目router注意事项"></a>Vue项目router注意事项</h1><h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><h4 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h4><p>在项目中唯一new了一次Vue，实现了App.vue的挂载，以及router与Vue的关联</p><h4 id="App-vue"><a href="#App-vue" class="headerlink" title="App.vue"></a>App.vue</h4><p>项目中的最外层的一个Vue，其中的router-view代表了可以变化和跳转的部分，如果内容写在router-view之外的话就无法跳转<br>并暴露了App接口，用于其他文件的引用</p><h4 id="route-index-js"><a href="#route-index-js" class="headerlink" title="route/index.js"></a>route/index.js</h4><p>用于在Vue中设置router，统一暴露所有的路由接口为router</p><h3 id="components-HelloWorld-vue"><a href="#components-HelloWorld-vue" class="headerlink" title="components/HelloWorld.vue"></a>components/HelloWorld.vue</h3><p>可以使用router-link to:=””来进行路由，其中的内容可以是button或者其他组件，对于components里的组件的引用，可以使用@/components/xxx来引用</p>]]></content>
       
       
       <categories>

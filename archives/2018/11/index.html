@@ -54,22 +54,24 @@ print(a.graph)
 print(b.graph)
 
 result: 均属于同一个计算图
-&amp;lt;tensorflow.python.framework.ops.Graph object at 0x0000012C137DAD68&amp;gt;..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/08/tfbase/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/string%20process"><i class="tag post-item-tag">string process</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/07/cookbookString/">字符串和文本处理</a></h2><time class="has-text-grey" datetime="2018-11-06T23:44:02.000Z">2018-11-07</time><p class="is-flex-grow-2 mt-2">字符串的切分line = &amp;quot;爸爸 妈妈; 儿子, 女儿,弟弟, 妹妹&amp;quot;
+&amp;lt;tensorflow.python.framework.ops.Graph object at 0x0000012C137DAD68&amp;gt;..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/08/tfbase/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/string%20process"><i class="tag post-item-tag">string process</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/07/cookbookString/">字符串和文本处理</a></h2><time class="has-text-grey" datetime="2018-11-06T23:44:02.000Z">2018-11-07</time><p class="is-flex-grow-2 mt-2">字符串的切分line = &quot;爸爸 妈妈; 儿子, 女儿,弟弟, 妹妹&quot;
 import re
-print(re.split(r&amp;#39;[;,\s]\s*&amp;#39;, line))
-print(re.split(r&amp;#39;(;|,|\s)\s*&amp;#39;, line))
-fields = re.split(r&amp;#39;(;|,|\s)\s*&amp;#39;, line)
+print(re.split(r'[;,\s]\s*', line))
+print(re.split(r'(;|,|\s)\s*', line))
+fields = re.split(r'(;|,|\s)\s*', line)
 print(fields[::2])
 print(fields[1::2])
 
 result:
-[&amp;#39;爸爸&amp;#39;, &amp;#39;妈妈&amp;#39;, &amp;#39;儿子&amp;#39;, &amp;#39;女儿&amp;#39;, &amp;#39;弟弟&amp;#39;, &amp;#39;妹妹&amp;#39;]
-[&amp;#39;爸爸&amp;#39;, &amp;#39; &amp;#39;, &amp;#3..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/07/cookbookString/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/smooth"><i class="tag post-item-tag">smooth</i></a><a href="/tags/kneser-ney"><i class="tag post-item-tag">kneser-ney</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/04/kneser-ney/">Good-Turing、Absolute、kneser-ney smooth</a></h2><time class="has-text-grey" datetime="2018-11-03T23:44:02.000Z">2018-11-04</time><p class="is-flex-grow-2 mt-2">Good-Turing smoothingGood-Turing基本思想是：用观察计数较高的N元语法数重新估计概率量的大小，并把它指派给那些具有零计数或者较低计数的N元语法。公式:
-c^{×} = \frac{(c+1)N_{c+1}}{N_c}其中c为某个N-gram出现的频数, $N_c$ 为出现次数为c的N-Gram的词组的个数，$c^×$为Good-Turing平滑计数例子:对于a = [A,A,A,B,B,C,D,E] sum(len(a)) = 7$c_A = 3$    $c_C = 2$
-$c_B = c_D = c_E = 1$
-$N_1=4$ $N_2=1$ $N_3=1$ 
+['爸爸', '妈妈', '儿子', '女儿', '弟弟', '妹妹']
+['爸爸', ' ', '妈妈', ';', '儿子', ',', '女儿', ',', '弟弟', ',', '妹妹']
+['爸爸', '妈妈', '儿子', '女儿', '弟弟', '妹妹']
+[' ', ';', ','..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/07/cookbookString/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/smooth"><i class="tag post-item-tag">smooth</i></a><a href="/tags/kneser-ney"><i class="tag post-item-tag">kneser-ney</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/04/kneser-ney/">Good-Turing、Absolute、kneser-ney smooth</a></h2><time class="has-text-grey" datetime="2018-11-03T23:44:02.000Z">2018-11-04</time><p class="is-flex-grow-2 mt-2">Good-Turing smoothingGood-Turing基本思想是：用观察计数较高的N元语法数重新估计概率量的大小，并把它指派给那些具有零计数或者较低计数的N元语法。公式:
+c^{×} = \frac{(c+1)N_{c+1}}{N_c}其中c为某个N-gram出现的频数,  为出现次数为c的N-Gram的词组的个数，为Good-Turing平滑计数例子:对于a = [A,A,A,B,B,C,D,E] sum(len(a)) = 7    
+
+   
 thus 
-c^{×} = 4 × \frac{0}{3} = 0c^×_B = 3×\frac{1}{1} =..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/04/kneser-ney/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Trie"><i class="tag post-item-tag">Trie</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/04/trie/">Trie树</a></h2><time class="has-text-grey" datetime="2018-11-03T23:44:02.000Z">2018-11-04</time><p class="is-flex-grow-2 mt-2">为了提高我的单词查找的速度，我拜读了@Rshcaroline的代码，发现trie树是一个很好解决这个问题的方法
+c^{×} = 4 × \frac{0}{3} = 0c^×_B = 3×\frac{1}{1} = 3c^×_C = c^×_D = c^×_E = 2×\frac{1}{4} = \frac{1}{2}（注意在他们求概率的时候都需要除以..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2018/11/04/kneser-ney/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Trie"><i class="tag post-item-tag">Trie</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2018/11/04/trie/">Trie树</a></h2><time class="has-text-grey" datetime="2018-11-03T23:44:02.000Z">2018-11-04</time><p class="is-flex-grow-2 mt-2">为了提高我的单词查找的速度，我拜读了@Rshcaroline的代码，发现trie树是一个很好解决这个问题的方法
 Trie树，又叫字典树、前缀树（Prefix Tree）、单词查找树 或 键树，是一种多叉树结构
 Trie树的基本性质：
 

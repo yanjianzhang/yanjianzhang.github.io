@@ -3,7 +3,7 @@
 阅读长篇英文博文请点击这里
 以下内容增加了自己的一些补充，不仅仅是上文的概述
 Major division: Value iteration and Policy iteration
-Generalized Policy Iteration (GPI)$V_{t+1}(s)=\mathbb{E}_{\pi}\left[r+\gamma V_{t}\left(s^{\prime}\right) | S_{t}=s\right]=\sum_{a} \pi(a | s) \sum_{s^{\prime}, r} P\left(s^{\prime}, r | s, a\right)\left(r+\gamma V_{k}\left.."><!-- hexo injector head_end start -->
+Generalized Policy Iteration (GPI)$ V_{t+1}(s)=\mathbb{E}_{\pi}\left[r+\gamma V_{t}\left(s^{\prime}\right) | S_{t}=s\right]=\sum_{a} \pi(a | s) \sum_{s^{\prime}, r} P\left(s^{\prime}, r | s, a\right)\left(r+\gamma V_{k}\lef.."><!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
@@ -12,7 +12,7 @@ Generalized Policy Iteration (GPI)$V_{t+1}(s)=\mathbb{E}_{\pi}\left[r+\gamma V_{
 <p>阅读长篇英文博文请<a target="_blank" rel="noopener" href="https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html">点击这里</a></p>
 <p>以下内容增加了自己的一些补充，不仅仅是上文的概述</p>
 <p>Major division: <strong>Value iteration</strong> and <strong>Policy iteration</strong></p>
-<h3 id="Generalized-Policy-Iteration-GPI"><a href="#Generalized-Policy-Iteration-GPI" class="headerlink" title="Generalized Policy Iteration (GPI)"></a>Generalized Policy Iteration (GPI)</h3><p>$V_{t+1}(s)=\mathbb{E}_{\pi}\left[r+\gamma V_{t}\left(s^{\prime}\right) | S_{t}=s\right]=\sum_{a} \pi(a | s) \sum_{s^{\prime}, r} P\left(s^{\prime}, r | s, a\right)\left(r+\gamma V_{k}\left(s^{\prime}\right)\right)$</p>
+<h3 id="Generalized-Policy-Iteration-GPI"><a href="#Generalized-Policy-Iteration-GPI" class="headerlink" title="Generalized Policy Iteration (GPI)"></a>Generalized Policy Iteration (GPI)</h3><p>$ V_{t+1}(s)=\mathbb{E}_{\pi}\left[r+\gamma V_{t}\left(s^{\prime}\right) | S_{t}=s\right]=\sum_{a} \pi(a | s) \sum_{s^{\prime}, r} P\left(s^{\prime}, r | s, a\right)\left(r+\gamma V_{k}\left(s^{\prime}\right)\right) $</p>
 <p>$Q_{\pi}(s, a)=\mathbb{E}\left[R_{t+1}+\gamma V_{\pi}\left(S_{t+1}\right) | S_{t}=s, A_{t}=a\right]=\sum_{s^{\prime}, r} P\left(s^{\prime}, r | s, a\right)\left(r+\gamma V_{\pi}\left(s^{\prime}\right)\right)$</p>
 <h3 id="DP-methods"><a href="#DP-methods" class="headerlink" title="DP methods"></a>DP methods</h3><p>Dynamic Programming: when the model is fully known, it can be directly solved by Dynamic Programming.</p>
 <p>值迭代就是顺着动态规划的思路，只要我们将值估计出来，就能够进行规划了。</p>

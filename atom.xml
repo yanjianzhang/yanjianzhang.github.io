@@ -54,9 +54,9 @@
     <category term="environment" scheme="https://yanjianzhang.github.io/categories/environment/"/>
     
     
-    <category term="Conda" scheme="https://yanjianzhang.github.io/tags/Conda/"/>
-    
     <category term="Jupyter notebook" scheme="https://yanjianzhang.github.io/tags/Jupyter-notebook/"/>
+    
+    <category term="Conda" scheme="https://yanjianzhang.github.io/tags/Conda/"/>
     
   </entry>
   
@@ -172,29 +172,6 @@
   </entry>
   
   <entry>
-    <title>Dropout of RNN, batch size, accumulation steps</title>
-    <link href="https://yanjianzhang.github.io/2019/12/04/encoder-decoder/"/>
-    <id>https://yanjianzhang.github.io/2019/12/04/encoder-decoder/</id>
-    <published>2019-12-03T23:00:00.000Z</published>
-    <updated>2021-12-26T22:48:52.876Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>Srivastava et al. (2014) applied dropout to feed forward neural network’s and RBM’s and noted a probability of dropout around <strong>0.5 for hidden units and 0.2 for inputs</strong> worked well for a variety of tasks.</p><p>Reference: <a href="https://medium.com/@bingobee01/a-review-of-dropout-as-applied-to-rnns-72e79ecd5b7b">A review of Dropout as applied to RNNs</a></p><p>When I apply the 0.5 for hidden units and 0.2 for inputs, it works well. But it is not the case in decoder. <strong>In decoder, I would suggest not to use dropout</strong>.</p><h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><p>Suggest &lt;=32， See <a href="https://www.cs.cmu.edu/~muli/file/minibatch_sgd.pdf">Efficient Mini-batch Training for Stochastic Optimization</a> and <a href="https://svail.github.io/rnn_perf/">this RNN study</a></p><h3 id="Accumulation-steps"><a href="#Accumulation-steps" class="headerlink" title="Accumulation_steps"></a>Accumulation_steps</h3><p>Have the same function like batch size, but it can be use when Graphics memory is not enough.</p>]]></content>
-    
-    
-    <summary type="html">The selection of dropout rate for encoder-decoder mechanism</summary>
-    
-    
-    
-    <category term="Deep Learning" scheme="https://yanjianzhang.github.io/categories/Deep-Learning/"/>
-    
-    
-    <category term="RNN" scheme="https://yanjianzhang.github.io/tags/RNN/"/>
-    
-    <category term="Dropout" scheme="https://yanjianzhang.github.io/tags/Dropout/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Indent problem! Latex and Python</title>
     <link href="https://yanjianzhang.github.io/2019/12/04/indent/"/>
     <id>https://yanjianzhang.github.io/2019/12/04/indent/</id>
@@ -214,6 +191,29 @@
     <category term="Python" scheme="https://yanjianzhang.github.io/tags/Python/"/>
     
     <category term="Latex" scheme="https://yanjianzhang.github.io/tags/Latex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dropout of RNN, batch size, accumulation steps</title>
+    <link href="https://yanjianzhang.github.io/2019/12/04/encoder-decoder/"/>
+    <id>https://yanjianzhang.github.io/2019/12/04/encoder-decoder/</id>
+    <published>2019-12-03T23:00:00.000Z</published>
+    <updated>2021-12-26T22:48:52.876Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>Srivastava et al. (2014) applied dropout to feed forward neural network’s and RBM’s and noted a probability of dropout around <strong>0.5 for hidden units and 0.2 for inputs</strong> worked well for a variety of tasks.</p><p>Reference: <a href="https://medium.com/@bingobee01/a-review-of-dropout-as-applied-to-rnns-72e79ecd5b7b">A review of Dropout as applied to RNNs</a></p><p>When I apply the 0.5 for hidden units and 0.2 for inputs, it works well. But it is not the case in decoder. <strong>In decoder, I would suggest not to use dropout</strong>.</p><h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><p>Suggest &lt;=32， See <a href="https://www.cs.cmu.edu/~muli/file/minibatch_sgd.pdf">Efficient Mini-batch Training for Stochastic Optimization</a> and <a href="https://svail.github.io/rnn_perf/">this RNN study</a></p><h3 id="Accumulation-steps"><a href="#Accumulation-steps" class="headerlink" title="Accumulation_steps"></a>Accumulation_steps</h3><p>Have the same function like batch size, but it can be use when Graphics memory is not enough.</p>]]></content>
+    
+    
+    <summary type="html">The selection of dropout rate for encoder-decoder mechanism</summary>
+    
+    
+    
+    <category term="Deep Learning" scheme="https://yanjianzhang.github.io/categories/Deep-Learning/"/>
+    
+    
+    <category term="RNN" scheme="https://yanjianzhang.github.io/tags/RNN/"/>
+    
+    <category term="Dropout" scheme="https://yanjianzhang.github.io/tags/Dropout/"/>
     
   </entry>
   

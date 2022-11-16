@@ -172,29 +172,6 @@
   </entry>
   
   <entry>
-    <title>Indent problem! Latex and Python</title>
-    <link href="https://yanjianzhang.github.io/2019/12/04/indent/"/>
-    <id>https://yanjianzhang.github.io/2019/12/04/indent/</id>
-    <published>2019-12-03T23:00:00.000Z</published>
-    <updated>2021-12-26T22:50:53.987Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>When we cooperation with other within python, like in <a href="https://studio.dev.tencent.com/">Cloud studio</a> of tencent. We may find our indent is different with our friend when we input the code. You may make a file name  “.editorconfig” in the root directory.</p><pre><code>root = true[*]charset = utf-8indent_style = tabtab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>However, when the python code are already mixed with tabs and spaces. Don’t worry.<br>Select Pycharm -&gt; Edit -&gt; Convert Indents. You will transform the whole file quickly without manually do it.</p><h3 id="Matlab"><a href="#Matlab" class="headerlink" title="Matlab"></a>Matlab</h3><p>When you copy the code to texstudio(seems not happend in Overleaf), the indent will vanish. It is the problem of default setting of Texstudio.<br>Select Options -&gt; Configure Texstudio -&gt; Editor -&gt; Indentation mode. And choose Keep Indentation.<br>That will solve the problem.</p><p>&nbsp; &nbsp;<br>&nbsp; &nbsp;<br>&nbsp; &nbsp;</p><h5 id="Reference-Version-in-Chinese-from-Google-translation"><a href="#Reference-Version-in-Chinese-from-Google-translation" class="headerlink" title="Reference Version in Chinese from Google translation:"></a>Reference Version in Chinese from Google translation:</h5><h3 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h3><p>当我们在python中与其他人合作时，例如腾讯的[Cloud studio]（<a href="https://studio.dev.tencent.com/）。">https://studio.dev.tencent.com/）。</a> 输入代码时，我们可能会发现缩进与我们的朋友有所不同。 您可以在根目录创建一个文件名“ .editorconfig”。</p><pre><code>根=真[*]字符集= utf-8indent_style =制表符tab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>但是，当python代码已经与制表符和空格混合在一起时。 不用担心<br>选择Pycharm-&gt;编辑-&gt;转换缩进。 您无需手动进行操作即可快速转换整个文件。</p><h3 id="Matlab-1"><a href="#Matlab-1" class="headerlink" title="Matlab"></a>Matlab</h3><p>当您将代码复制到texstudio时（似乎在Overleaf中没有发生），缩进将消失。 这是Texstudio默认设置的问题。<br>选择选项-&gt;配置Texstudio-&gt;编辑器-&gt;缩进模式。 然后选择“保持缩进”。<br>这样可以解决问题。</p>]]></content>
-    
-    
-    <summary type="html">快速解决python的tab-space转换和latex复制代码时indent消失的问题</summary>
-    
-    
-    
-    <category term="Latex" scheme="https://yanjianzhang.github.io/categories/Latex/"/>
-    
-    
-    <category term="Python" scheme="https://yanjianzhang.github.io/tags/Python/"/>
-    
-    <category term="Latex" scheme="https://yanjianzhang.github.io/tags/Latex/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Dropout of RNN, batch size, accumulation steps</title>
     <link href="https://yanjianzhang.github.io/2019/12/04/encoder-decoder/"/>
     <id>https://yanjianzhang.github.io/2019/12/04/encoder-decoder/</id>
@@ -214,6 +191,29 @@
     <category term="RNN" scheme="https://yanjianzhang.github.io/tags/RNN/"/>
     
     <category term="Dropout" scheme="https://yanjianzhang.github.io/tags/Dropout/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Indent problem! Latex and Python</title>
+    <link href="https://yanjianzhang.github.io/2019/12/04/indent/"/>
+    <id>https://yanjianzhang.github.io/2019/12/04/indent/</id>
+    <published>2019-12-03T23:00:00.000Z</published>
+    <updated>2021-12-26T22:50:53.987Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>When we cooperation with other within python, like in <a href="https://studio.dev.tencent.com/">Cloud studio</a> of tencent. We may find our indent is different with our friend when we input the code. You may make a file name  “.editorconfig” in the root directory.</p><pre><code>root = true[*]charset = utf-8indent_style = tabtab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>However, when the python code are already mixed with tabs and spaces. Don’t worry.<br>Select Pycharm -&gt; Edit -&gt; Convert Indents. You will transform the whole file quickly without manually do it.</p><h3 id="Matlab"><a href="#Matlab" class="headerlink" title="Matlab"></a>Matlab</h3><p>When you copy the code to texstudio(seems not happend in Overleaf), the indent will vanish. It is the problem of default setting of Texstudio.<br>Select Options -&gt; Configure Texstudio -&gt; Editor -&gt; Indentation mode. And choose Keep Indentation.<br>That will solve the problem.</p><p>&nbsp; &nbsp;<br>&nbsp; &nbsp;<br>&nbsp; &nbsp;</p><h5 id="Reference-Version-in-Chinese-from-Google-translation"><a href="#Reference-Version-in-Chinese-from-Google-translation" class="headerlink" title="Reference Version in Chinese from Google translation:"></a>Reference Version in Chinese from Google translation:</h5><h3 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h3><p>当我们在python中与其他人合作时，例如腾讯的[Cloud studio]（<a href="https://studio.dev.tencent.com/）。">https://studio.dev.tencent.com/）。</a> 输入代码时，我们可能会发现缩进与我们的朋友有所不同。 您可以在根目录创建一个文件名“ .editorconfig”。</p><pre><code>根=真[*]字符集= utf-8indent_style =制表符tab_width = 4end_of_line = lfinsert_final_newline = truetrim_trailing_whitespace = true</code></pre><p>但是，当python代码已经与制表符和空格混合在一起时。 不用担心<br>选择Pycharm-&gt;编辑-&gt;转换缩进。 您无需手动进行操作即可快速转换整个文件。</p><h3 id="Matlab-1"><a href="#Matlab-1" class="headerlink" title="Matlab"></a>Matlab</h3><p>当您将代码复制到texstudio时（似乎在Overleaf中没有发生），缩进将消失。 这是Texstudio默认设置的问题。<br>选择选项-&gt;配置Texstudio-&gt;编辑器-&gt;缩进模式。 然后选择“保持缩进”。<br>这样可以解决问题。</p>]]></content>
+    
+    
+    <summary type="html">快速解决python的tab-space转换和latex复制代码时indent消失的问题</summary>
+    
+    
+    
+    <category term="Latex" scheme="https://yanjianzhang.github.io/categories/Latex/"/>
+    
+    
+    <category term="Python" scheme="https://yanjianzhang.github.io/tags/Python/"/>
+    
+    <category term="Latex" scheme="https://yanjianzhang.github.io/tags/Latex/"/>
     
   </entry>
   

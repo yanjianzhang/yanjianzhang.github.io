@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>强化学习精要总结（更新）</title>
+      <title>决策模型</title>
       <link href="/2022/11/23/DM/"/>
       <url>/2022/11/23/DM/</url>
       
@@ -13,14 +13,14 @@
       
       <categories>
           
-          <category> Reinforcement Learning </category>
+          <category> Decision Modeling </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Reinforcement Learning </tag>
+            <tag> Decision Modeling </tag>
             
         </tags>
       
@@ -147,11 +147,11 @@
       
         <tags>
             
-            <tag> Natural Language Processing </tag>
-            
             <tag> Reinforcement Learning </tag>
             
             <tag> Adversarial Learning </tag>
+            
+            <tag> Natural Language Processing </tag>
             
         </tags>
       

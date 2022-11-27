@@ -6,7 +6,7 @@
   <link href="https://yanjianzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://yanjianzhang.github.io/"/>
-  <updated>2022-11-27T11:39:59.086Z</updated>
+  <updated>2022-11-27T12:02:35.129Z</updated>
   <id>https://yanjianzhang.github.io/</id>
   
   <author>
@@ -17,21 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>强化学习精要总结（更新）</title>
+    <title>决策模型</title>
     <link href="https://yanjianzhang.github.io/2022/11/23/DM/"/>
     <id>https://yanjianzhang.github.io/2022/11/23/DM/</id>
     <published>2022-11-22T23:00:00.000Z</published>
-    <updated>2022-11-27T11:39:59.086Z</updated>
+    <updated>2022-11-27T12:02:35.129Z</updated>
     
     
-    <summary type="html">Short Note, the comparison and development of RL methods</summary>
+    <summary type="html">Commonly used decision modeling method</summary>
     
     
     
-    <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/categories/Reinforcement-Learning/"/>
+    <category term="Decision Modeling" scheme="https://yanjianzhang.github.io/categories/Decision-Modeling/"/>
     
     
-    <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/tags/Reinforcement-Learning/"/>
+    <category term="Decision Modeling" scheme="https://yanjianzhang.github.io/tags/Decision-Modeling/"/>
     
   </entry>
   
@@ -138,11 +138,11 @@
     <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/categories/Reinforcement-Learning/"/>
     
     
-    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/tags/Natural-Language-Processing/"/>
-    
     <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/tags/Reinforcement-Learning/"/>
     
     <category term="Adversarial Learning" scheme="https://yanjianzhang.github.io/tags/Adversarial-Learning/"/>
+    
+    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/tags/Natural-Language-Processing/"/>
     
   </entry>
   

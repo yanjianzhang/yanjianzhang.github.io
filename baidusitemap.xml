@@ -2,14 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://yanjianzhang.github.io/2022/11/23/RL/</loc>
-    <lastmod>2022-11-24</lastmod>
+    <lastmod>2022-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://yanjianzhang.github.io/2019/12/04/indent/</loc>
+    <lastmod>2022-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://yanjianzhang.github.io/2022/11/23/DM/</loc>
+    <lastmod>2022-11-27</lastmod>
   </url>
   <url>
     <loc>https://yanjianzhang.github.io/2018/08/23/Vue-all/</loc>
     <lastmod>2022-11-16</lastmod>
   </url>
   <url>
-    <loc>https://yanjianzhang.github.io/2021/02/19/ipykernel/</loc>
+    <loc>https://yanjianzhang.github.io/2021/02/19/environment/</loc>
     <lastmod>2022-10-24</lastmod>
   </url>
   <url>
@@ -22,10 +30,6 @@
   </url>
   <url>
     <loc>https://yanjianzhang.github.io/2018/11/04/kneser-ney/</loc>
-    <lastmod>2021-12-26</lastmod>
-  </url>
-  <url>
-    <loc>https://yanjianzhang.github.io/2019/12/04/indent/</loc>
     <lastmod>2021-12-26</lastmod>
   </url>
   <url>
@@ -63,14 +67,6 @@
   <url>
     <loc>https://yanjianzhang.github.io/2020/02/19/NLP_toolkit/</loc>
     <lastmod>2020-02-19</lastmod>
-  </url>
-  <url>
-    <loc>https://yanjianzhang.github.io/2018/08/14/malloclab/</loc>
-    <lastmod>2019-12-28</lastmod>
-  </url>
-  <url>
-    <loc>https://yanjianzhang.github.io/2018/08/14/proxylab/</loc>
-    <lastmod>2019-12-28</lastmod>
   </url>
   <url>
     <loc>https://yanjianzhang.github.io/2019/12/27/doctor/</loc>

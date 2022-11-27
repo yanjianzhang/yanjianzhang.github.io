@@ -1,5 +1,5 @@
-<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta name="google-site-verification" content="EnW3iE5uXnkCt08dH5N1p2UztpHHWUslmyE_mIIGaac"><meta name="baidu-site-verification" content="code-EtTckMomHC"><meta charset="UTF-8"><title>字符串和文本处理</title><meta name="description" content="精诚致志，求仁存心"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="字符串的切分line = &quot;爸爸 妈妈; 儿子, 女儿,弟弟, 妹妹&quot;
+<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>字符串和文本处理</title><meta name="description" content="精诚致志，求仁存心"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="字符串的切分line = &quot;爸爸 妈妈; 儿子, 女儿,弟弟, 妹妹&quot;
 import re
 print(re.split(r'[;,\s]\s*', line))
 print(re.split(r'(;|,|\s)\s*', line))
@@ -15,8 +15,7 @@ result:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Yanjian Zhang's Blog" type="application/atom+xml">
-<style>mjx-container[jax="SVG"] {
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -128,7 +127,8 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Yanjian Zhang's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">字符串和文本处理</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%87%E5%88%86"><span class="toc-number">1.</span> <span class="toc-text">字符串的切分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%BC%80%E5%A4%B4%E4%B8%8E%E7%BB%93%E5%B0%BE%E5%8C%B9%E9%85%8D"><span class="toc-number">2.</span> <span class="toc-text">字符串的开头与结尾匹配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%8C%B9%E9%85%8D%E4%B8%8E%E6%90%9C%E7%B4%A2"><span class="toc-number">3.</span> <span class="toc-text">字符串的匹配与搜索</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/string%20process"><i class="tag post-item-tag">string process</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">字符串和文本处理</h1><time class="has-text-grey" datetime="2018-11-06T23:44:02.000Z">2018-11-07</time><article class="mt-2 post-content"><h4 id="字符串的切分"><a href="#字符串的切分" class="headerlink" title="字符串的切分"></a>字符串的切分</h4><pre><code class="lang-python">line = "爸爸 妈妈; 儿子, 女儿,弟弟, 妹妹"
+</style><link rel="alternate" href="/atom.xml" title="Yanjian Zhang's Blog" type="application/atom+xml">
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Yanjian Zhang's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">字符串和文本处理</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%87%E5%88%86"><span class="toc-text">字符串的切分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%BC%80%E5%A4%B4%E4%B8%8E%E7%BB%93%E5%B0%BE%E5%8C%B9%E9%85%8D"><span class="toc-text">字符串的开头与结尾匹配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%8C%B9%E9%85%8D%E4%B8%8E%E6%90%9C%E7%B4%A2"><span class="toc-text">字符串的匹配与搜索</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/string%20process"><i class="tag post-item-tag">string process</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">字符串和文本处理</h1><time class="has-text-grey" datetime="2018-11-06T23:44:02.000Z">2018-11-07</time><article class="mt-2 post-content"><h4 id="字符串的切分"><a href="#字符串的切分" class="headerlink" title="字符串的切分"></a>字符串的切分</h4><pre><code class="python">line = "爸爸 妈妈; 儿子, 女儿,弟弟, 妹妹"
 import re
 print(re.split(r'[;,\s]\s*', line))
 print(re.split(r'(;|,|\s)\s*', line))
@@ -141,16 +141,18 @@ print(fields[1::2])
 ['爸爸', ' ', '妈妈', ';', '儿子', ',', '女儿', ',', '弟弟', ',', '妹妹']
 ['爸爸', '妈妈', '儿子', '女儿', '弟弟', '妹妹']
 [' ', ';', ',', ',', ',']
-</code></pre><p>总结: “\s” 代表空格，一定范围的符号用[]、(…|…|…)框起来，使用[]会去掉匹配的文本，而(…|…|…)会保留匹配的分组，可变长(0-n)的字段可以加*l，在末尾的field的切片中，最后一位代表step</p>
-<h4 id="字符串的开头与结尾匹配"><a href="#字符串的开头与结尾匹配" class="headerlink" title="字符串的开头与结尾匹配"></a>字符串的开头与结尾匹配</h4><pre><code class="lang-python">filenames = ["Makefile", "foo.c", "bar.py", "spam.c", "spam.h"]
+</code></pre>
+<p>总结: “\s” 代表空格，一定范围的符号用[]、(…|…|…)框起来，使用[]会去掉匹配的文本，而(…|…|…)会保留匹配的分组，可变长(0-n)的字段可以加*l，在末尾的field的切片中，最后一位代表step</p>
+<h4 id="字符串的开头与结尾匹配"><a href="#字符串的开头与结尾匹配" class="headerlink" title="字符串的开头与结尾匹配"></a>字符串的开头与结尾匹配</h4><pre><code class="python">filenames = ["Makefile", "foo.c", "bar.py", "spam.c", "spam.h"]
 print(any(name.endswith(".py") for name in filenames))
 print([name for name in filenames if name.endswith((".c", ".h"))])
 </code></pre>
 <p>result</p>
 <pre><code>True
 ['foo.c', 'spam.c', 'spam.h']
-</code></pre><p>总结：直接使用str.startswith()，str.endswith()，any用于检验列表元素的有无，两个函数可以作为判断指标生成新的列表，注意这两个函数内部如果有多个匹配的话需要用tuple(元组)把它们括起来<br>也可以使用match来进行开头的匹配，代码如下</p>
-<pre><code class="lang-python">import re
+</code></pre>
+<p>总结：直接使用str.startswith()，str.endswith()，any用于检验列表元素的有无，两个函数可以作为判断指标生成新的列表，注意这两个函数内部如果有多个匹配的话需要用tuple(元组)把它们括起来<br>也可以使用match来进行开头的匹配，代码如下</p>
+<pre><code class="python">import re
 url = "http://www.python.org"
 res = re.match("https|http|ftp", url)
 print(res != None)
@@ -159,7 +161,8 @@ print(res.group())
 <p>result</p>
 <pre><code>True
 http
-</code></pre><h4 id="字符串的匹配与搜索"><a href="#字符串的匹配与搜索" class="headerlink" title="字符串的匹配与搜索"></a>字符串的匹配与搜索</h4><pre><code class="lang-python">import re
+</code></pre>
+<h4 id="字符串的匹配与搜索"><a href="#字符串的匹配与搜索" class="headerlink" title="字符串的匹配与搜索"></a>字符串的匹配与搜索</h4><pre><code class="python">import re
 text = "Today is 11/27/2012. PyCon starts 3/13/2013"
 print(text.find("PyCon"))
 print(re.findall(r'\d+/\d+/\d+', text))
@@ -170,5 +173,6 @@ print(datapat.findall(text))
 <pre><code>21
 ['11/27/2012', '3/13/2013']
 ['11/27/2012', '3/13/2013']
-</code></pre><p>find可以返回第一个匹配的位置，如果想要找到所有的匹配，可以使用findall，一方面可以直接使用，另一方面可以将模式字符串预编译为模式对象</p>
-</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/tfbase/" title="Tensorflow 基本概念"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: Tensorflow 基本概念</span></a><a class="button is-default" href="/kneser-ney/" title="Good-Turing、Absolute、kneser-ney smooth"><span class="has-text-weight-semibold">Next: Good-Turing、Absolute、kneser-ney smooth</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><script src="/js/post.js"></script></body></html>
+</code></pre>
+<p>find可以返回第一个匹配的位置，如果想要找到所有的匹配，可以使用findall，一方面可以直接使用，另一方面可以将模式字符串预编译为模式对象</p>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/tfbase/" title="Tensorflow 基本概念"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: Tensorflow 基本概念</span></a><a class="button is-default" href="/kneser-ney/" title="Good-Turing、Absolute、kneser-ney smooth"><span class="has-text-weight-semibold">Next: Good-Turing、Absolute、kneser-ney smooth</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/yanjianzhang"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/allan_zhang_"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><a title="zhihu" target="_blank" rel="noopener nofollow" href="//zhihu.com/people/tu-ling-72"><i class="iconfont icon-zhihu"></i></a><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/yanjianzhang"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/zhang.yanjian.7"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Yanjian Zhang 2022</span></p><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>

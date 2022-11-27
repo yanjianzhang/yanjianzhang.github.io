@@ -1,5 +1,5 @@
-<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta name="google-site-verification" content="EnW3iE5uXnkCt08dH5N1p2UztpHHWUslmyE_mIIGaac"><meta name="baidu-site-verification" content="code-EtTckMomHC"><meta charset="UTF-8"><title>Trie树</title><meta name="description" content="精诚致志，求仁存心"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="为了提高我的单词查找的速度，我拜读了@Rshcaroline的代码，发现trie树是一个很好解决这个问题的方法
+<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>Trie树</title><meta name="description" content="精诚致志，求仁存心"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="为了提高我的单词查找的速度，我拜读了@Rshcaroline的代码，发现trie树是一个很好解决这个问题的方法
 Trie树，又叫字典树、前缀树（Prefix Tree）、单词查找树 或 键树，是一种多叉树结构
 Trie树的基本性质：
 
@@ -27,7 +27,7 @@ class Trie:
 </ol>
 <p>为了了解它的实现，我从leetcode中找了题目<a target="_blank" rel="noopener" href="https://leetcode.com/problems/implement-trie-prefix-tree/description/">Implement Trie (Prefix Tree)</a>做了一下</p>
 <p>一下是我的代码</p>
-<pre><code class="lang-python">class Trie:
+<pre><code class="python">class Trie:
 
     def __init__(self):
         &quot;&quot;&quot;
@@ -80,7 +80,7 @@ class Trie:
         return True
 </code></pre>
 <p>对于一个单词的查找一定编辑距离的相关集合的代码如下(from <a target="_blank" rel="noopener" href="https://github.com/Rshcaroline/FDU-Natural-Language-Processing/blob/master/Project%201.%20Spell%20Correction/spell_correction.py">@Rshcaroline</a>)，其中的deque是python的高性能双向队列，用于将trie,  word, path, edit_distance整个打包起来加入队列, 广度优先查找符合的单词</p>
-<pre><code class="lang-python">def get_candidate(trie, word, edit_distance=1):
+<pre><code class="python">def get_candidate(trie, word, edit_distance=1):
     que = deque([(trie, word, &#39;&#39;, edit_distance)])
     while que:
         trie, word, path, edit_distance = que.popleft()
@@ -110,4 +110,4 @@ class Trie:
                 if len(word) &gt; 1:
                     que.append((trie, word[1]+word[0]+word[2:], path, edit_distance))
 </code></pre>
-</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/kneser-ney/" title="Good-Turing、Absolute、kneser-ney smooth"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: Good-Turing、Absolute、kneser-ney smooth</span></a><a class="button is-default" href="/spring/" title="Spring, Spring Boot, Restful, Docker"><span class="has-text-weight-semibold">Next: Spring, Spring Boot, Restful, Docker</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><script src="/js/post.js"></script></body></html>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/kneser-ney/" title="Good-Turing、Absolute、kneser-ney smooth"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: Good-Turing、Absolute、kneser-ney smooth</span></a><a class="button is-default" href="/spring/" title="Spring, Spring Boot, Restful, Docker"><span class="has-text-weight-semibold">Next: Spring, Spring Boot, Restful, Docker</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/yanjianzhang"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/allan_zhang_"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><a title="zhihu" target="_blank" rel="noopener nofollow" href="//zhihu.com/people/tu-ling-72"><i class="iconfont icon-zhihu"></i></a><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/yanjianzhang"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/zhang.yanjian.7"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Yanjian Zhang 2022</span></p><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>

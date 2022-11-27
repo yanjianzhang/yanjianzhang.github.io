@@ -10,7 +10,7 @@ Vue项目v-for、v-model的使用V-forv-for既可以在data内的一个对象列
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
 <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Yanjian Zhang's Blog" type="application/atom+xml">
-</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Yanjian Zhang's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Vue项目的合集</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">Vue组件的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E5%A4%8D%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">组件的复用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E7%BB%84%E4%BB%B6%E5%90%91%E5%A4%8D%E7%94%A8%E7%BB%84%E4%BB%B6%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">子组件向复用组件触发事件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E9%A1%B9%E7%9B%AEv-for%E3%80%81v-model%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">Vue项目v-for、v-model的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#V-for"><span class="toc-number">2.1.</span> <span class="toc-text">V-for</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#v-for-%E5%93%8D%E5%BA%94%E7%9A%84%E5%86%85%E5%AE%B9%E6%9B%B4%E6%96%B0"><span class="toc-number">2.1.1.</span> <span class="toc-text">v-for 响应的内容更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E8%BF%87%E6%BB%A4%E5%88%9B%E7%AB%8B%E6%96%B0%E6%95%B0%E7%BB%84"><span class="toc-number">2.1.2.</span> <span class="toc-text">利用过滤创立新数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-for-%E4%B8%8E-v-if-%E7%9A%84%E5%90%88%E5%B9%B6%E4%BD%BF%E7%94%A8"><span class="toc-number">2.1.3.</span> <span class="toc-text">v-for 与 v-if 的合并使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V-model"><span class="toc-number">2.2.</span> <span class="toc-text">V-model</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E9%A1%B9%E7%9B%AEbus%E4%B8%8Evuex%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">Vue项目bus与vuex的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Bus"><span class="toc-number">3.1.</span> <span class="toc-text">为什么需要Bus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E5%88%9B%E5%BB%BABus"><span class="toc-number">3.2.</span> <span class="toc-text">直接创建Bus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8vue-bus"><span class="toc-number">3.3.</span> <span class="toc-text">使用vue-bus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8vuex"><span class="toc-number">3.4.</span> <span class="toc-text">为什么使用vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8vuex"><span class="toc-number">3.5.</span> <span class="toc-text">使用vuex</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E9%A1%B9%E7%9B%AE%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">Vue项目路由传参方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#query%E4%BC%A0%E5%8F%82"><span class="toc-number">4.1.</span> <span class="toc-text">query传参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#params%E4%BC%A0%E5%8F%82"><span class="toc-number">4.2.</span> <span class="toc-text">params传参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router-push%E4%BC%A0%E5%8F%82"><span class="toc-number">4.3.</span> <span class="toc-text">$router.push传参</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E9%A1%B9%E7%9B%AErouter%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">5.</span> <span class="toc-text">Vue项目router注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">5.1.</span> <span class="toc-text">项目结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main-js"><span class="toc-number">5.1.1.</span> <span class="toc-text">main.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#App-vue"><span class="toc-number">5.1.2.</span> <span class="toc-text">App.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#route-x2F-index-js"><span class="toc-number">5.1.3.</span> <span class="toc-text">route&#x2F;index.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#components-x2F-HelloWorld-vue"><span class="toc-number">5.2.</span> <span class="toc-text">components&#x2F;HelloWorld.vue</span></a></li></ol></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Vue"><i class="tag post-item-tag">Vue</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">Vue项目的合集</h1><time class="has-text-grey" datetime="2018-08-23T13:44:02.000Z">2018-08-23</time><article class="mt-2 post-content"><h1 id="Vue组件的使用"><a href="#Vue组件的使用" class="headerlink" title="Vue组件的使用"></a>Vue组件的使用</h1><h2 id="组件的复用"><a href="#组件的复用" class="headerlink" title="组件的复用"></a>组件的复用</h2><p>组件可以被复用，且复用组件的内容由每一个实例自己维护。但是复用组件的data选项必须是一个函数。</p>
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Yanjian Zhang's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Vue项目的合集</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">Vue组件的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E5%A4%8D%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">组件的复用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E7%BB%84%E4%BB%B6%E5%90%91%E5%A4%8D%E7%94%A8%E7%BB%84%E4%BB%B6%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">子组件向复用组件触发事件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E9%A1%B9%E7%9B%AEv-for%E3%80%81v-model%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">Vue项目v-for、v-model的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#V-for"><span class="toc-number">2.1.</span> <span class="toc-text">V-for</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#v-for-%E5%93%8D%E5%BA%94%E7%9A%84%E5%86%85%E5%AE%B9%E6%9B%B4%E6%96%B0"><span class="toc-number">2.1.1.</span> <span class="toc-text">v-for 响应的内容更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E8%BF%87%E6%BB%A4%E5%88%9B%E7%AB%8B%E6%96%B0%E6%95%B0%E7%BB%84"><span class="toc-number">2.1.2.</span> <span class="toc-text">利用过滤创立新数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-for-%E4%B8%8E-v-if-%E7%9A%84%E5%90%88%E5%B9%B6%E4%BD%BF%E7%94%A8"><span class="toc-number">2.1.3.</span> <span class="toc-text">v-for 与 v-if 的合并使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V-model"><span class="toc-number">2.2.</span> <span class="toc-text">V-model</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E9%A1%B9%E7%9B%AEbus%E4%B8%8Evuex%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">Vue项目bus与vuex的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Bus"><span class="toc-number">3.1.</span> <span class="toc-text">为什么需要Bus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E5%88%9B%E5%BB%BABus"><span class="toc-number">3.2.</span> <span class="toc-text">直接创建Bus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8vue-bus"><span class="toc-number">3.3.</span> <span class="toc-text">使用vue-bus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8vuex"><span class="toc-number">3.4.</span> <span class="toc-text">为什么使用vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8vuex"><span class="toc-number">3.5.</span> <span class="toc-text">使用vuex</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E9%A1%B9%E7%9B%AE%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">Vue项目路由传参方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#query%E4%BC%A0%E5%8F%82"><span class="toc-number">4.1.</span> <span class="toc-text">query传参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#params%E4%BC%A0%E5%8F%82"><span class="toc-number">4.2.</span> <span class="toc-text">params传参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router-push%E4%BC%A0%E5%8F%82"><span class="toc-number">4.3.</span> <span class="toc-text">$router.push传参</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E9%A1%B9%E7%9B%AErouter%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">5.</span> <span class="toc-text">Vue项目router注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">5.1.</span> <span class="toc-text">项目结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main-js"><span class="toc-number">5.1.1.</span> <span class="toc-text">main.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#App-vue"><span class="toc-number">5.1.2.</span> <span class="toc-text">App.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#route-index-js"><span class="toc-number">5.1.3.</span> <span class="toc-text">route&#x2F;index.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#components-HelloWorld-vue"><span class="toc-number">5.2.</span> <span class="toc-text">components&#x2F;HelloWorld.vue</span></a></li></ol></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Vue"><i class="tag post-item-tag">Vue</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">Vue项目的合集</h1><time class="has-text-grey" datetime="2018-08-23T13:44:02.000Z">2018-08-23</time><article class="mt-2 post-content"><h1 id="Vue组件的使用"><a href="#Vue组件的使用" class="headerlink" title="Vue组件的使用"></a>Vue组件的使用</h1><h2 id="组件的复用"><a href="#组件的复用" class="headerlink" title="组件的复用"></a>组件的复用</h2><p>组件可以被复用，且复用组件的内容由每一个实例自己维护。但是复用组件的data选项必须是一个函数。</p>
 <h2 id="子组件向复用组件触发事件"><a href="#子组件向复用组件触发事件" class="headerlink" title="子组件向复用组件触发事件"></a>子组件向复用组件触发事件</h2><p>我们在子组件中引用复用组件时，点击复用组件的按钮，我们希望能够将时间传递到复用组件中去，这时候我们需要用$emit方法传入事件，并且在复用组件的模板中使用v-on:来启动相应的方法</p>
 <p>对于$emit方法的第二个参数,可以在复用组件里使用$event获取，当复用组件定义了相应的方法时，可以作为函数的参数使用</p>
 <h1 id="Vue项目v-for、v-model的使用"><a href="#Vue项目v-for、v-model的使用" class="headerlink" title="Vue项目v-for、v-model的使用"></a>Vue项目v-for、v-model的使用</h1><h2 id="V-for"><a href="#V-for" class="headerlink" title="V-for"></a>V-for</h2><p>v-for既可以在data内的一个对象列表中循环，也可以在一个对象中循环</p>
@@ -20,7 +20,7 @@ Vue项目v-for、v-model的使用V-forv-for既可以在data内的一个对象列
 </ol>
 <h3 id="v-for-响应的内容更新"><a href="#v-for-响应的内容更新" class="headerlink" title="v-for 响应的内容更新"></a>v-for 响应的内容更新</h3><p> 可以使用vm.$set(vm.items, indexOfItem, newValue)对items第i个内容进行修改，并且v-for会实时响应更新，如果是items[i]则不行</p>
 <h3 id="利用过滤创立新数组"><a href="#利用过滤创立新数组" class="headerlink" title="利用过滤创立新数组"></a>利用过滤创立新数组</h3><p> 可以建立以下method</p>
-<pre><code class="js">methods: &#123;
+<pre><code class="lang-js">methods: &#123;
   even: function (numbers) &#123;
     return numbers.filter(function (number) &#123;
       return number % 2 === 0
@@ -36,8 +36,8 @@ Vue项目v-for、v-model的使用V-forv-for既可以在data内的一个对象列
 <li>更特别的，对于checkbox来说，value就包含true和false</li>
 </ol>
 <h1 id="Vue项目bus与vuex的使用"><a href="#Vue项目bus与vuex的使用" class="headerlink" title="Vue项目bus与vuex的使用"></a>Vue项目bus与vuex的使用</h1><h2 id="为什么需要Bus"><a href="#为什么需要Bus" class="headerlink" title="为什么需要Bus"></a>为什么需要Bus</h2><p>一般来说，都是利用父组件给子组件使用query或者params传递参数来实现子组件的数据显示<br>不过，当出现子组件需要向父组件传递数据的时候，就需要用到bus，bus可以自己创建，也可以通过装包来实现</p>
-<h2 id="直接创建Bus"><a href="#直接创建Bus" class="headerlink" title="直接创建Bus"></a>直接创建Bus</h2><p>在此处直接将Bus注入Vue对象中，成为全局的组件。<br>在子组件中通过this.$root.Bus.$on(key,method),this.$root.Bus.$emit(key,data)来调用<br>将$on放在mounted，created这些钩子函数中，相应的函数使用(e)&#x3D;&gt;{function}比较便捷         </p>
-<pre><code class="js">import Vue from &#39;vue&#39;
+<h2 id="直接创建Bus"><a href="#直接创建Bus" class="headerlink" title="直接创建Bus"></a>直接创建Bus</h2><p>在此处直接将Bus注入Vue对象中，成为全局的组件。<br>在子组件中通过this.$root.Bus.$on(key,method),this.$root.Bus.$emit(key,data)来调用<br>将$on放在mounted，created这些钩子函数中，相应的函数使用(e)=&gt;{function}比较便捷         </p>
+<pre><code class="lang-js">import Vue from &#39;vue&#39;
 const Bus = new Vue()
 
 var app= new Vue(&#123;
@@ -49,7 +49,7 @@ var app= new Vue(&#123;
 &#125;)
 </code></pre>
 <h2 id="使用vue-bus"><a href="#使用vue-bus" class="headerlink" title="使用vue-bus"></a>使用vue-bus</h2><p>使用yarn或者npm安装vue-bus之后，在main.js中引用它</p>
-<pre><code class="js">import VueBus from &#39;vue-bus&#39;;
+<pre><code class="lang-js">import VueBus from &#39;vue-bus&#39;;
 Vue.use(VueBus);
 </code></pre>
 <p>于是调用直接可以写为 this.$bus.on(key, this.method)，this.$bus.emit(key, { text: …… }<br>其中第一个字符串参数代表key，每个key都能够实现自己的独立传输，this.method为事先定义好的method，用于对传入的数据进行处理</p>
@@ -60,7 +60,7 @@ Vue.use(VueBus);
 </ol>
 <p>经过我的观察，vuex在其中的作用就是组件与状态的捆绑剥离开来，使得组件状态的改变依赖于某个行为，这使得代码变得易于调试。<br>Vuex采用集中式存储管理应用的所有组件的状态，这里的关键在于集中式存储管理。这意味着本来需要共享状态的更新是需要组件之间通讯的，而现在有了vuex，就组件就都和store通讯了。</p>
 <h2 id="使用vuex"><a href="#使用vuex" class="headerlink" title="使用vuex"></a>使用vuex</h2><p>使用yarn或者npm安装vuex之后，在main.js中引用它</p>
-<pre><code class="js">import Vuex from &#39;vuex&#39;
+<pre><code class="lang-js">import Vuex from &#39;vuex&#39;
 import store from &#39;./vuex/store&#39;
 Vue.use(Vuex)
 new Vue(&#123;
@@ -69,7 +69,7 @@ new Vue(&#123;
 &#125;)
 </code></pre>
 <p>随后创建vuex目录,将store.js放在目录下,定义state和mutation</p>
-<pre><code class="js">import Vue from &#39;vue&#39;
+<pre><code class="lang-js">import Vue from &#39;vue&#39;
 import Vuex from &#39;vuex&#39;
 
 Vue.use(Vuex)
@@ -88,18 +88,18 @@ export default store
 </code></pre>
 <p>在使用的时候，不直接修改this.$store.state.author，而是使用this.$store.commit()来提交，可以让我们更好的跟踪每一个状态的变化，在大型项目中更为适用</p>
 <h1 id="Vue项目路由传参方法"><a href="#Vue项目路由传参方法" class="headerlink" title="Vue项目路由传参方法"></a>Vue项目路由传参方法</h1><h2 id="query传参"><a href="#query传参" class="headerlink" title="query传参"></a>query传参</h2><p>父组件通过path来配置路由，用query来传递参数</p>
-<pre><code class="js">    this.$router.push(&#123;
+<pre><code class="lang-js">    this.$router.push(&#123;
           path: &#39;/describe&#39;,
           query: &#123;
             id: id
           &#125;
         &#125;)
 </code></pre>
-<p>此时不需要在路由配置上做手脚，直接在子组件上使用params即可，注意此时是用route来表示，而不是用router<br>最终效果是query传递的参数会显示在url后面的?id&#x3D;上</p>
-<pre><code class="js">this.$route.params.id
+<p>此时不需要在路由配置上做手脚，直接在子组件上使用params即可，注意此时是用route来表示，而不是用router<br>最终效果是query传递的参数会显示在url后面的?id=上</p>
+<pre><code class="lang-js">this.$route.params.id
 </code></pre>
 <h2 id="params传参"><a href="#params传参" class="headerlink" title="params传参"></a>params传参</h2><p>此时不过是用别名name来代替path，使用params代替query而已</p>
-<pre><code class="js">       this.$router.push(&#123;
+<pre><code class="lang-js">       this.$router.push(&#123;
           name: &#39;Describe&#39;,
           params: &#123;
             id: id
@@ -107,27 +107,27 @@ export default store
         &#125;)
 </code></pre>
 <p>同样的引用方式</p>
-<pre><code class="js">this.$route.params.id
+<pre><code class="lang-js">this.$route.params.id
 </code></pre>
 <h2 id="router-push传参"><a href="#router-push传参" class="headerlink" title="$router.push传参"></a>$router.push传参</h2><p>父组件</p>
-<pre><code class="js">      getDescribe(id) &#123;
+<pre><code class="lang-js">      getDescribe(id) &#123;
 //   直接调用$router.push 实现携带参数的跳转
         this.$router.push(&#123;
           path: `/describe/$&#123;id&#125;`,
         &#125;)
 </code></pre>
-<p>此时需要修改router中的index.js，需要在path中添加&#x2F;:id来对应 $router.push 中path携带的参数</p>
-<pre><code class="js">&#123;
+<p>此时需要修改router中的index.js，需要在path中添加/:id来对应 $router.push 中path携带的参数</p>
+<pre><code class="lang-js">&#123;
      path: &#39;/describe/:id&#39;,
      name: &#39;Describe&#39;,
      component: Describe
    &#125;
 </code></pre>
 <p>同样的引用方式</p>
-<pre><code class="js">this.$route.params.id
+<pre><code class="lang-js">this.$route.params.id
 </code></pre>
 <h1 id="Vue项目router注意事项"><a href="#Vue项目router注意事项" class="headerlink" title="Vue项目router注意事项"></a>Vue项目router注意事项</h1><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><h3 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h3><p>在项目中唯一new了一次Vue，实现了App.vue的挂载，以及router与Vue的关联</p>
 <h3 id="App-vue"><a href="#App-vue" class="headerlink" title="App.vue"></a>App.vue</h3><p>项目中的最外层的一个Vue，其中的router-view代表了可以变化和跳转的部分，如果内容写在router-view之外的话就无法跳转<br>并暴露了App接口，用于其他文件的引用</p>
-<h3 id="route-x2F-index-js"><a href="#route-x2F-index-js" class="headerlink" title="route&#x2F;index.js"></a>route&#x2F;index.js</h3><p>用于在Vue中设置router，统一暴露所有的路由接口为router</p>
-<h2 id="components-x2F-HelloWorld-vue"><a href="#components-x2F-HelloWorld-vue" class="headerlink" title="components&#x2F;HelloWorld.vue"></a>components&#x2F;HelloWorld.vue</h2><p>可以使用router-link to:&#x3D;””来进行路由，其中的内容可以是button或者其他组件，对于components里的组件的引用，可以使用@&#x2F;components&#x2F;xxx来引用</p>
+<h3 id="route-index-js"><a href="#route-index-js" class="headerlink" title="route/index.js"></a>route/index.js</h3><p>用于在Vue中设置router，统一暴露所有的路由接口为router</p>
+<h2 id="components-HelloWorld-vue"><a href="#components-HelloWorld-vue" class="headerlink" title="components/HelloWorld.vue"></a>components/HelloWorld.vue</h2><p>可以使用router-link to:=””来进行路由，其中的内容可以是button或者其他组件，对于components里的组件的引用，可以使用@/components/xxx来引用</p>
 </article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/connectlb/" title="Vue、Loopback、mysql"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: Vue、Loopback、mysql</span></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><script src="/js/post.js"></script></body></html>

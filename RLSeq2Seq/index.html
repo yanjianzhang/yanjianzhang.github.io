@@ -18,7 +18,7 @@ SeqGANs就使用了强化学习的方法来实现反向.."><!-- hexo injector he
 <p>解码器的loss往往是使用每个词的NLL(negative log likelihood)来获得，而这意味着一旦进行了解码，就没有办法对整句话进行评价了。因此为了解决这个问题，往往使用强化学习的方法。</p>
 <p>SeqGANs就使用了强化学习的方法来实现反向传播。中间为了使得生成完整的句子用于Discriminator能够衡量reward，还使用了蒙特卡洛的方法。之所以使用MCTS这主要受限于问题的假设，是没有编码器的文本生成，一开始的生成序列会非常短。这意味着就是生成的结果基本取决于训练的文本，就像是图像中的的人脸数据集就会生成人脸，而油画数据集就会生成油画一样。</p>
 <p>对于我来说，最难的部分就在于如何在代码中计算loss，我在SeqGANs的代码中看到这样一段</p>
-<pre><code class="python">def batchPGLoss(self, inp, target, reward):
+<pre><code class="lang-python">def batchPGLoss(self, inp, target, reward):
         &quot;&quot;&quot;
         Returns a pseudo-loss that gives corresponding policy gradients (on calling .backward()).
         Inspired by the example in http://karpathy.github.io/2016/05/31/rl/
@@ -44,7 +44,7 @@ SeqGANs就使用了强化学习的方法来实现反向.."><!-- hexo injector he
 
         return loss/batch_size
 </code></pre>
-<p>访问代码中的博客<a target="_blank" rel="noopener" href="http://karpathy.github.io/2016/05/31/rl/%EF%BC%8C">http://karpathy.github.io/2016/05/31/rl/，</a> 我确实被惊艳了，作者正好说了我最需要关注的东西，监督学习与强化学习的比较，我确实不敢相信它是如此的2016 (just joking)。</p>
+<p>访问代码中的博客<a target="_blank" rel="noopener" href="http://karpathy.github.io/2016/05/31/rl/，">http://karpathy.github.io/2016/05/31/rl/，</a> 我确实被惊艳了，作者正好说了我最需要关注的东西，监督学习与强化学习的比较，我确实不敢相信它是如此的2016 (just joking)。</p>
 <p>不过蒙特卡洛除了解决这一个问题之外，还解决了一个Reward for Every Generation Step(REGS)的问题，以下是从<a target="_blank" rel="noopener" href="https://www.cnblogs.com/n2meetu/p/8182194.html">其他博文</a>中找到的描述</p>
 <p>‘’在以往的工作中，D效果非常好而G的效果非常糟糕会带来训练效果的下降。试想一下一个G所有产生的答案都被D驳回了，在这段时间内G的所有反馈都是负反馈，G就会迷失从而不知道向什么方向优化会得到正反馈，所以理想的情况下G和D是交替训练上升的。’’</p>
 <p>《Adversarial learning for neural dialogue generation》正是注意到了这一点，对其使用部分片段的评价进行优化。</p>

@@ -6,7 +6,7 @@
   <link href="https://yanjianzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://yanjianzhang.github.io/"/>
-  <updated>2022-11-27T14:46:10.283Z</updated>
+  <updated>2022-11-27T15:12:52.244Z</updated>
   <id>https://yanjianzhang.github.io/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="https://yanjianzhang.github.io/2022/11/23/DM/"/>
     <id>https://yanjianzhang.github.io/2022/11/23/DM/</id>
     <published>2022-11-22T23:00:00.000Z</published>
-    <updated>2022-11-27T14:46:10.283Z</updated>
+    <updated>2022-11-27T15:12:52.244Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Binary-Relations"><a href="#Binary-Relations" class="headerlink" title="Binary Relations"></a>Binary Relations</h1><h1 id="Voting-Rules"><a href="#Voting-Rules" class="headerlink" title="Voting Rules"></a>Voting Rules</h1><h2 id="Plurality-多数制选举"><a href="#Plurality-多数制选举" class="headerlink" title="Plurality 多数制选举"></a>Plurality 多数制选举</h2><p>变种: Plurality with run-off</p><ul><li>first round finished if more than 50% voted to same candidate else keep two candidates</li><li>second round compare between two candidates</li></ul><h2 id="Condorcet-voting-rule-双序制选举（孔多塞制）"><a href="#Condorcet-voting-rule-双序制选举（孔多塞制）" class="headerlink" title="Condorcet voting rule 双序制选举（孔多塞制）"></a>Condorcet voting rule 双序制选举（孔多塞制）</h2><ul><li>Do pairwise comparision</li><li>Generate Condorcet winner</li></ul><h2 id="Borda-voting-rule"><a href="#Borda-voting-rule" class="headerlink" title="Borda voting rule"></a>Borda voting rule</h2><h2 id="Arrow’s-Theorem"><a href="#Arrow’s-Theorem" class="headerlink" title="Arrow’s Theorem"></a>Arrow’s Theorem</h2><p>No method respect 5 principle</p><h1 id="MAUT-Approach"><a href="#MAUT-Approach" class="headerlink" title="MAUT Approach"></a>MAUT Approach</h1><p>MAUT(Multi Attribute Utility Theory)</p><h1 id="Outranking-approach"><a href="#Outranking-approach" class="headerlink" title="Outranking approach"></a>Outranking approach</h1>]]></content>
     
     
-    <summary type="html">Binary relations</summary>
+    <summary type="html">Binary relations, Voting Rules, MAUT Approach, Outranking approach</summary>
     
     
     

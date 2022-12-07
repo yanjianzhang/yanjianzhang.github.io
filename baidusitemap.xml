@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yanjianzhang.github.io/git/</loc>
-    <lastmod>2022-11-27</lastmod>
+    <loc>https://yanjianzhang.github.io/RL/</loc>
+    <lastmod>2022-12-07</lastmod>
   </url>
   <url>
-    <loc>https://yanjianzhang.github.io/RL/</loc>
+    <loc>https://yanjianzhang.github.io/DM/</loc>
+    <lastmod>2022-11-29</lastmod>
+  </url>
+  <url>
+    <loc>https://yanjianzhang.github.io/git/</loc>
     <lastmod>2022-11-27</lastmod>
   </url>
   <url>
@@ -14,10 +18,6 @@
   </url>
   <url>
     <loc>https://yanjianzhang.github.io/Vue-all/</loc>
-    <lastmod>2022-11-27</lastmod>
-  </url>
-  <url>
-    <loc>https://yanjianzhang.github.io/DM/</loc>
     <lastmod>2022-11-27</lastmod>
   </url>
   <url>

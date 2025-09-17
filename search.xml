@@ -85,31 +85,6 @@
     
     
     <entry>
-      <title>Hexo博客搭建的一些坑</title>
-      <link href="/hexo/"/>
-      <url>/hexo/</url>
-      
-        <content type="html"><![CDATA[<h1 id="数学表达式渲染"><a href="#数学表达式渲染" class="headerlink" title="数学表达式渲染"></a>数学表达式渲染</h1><p>试过了很多方法都不行，最后升级了hexo，使用了一下目录<br><a href="https://github.com/hexojs/hexo-math">https://github.com/hexojs/hexo-math</a><br>还是要保留原有的 hexo-renderer-marked</p><pre><code>npm install hexo-renderer-marked --save</code></pre><h1 id="表格渲染"><a href="#表格渲染" class="headerlink" title="表格渲染"></a>表格渲染</h1><p>表格前后需要空一到两行，才能在部署到网站上成功渲染</p><h1 id="toc目录"><a href="#toc目录" class="headerlink" title="toc目录"></a>toc目录</h1><p>每个目录的层级必须连续，不能从层级1跳到层级3，否则toc目录渲染失败</p><h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>图片的路径很难统一，最后笔者是修改了_config.yml, 使得路由比较简单，使用相对路径</p><pre><code>permalink: :title/</code></pre><h1 id="hexo-常用命令"><a href="#hexo-常用命令" class="headerlink" title="hexo 常用命令"></a>hexo 常用命令</h1><pre><code>hexo clean  # 清空public目录hexo g      # 生成public文件hexo s      # 本地服务测试hexo d      # 部署到远端</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Git傻瓜安全策略</title>
       <link href="/git/"/>
       <url>/git/</url>
@@ -127,6 +102,31 @@
         <tags>
             
             <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo博客搭建的一些坑</title>
+      <link href="/hexo/"/>
+      <url>/hexo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="数学表达式渲染"><a href="#数学表达式渲染" class="headerlink" title="数学表达式渲染"></a>数学表达式渲染</h1><p>试过了很多方法都不行，最后升级了hexo，使用了一下目录<br><a href="https://github.com/hexojs/hexo-math">https://github.com/hexojs/hexo-math</a><br>还是要保留原有的 hexo-renderer-marked</p><pre><code>npm install hexo-renderer-marked --save</code></pre><h1 id="表格渲染"><a href="#表格渲染" class="headerlink" title="表格渲染"></a>表格渲染</h1><p>表格前后需要空一到两行，才能在部署到网站上成功渲染</p><h1 id="toc目录"><a href="#toc目录" class="headerlink" title="toc目录"></a>toc目录</h1><p>每个目录的层级必须连续，不能从层级1跳到层级3，否则toc目录渲染失败</p><h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>图片的路径很难统一，最后笔者是修改了_config.yml, 使得路由比较简单，使用相对路径</p><pre><code>permalink: :title/</code></pre><h1 id="hexo-常用命令"><a href="#hexo-常用命令" class="headerlink" title="hexo 常用命令"></a>hexo 常用命令</h1><pre><code>hexo clean  # 清空public目录hexo g      # 生成public文件hexo s      # 本地服务测试hexo d      # 部署到远端</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
             
         </tags>
       
@@ -205,9 +205,9 @@
             
             <tag> Reinforcement Learning </tag>
             
-            <tag> Adversarial Learning </tag>
-            
             <tag> Natural Language Processing </tag>
+            
+            <tag> Adversarial Learning </tag>
             
         </tags>
       

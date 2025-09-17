@@ -4,23 +4,29 @@
   
     
     <entry>
-      <title>决策模型</title>
-      <link href="/DM/"/>
-      <url>/DM/</url>
+      <title>ComfyUI 调试 Flux/In-Context LoRA 经验记录</title>
+      <link href="/flux/"/>
+      <url>/flux/</url>
       
-        <content type="html"><![CDATA[<h1 id="Binary-Relations"><a href="#Binary-Relations" class="headerlink" title="Binary Relations"></a>Binary Relations</h1><p>Provement: R asymmetric and negative transitive =&gt; R transitive</p><p>Suppose R is not transitive<br>There exit x, y and z such that xRy, yRz and not (xRz)</p><p>If asymmetric:<br>xRy =&gt; not yRx<br>yRz =&gt; not zRy</p><p>If negative transitive:<br>Not yRx and not zRy =&gt; not zRx</p><p>Provement: R complete and transitive =&gt; R negative transitive</p><h1 id="Voting-Rules"><a href="#Voting-Rules" class="headerlink" title="Voting Rules"></a>Voting Rules</h1><h2 id="Plurality-多数制选举"><a href="#Plurality-多数制选举" class="headerlink" title="Plurality 多数制选举"></a>Plurality 多数制选举</h2><p>变种: Plurality with run-off</p><ul><li>first round finished if more than 50% voted to same candidate else keep two candidates</li><li>second round compare between two candidates</li></ul><h2 id="Condorcet-voting-rule-双序制选举（孔多塞制）"><a href="#Condorcet-voting-rule-双序制选举（孔多塞制）" class="headerlink" title="Condorcet voting rule 双序制选举（孔多塞制）"></a>Condorcet voting rule 双序制选举（孔多塞制）</h2><ul><li>Do pairwise comparision</li><li>Generate Condorcet winner</li></ul><h2 id="Borda-voting-rule"><a href="#Borda-voting-rule" class="headerlink" title="Borda voting rule"></a>Borda voting rule</h2><h2 id="Arrow’s-Theorem"><a href="#Arrow’s-Theorem" class="headerlink" title="Arrow’s Theorem"></a>Arrow’s Theorem</h2><p>No method respect 5 principle</p><h1 id="MAUT-Approach"><a href="#MAUT-Approach" class="headerlink" title="MAUT Approach"></a>MAUT Approach</h1><p>MAUT(Multi Attribute Utility Theory)</p><h1 id="Outranking-approach"><a href="#Outranking-approach" class="headerlink" title="Outranking approach"></a>Outranking approach</h1>]]></content>
+        <content type="html"><![CDATA[<p>本文记录了我在 ComfyUI 上尝试运行 <strong>Flux.1-dev</strong> 与 <strong>In-Context LoRA</strong> 时的调试经验。主要聚焦在 Workflow 调试、模型文件处理、以及关键的排错方法。  </p><h1 id="关键经验点"><a href="#关键经验点" class="headerlink" title="关键经验点"></a>关键经验点</h1><h2 id="1-发现-NaN-→-黑图"><a href="#1-发现-NaN-→-黑图" class="headerlink" title="1. 发现 NaN → 黑图"></a>1. 发现 NaN → 黑图</h2><p>这次调试过程中，最大的发现是：  </p><ul><li>中间 latent 输出含有 <strong>NaN 值</strong>，导致最终结果变成全黑图。  </li><li>通过在 Workflow 中加入 <strong>Preview Any 节点</strong>，能够直接检查 latent 和中间张量，从而快速定位问题。</li></ul><p>这一点非常关键：黑图不一定是显存不足或连接错误，也可能是 <strong>中间数值溢出</strong>。</p><h2 id="2-分片模型必须合并"><a href="#2-分片模型必须合并" class="headerlink" title="2. 分片模型必须合并"></a>2. 分片模型必须合并</h2><p>Flux 的部分模型文件（例如 text_encoder_2）是以 <strong>分片 safetensors</strong> 的形式提供的，不能直接加载。<br>解决办法是合并为单一文件：  </p><pre><code class="bash">pip install safetensorssafetensors-cli merge \  models/clip/text_encoder_2/model-00001-of-00002.safetensors \  models/clip/text_encoder_2/model-00002-of-00002.safetensors \  models/clip/text_encoder_2/model.safetensors</code></pre><p>合并后再加载，就能正常运行。  </p><h2 id="3-调试方法的优先级"><a href="#3-调试方法的优先级" class="headerlink" title="3. 调试方法的优先级"></a>3. 调试方法的优先级</h2><p>在整个过程中，逐步形成了一个排错优先级：  </p><ol><li><strong>先看 latent</strong>：用 Preview Any 判断是否已经出现 NaN。  </li><li><strong>再看模型文件</strong>：确认路径、大小、以及是否合并。  </li><li><strong>最后调 Workflow</strong>：检查是否有不合理的参数或节点。</li></ol><p>这样可以避免盲目地不断调整参数，而忽视了更根本的问题。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这次调试的主要收获有两点：  </p><ul><li><strong>Preview Any 是最重要的调试工具</strong>，能直接揭示中间 latent 是否正常。  </li><li><strong>分片模型必须合并</strong>，否则会造成黑图或下拉列表为空。</li></ul><p>整体感受是：黑图问题往往并不是“最后一步出错”，而是中间环节早就出现了异常。如果能及时发现 NaN，就能节省大量调试时间。  </p>]]></content>
       
       
       <categories>
           
-          <category> Decision Modeling </category>
+          <category> Generative AI </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Decision Modeling </tag>
+            <tag> Stable Diffusion </tag>
+            
+            <tag> ComfyUI </tag>
+            
+            <tag> Flux </tag>
+            
+            <tag> LoRA </tag>
             
         </tags>
       

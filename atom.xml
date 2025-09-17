@@ -18,8 +18,8 @@
   
   <entry>
     <title>ComfyUI 调试 Flux/In-Context LoRA 经验记录</title>
-    <link href="https://yanjianzhang.github.io/flux/"/>
-    <id>https://yanjianzhang.github.io/flux/</id>
+    <link href="https://yanjianzhang.github.io/2025/flux/"/>
+    <id>https://yanjianzhang.github.io/2025/flux/</id>
     <published>2025-09-16T16:00:00.000Z</published>
     <updated>2025-09-17T13:47:18.296Z</updated>
     
@@ -45,8 +45,8 @@
   
   <entry>
     <title>强化学习精要总结（更新）</title>
-    <link href="https://yanjianzhang.github.io/RL/"/>
-    <id>https://yanjianzhang.github.io/RL/</id>
+    <link href="https://yanjianzhang.github.io/2022/RL/"/>
+    <id>https://yanjianzhang.github.io/2022/RL/</id>
     <published>2022-11-22T16:00:00.000Z</published>
     <updated>2022-12-14T16:28:50.634Z</updated>
     
@@ -66,8 +66,8 @@
   
   <entry>
     <title>Pre-order traversal and Recursive</title>
-    <link href="https://yanjianzhang.github.io/recursive_20220916/"/>
-    <id>https://yanjianzhang.github.io/recursive_20220916/</id>
+    <link href="https://yanjianzhang.github.io/2022/recursive_20220916/"/>
+    <id>https://yanjianzhang.github.io/2022/recursive_20220916/</id>
     <published>2022-09-15T16:00:00.000Z</published>
     <updated>2022-09-16T09:21:33.673Z</updated>
     
@@ -87,8 +87,8 @@
   
   <entry>
     <title>Git傻瓜安全策略</title>
-    <link href="https://yanjianzhang.github.io/git/"/>
-    <id>https://yanjianzhang.github.io/git/</id>
+    <link href="https://yanjianzhang.github.io/2021/git/"/>
+    <id>https://yanjianzhang.github.io/2021/git/</id>
     <published>2021-11-26T07:44:02.000Z</published>
     <updated>2022-11-27T20:57:21.820Z</updated>
     
@@ -108,8 +108,8 @@
   
   <entry>
     <title>Hexo博客搭建的一些坑</title>
-    <link href="https://yanjianzhang.github.io/hexo/"/>
-    <id>https://yanjianzhang.github.io/hexo/</id>
+    <link href="https://yanjianzhang.github.io/2021/hexo/"/>
+    <id>https://yanjianzhang.github.io/2021/hexo/</id>
     <published>2021-11-26T07:44:02.000Z</published>
     <updated>2022-11-27T20:38:27.254Z</updated>
     
@@ -129,8 +129,8 @@
   
   <entry>
     <title>conda, pip, jupyter</title>
-    <link href="https://yanjianzhang.github.io/environment/"/>
-    <id>https://yanjianzhang.github.io/environment/</id>
+    <link href="https://yanjianzhang.github.io/2021/environment/"/>
+    <id>https://yanjianzhang.github.io/2021/environment/</id>
     <published>2021-02-18T16:00:00.000Z</published>
     <updated>2022-10-24T08:15:12.364Z</updated>
     
@@ -152,8 +152,8 @@
   
   <entry>
     <title>常见NLP工具包</title>
-    <link href="https://yanjianzhang.github.io/NLP_toolkit/"/>
-    <id>https://yanjianzhang.github.io/NLP_toolkit/</id>
+    <link href="https://yanjianzhang.github.io/2020/NLP_toolkit/"/>
+    <id>https://yanjianzhang.github.io/2020/NLP_toolkit/</id>
     <published>2020-02-18T16:00:00.000Z</published>
     <updated>2020-02-19T08:58:44.000Z</updated>
     
@@ -173,8 +173,8 @@
   
   <entry>
     <title>NLG里的强化与对抗</title>
-    <link href="https://yanjianzhang.github.io/RLSeq2Seq/"/>
-    <id>https://yanjianzhang.github.io/RLSeq2Seq/</id>
+    <link href="https://yanjianzhang.github.io/2020/RLSeq2Seq/"/>
+    <id>https://yanjianzhang.github.io/2020/RLSeq2Seq/</id>
     <published>2020-02-10T16:00:00.000Z</published>
     <updated>2021-12-26T22:45:08.612Z</updated>
     
@@ -190,16 +190,16 @@
     
     <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/tags/Reinforcement-Learning/"/>
     
-    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/tags/Natural-Language-Processing/"/>
-    
     <category term="Adversarial Learning" scheme="https://yanjianzhang.github.io/tags/Adversarial-Learning/"/>
+    
+    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/tags/Natural-Language-Processing/"/>
     
   </entry>
   
   <entry>
     <title>Top essays by scientists in 2019</title>
-    <link href="https://yanjianzhang.github.io/doctor/"/>
-    <id>https://yanjianzhang.github.io/doctor/</id>
+    <link href="https://yanjianzhang.github.io/2019/doctor/"/>
+    <id>https://yanjianzhang.github.io/2019/doctor/</id>
     <published>2019-12-26T16:00:00.000Z</published>
     <updated>2019-12-27T06:00:36.000Z</updated>
     
@@ -219,8 +219,8 @@
   
   <entry>
     <title>Commonsense Validation and Explanation</title>
-    <link href="https://yanjianzhang.github.io/Commonsence/"/>
-    <id>https://yanjianzhang.github.io/Commonsence/</id>
+    <link href="https://yanjianzhang.github.io/2019/Commonsence/"/>
+    <id>https://yanjianzhang.github.io/2019/Commonsence/</id>
     <published>2019-12-20T16:00:00.000Z</published>
     <updated>2021-12-26T22:45:49.318Z</updated>
     
@@ -242,8 +242,8 @@
   
   <entry>
     <title>Dropout of RNN, batch size, accumulation steps</title>
-    <link href="https://yanjianzhang.github.io/encoder-decoder/"/>
-    <id>https://yanjianzhang.github.io/encoder-decoder/</id>
+    <link href="https://yanjianzhang.github.io/2019/encoder-decoder/"/>
+    <id>https://yanjianzhang.github.io/2019/encoder-decoder/</id>
     <published>2019-12-03T16:00:00.000Z</published>
     <updated>2021-12-26T22:48:52.876Z</updated>
     
@@ -265,8 +265,8 @@
   
   <entry>
     <title>Indent problem! Latex and Python</title>
-    <link href="https://yanjianzhang.github.io/indent/"/>
-    <id>https://yanjianzhang.github.io/indent/</id>
+    <link href="https://yanjianzhang.github.io/2019/indent/"/>
+    <id>https://yanjianzhang.github.io/2019/indent/</id>
     <published>2019-12-03T16:00:00.000Z</published>
     <updated>2022-11-27T11:42:20.785Z</updated>
     
@@ -288,8 +288,8 @@
   
   <entry>
     <title>Matlab的使用笔记</title>
-    <link href="https://yanjianzhang.github.io/Matlab/"/>
-    <id>https://yanjianzhang.github.io/Matlab/</id>
+    <link href="https://yanjianzhang.github.io/2018/Matlab/"/>
+    <id>https://yanjianzhang.github.io/2018/Matlab/</id>
     <published>2018-11-14T16:44:02.000Z</published>
     <updated>2018-11-15T16:59:48.000Z</updated>
     
@@ -309,8 +309,8 @@
   
   <entry>
     <title>机器学习评价指标</title>
-    <link href="https://yanjianzhang.github.io/measure/"/>
-    <id>https://yanjianzhang.github.io/measure/</id>
+    <link href="https://yanjianzhang.github.io/2018/measure/"/>
+    <id>https://yanjianzhang.github.io/2018/measure/</id>
     <published>2018-11-08T16:44:02.000Z</published>
     <updated>2021-12-26T22:47:29.149Z</updated>
     
@@ -330,8 +330,8 @@
   
   <entry>
     <title>Tensorboard的使用</title>
-    <link href="https://yanjianzhang.github.io/tensorboard/"/>
-    <id>https://yanjianzhang.github.io/tensorboard/</id>
+    <link href="https://yanjianzhang.github.io/2018/tensorboard/"/>
+    <id>https://yanjianzhang.github.io/2018/tensorboard/</id>
     <published>2018-11-08T16:44:02.000Z</published>
     <updated>2021-12-26T22:47:01.471Z</updated>
     
@@ -353,8 +353,8 @@
   
   <entry>
     <title>Tensorflow 基本概念</title>
-    <link href="https://yanjianzhang.github.io/tfbase/"/>
-    <id>https://yanjianzhang.github.io/tfbase/</id>
+    <link href="https://yanjianzhang.github.io/2018/tfbase/"/>
+    <id>https://yanjianzhang.github.io/2018/tfbase/</id>
     <published>2018-11-07T16:44:02.000Z</published>
     <updated>2021-12-26T22:47:16.172Z</updated>
     
@@ -374,8 +374,8 @@
   
   <entry>
     <title>字符串和文本处理</title>
-    <link href="https://yanjianzhang.github.io/cookbookString/"/>
-    <id>https://yanjianzhang.github.io/cookbookString/</id>
+    <link href="https://yanjianzhang.github.io/2018/cookbookString/"/>
+    <id>https://yanjianzhang.github.io/2018/cookbookString/</id>
     <published>2018-11-06T16:44:02.000Z</published>
     <updated>2021-12-26T22:46:42.727Z</updated>
     
@@ -395,8 +395,8 @@
   
   <entry>
     <title>Good-Turing、Absolute、kneser-ney smooth</title>
-    <link href="https://yanjianzhang.github.io/kneser-ney/"/>
-    <id>https://yanjianzhang.github.io/kneser-ney/</id>
+    <link href="https://yanjianzhang.github.io/2018/kneser-ney/"/>
+    <id>https://yanjianzhang.github.io/2018/kneser-ney/</id>
     <published>2018-11-03T16:44:02.000Z</published>
     <updated>2021-12-26T23:13:47.090Z</updated>
     
@@ -418,8 +418,8 @@
   
   <entry>
     <title>Trie树</title>
-    <link href="https://yanjianzhang.github.io/trie/"/>
-    <id>https://yanjianzhang.github.io/trie/</id>
+    <link href="https://yanjianzhang.github.io/2018/trie/"/>
+    <id>https://yanjianzhang.github.io/2018/trie/</id>
     <published>2018-11-03T16:44:02.000Z</published>
     <updated>2021-12-26T22:46:11.461Z</updated>
     
@@ -439,8 +439,8 @@
   
   <entry>
     <title>Spring, Spring Boot, Restful, Docker</title>
-    <link href="https://yanjianzhang.github.io/spring/"/>
-    <id>https://yanjianzhang.github.io/spring/</id>
+    <link href="https://yanjianzhang.github.io/2018/spring/"/>
+    <id>https://yanjianzhang.github.io/2018/spring/</id>
     <published>2018-09-15T16:00:00.000Z</published>
     <updated>2022-09-16T09:22:48.677Z</updated>
     

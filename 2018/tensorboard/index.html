@@ -1,0 +1,148 @@
+<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>Tensorboard的使用</title><meta name="description" content="精诚致志，求仁存心"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    ignoreHtmlClass: 'tex2jax_ignore'
+  }
+};</script><script id="mathjax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="其中summary.image生成新的图像用于验证输入结果的准确与否summary.scalar用于记录准确率、损失等信息得到的结果需要进行 merged &amp;#x3D; tf.summary.merge_all()最后要sess.run([train_step,merged])
+import tensorflow as tf
+from tensorflow.examples.tutorials.mnist import input_data
+max_steps = 1000
+learning_rate = 0.001
+dropout = 0.9
+data_dir = &amp;quot;&amp;quot;
+log_dir = &amp;quot;C:/Users/dongfanker/Desktop/log&amp;quot;
+mnis.."><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Yanjian Zhang's Blog" type="application/atom+xml">
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Yanjian Zhang's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Tensorboard的使用</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile is-hidden"></div><div class="column is-9"><header class="my-4"><a href="/tags/tensorflow"><i class="tag post-item-tag">tensorflow</i></a><a href="/tags/tensorboard"><i class="tag post-item-tag">tensorboard</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">Tensorboard的使用</h1><time class="has-text-grey" datetime="2018-11-08T16:44:02.000Z">2018-11-09</time><article class="mt-2 post-content"><p>其中<br>summary.image生成新的图像用于验证输入结果的准确与否<br>summary.scalar用于记录准确率、损失等信息<br>得到的结果需要进行 merged &#x3D; tf.summary.merge_all()<br>最后要sess.run([train_step,merged])</p>
+<pre><code class="python">import tensorflow as tf
+from tensorflow.examples.tutorials.mnist import input_data
+max_steps = 1000
+learning_rate = 0.001
+dropout = 0.9
+data_dir = &quot;&quot;
+log_dir = &quot;C:/Users/dongfanker/Desktop/log&quot;
+mnist = input_data.read_data_sets(data_dir, one_hot=True)
+sess = tf.InteractiveSession()
+with tf.name_scope(&quot;input&quot;):
+    x = tf.placeholder(tf.float32, [None, 784], name=&quot;x-input&quot;)
+    y_ = tf.placeholder(tf.float32, [None, 10], name=&quot;y-input&quot;)
+with tf.name_scope(&quot;input_reshape&quot;):
+    image_shaped_input = tf.reshape(x, [-1, 28, 28, 1])
+    tf.summary.image(&quot;input&quot;, image_shaped_input, 10)
+# 创建初始化参数的方法
+
+
+def weight_variable(shape):
+    initial = tf.truncated_normal(shape, stddev=0.1)
+    return tf.Variable(initial)
+
+
+def bias_variable(shape):
+    initial = tf.constant(0.1, shape=shape)
+    return tf.Variable(initial)
+
+
+def variable_summaries(var):
+    with tf.name_scope(&quot;summaries&quot;):
+        mean = tf.reduce_mean(var)
+        tf.summary.scalar(&quot;mean&quot;, mean)
+        with tf.name_scope(&quot;stddev&quot;):
+            stddev = tf.sqrt(tf.reduce_mean(tf.square(var - mean)))
+        tf.summary.scalar(&quot;stddev&quot;, stddev)
+    tf.summary.scalar(&quot;stddev&quot;, stddev)
+    tf.summary.scalar(&quot;max&quot;, tf.reduce_max(var))
+    tf.summary.scalar(&quot;min&quot;, tf.reduce_min(var))
+    tf.summary.histogram(&quot;histogram&quot;, var)
+
+
+def nn_layer(input_tensor, input_dim, output_dim, layer_name, act=tf.nn.relu):
+    with tf.name_scope(layer_name):
+        with tf.name_scope(&quot;weights&quot;):
+            weights = weight_variable([input_dim, output_dim])
+            variable_summaries(weights)
+        with tf.name_scope(&quot;biases&quot;):
+            biases = bias_variable([output_dim])
+            variable_summaries(biases)
+        with tf.name_scope(&quot;linear_compute&quot;):
+            preactivate = tf.matmul(input_tensor, weights) + biases
+            tf.summary.histogram(&quot;pre_activation&quot;, preactivate)
+        activations = act(preactivate, name=&quot;activation&quot;)
+        tf.summary.histogram(&quot;activation&quot;, activations)
+        return activations
+
+
+hidden1 = nn_layer(x, 784, 500, &quot;layer1&quot;)
+
+with tf.name_scope(&quot;dropout&quot;):
+    keep_prob = tf.placeholder(tf.float32)
+    tf.summary.scalar(&quot;dropout_keep_probability&quot;, keep_prob)
+    dropped = tf.nn.dropout(hidden1, keep_prob)
+y = nn_layer(dropped, 500, 10, &quot;layer2&quot;, act=tf.identity)
+
+with tf.name_scope(&quot;cross_entropy&quot;):
+    diff = tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y)
+    with tf.name_scope(&quot;total&quot;):
+        cross_entropy = tf.reduce_mean(diff)
+tf.summary.scalar(&quot;loss&quot;, cross_entropy)
+
+with tf.name_scope(&quot;train&quot;):
+    train_step = tf.train.AdamOptimizer(learning_rate).minimize(cross_entropy)
+
+with tf.name_scope(&quot;accuracy&quot;):
+    with tf.name_scope(&quot;correct_prediction&quot;):
+        correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
+    with tf.name_scope(&quot;accuracy&quot;):
+        accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+tf.summary.scalar(&quot;accuracy&quot;, accuracy)
+
+merged = tf.summary.merge_all()
+train_writer = tf.summary.FileWriter(log_dir + &quot;/train&quot;, sess.graph)
+test_writer = tf.summary.FileWriter(log_dir + &quot;/test&quot;)
+tf.global_variables_initializer().run()
+
+
+def feed_dict(train):
+    if train:
+        xs, ys = mnist.train.next_batch(100)
+        k = dropout
+    else:
+        xs, ys = mnist.test.images, mnist.test.labels
+        k = 1.0
+    return &#123;x: xs, y_: ys, keep_prob: k&#125;
+
+
+saver = tf.train.Saver()
+for i in range(max_steps):
+    if i % 10 == 0:
+        summary, acc = sess.run([merged, accuracy], feed_dict=feed_dict(False))
+        test_writer.add_summary(summary, i)
+        print(&quot;Accuracy at step %s: %s&quot; % (i, acc))
+    else:
+        if i % 100 == 99:
+            run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
+            run_metadata = tf.RunMetadata()
+            summary, _ = sess.run([merged, train_step],
+                                  feed_dict=feed_dict(True),
+                                  options=run_options,
+                                  run_metadata=run_metadata)
+            train_writer.add_run_metadata(run_metadata, &quot;step%03d&quot; % i)
+            train_writer.add_summary(summary, i)
+            saver.save(sess, log_dir + &quot;/model.ckpt&quot;, i)
+            print(&quot;Adding run metadata for &quot;, i)
+        else:
+            summary, _ = sess.run([merged, train_step],
+                                  feed_dict=feed_dict(True))
+            train_writer.add_summary(summary, i)
+train_writer.close()
+test_writer.close()
+</code></pre>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2018/measure/" title="机器学习评价指标"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: 机器学习评价指标</span></a><a class="button is-default" href="/2018/tfbase/" title="Tensorflow 基本概念"><span class="has-text-weight-semibold">Next: Tensorflow 基本概念</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/yanjianzhang"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/allan_zhang_"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><a title="zhihu" target="_blank" rel="noopener nofollow" href="//zhihu.com/people/tu-ling-72"><i class="iconfont icon-zhihu"></i></a><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/yanjianzhang"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/zhang.yanjian.7"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Yanjian Zhang 2025</span></p><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>

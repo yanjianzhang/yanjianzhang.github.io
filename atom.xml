@@ -86,27 +86,6 @@
   </entry>
   
   <entry>
-    <title>Git傻瓜安全策略</title>
-    <link href="https://yanjianzhang.github.io/2021/git/"/>
-    <id>https://yanjianzhang.github.io/2021/git/</id>
-    <published>2021-11-26T07:44:02.000Z</published>
-    <updated>2022-11-27T20:57:21.820Z</updated>
-    
-    <content type="html"><![CDATA[<p>显示远端</p><pre><code>git show-ref</code></pre><p>当你晚于remote的时候，会出现</p><pre><code>git statusHEAD detached from 65dcb8a</code></pre><p>于是我们需要</p><pre><code>git checkout -b newbranchgit checkout mastergit merge newbranchgit branch -d newbranch</code></pre><p>边看边学吧，之前看过一个好网站：<a href="https://learngitbranching.js.org/">https://learngitbranching.js.org</a><br>不过内容还挺繁多</p><p>revert 和 reset的区别<br>revert是用来消除某个commit的影响，<br>reset用来会退到某个版本<br>参考：<a href="https://zhuanlan.zhihu.com/p/137856034">https://zhuanlan.zhihu.com/p/137856034</a></p>]]></content>
-    
-    
-    <summary type="html">一些遇到bug的时候的傻瓜解决策略</summary>
-    
-    
-    
-    <category term="Git" scheme="https://yanjianzhang.github.io/categories/Git/"/>
-    
-    
-    <category term="Git" scheme="https://yanjianzhang.github.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexo博客搭建的一些坑</title>
     <link href="https://yanjianzhang.github.io/2021/hexo/"/>
     <id>https://yanjianzhang.github.io/2021/hexo/</id>
@@ -124,6 +103,27 @@
     
     
     <category term="Hexo" scheme="https://yanjianzhang.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git傻瓜安全策略</title>
+    <link href="https://yanjianzhang.github.io/2021/git/"/>
+    <id>https://yanjianzhang.github.io/2021/git/</id>
+    <published>2021-11-26T07:44:02.000Z</published>
+    <updated>2022-11-27T20:57:21.820Z</updated>
+    
+    <content type="html"><![CDATA[<p>显示远端</p><pre><code>git show-ref</code></pre><p>当你晚于remote的时候，会出现</p><pre><code>git statusHEAD detached from 65dcb8a</code></pre><p>于是我们需要</p><pre><code>git checkout -b newbranchgit checkout mastergit merge newbranchgit branch -d newbranch</code></pre><p>边看边学吧，之前看过一个好网站：<a href="https://learngitbranching.js.org/">https://learngitbranching.js.org</a><br>不过内容还挺繁多</p><p>revert 和 reset的区别<br>revert是用来消除某个commit的影响，<br>reset用来会退到某个版本<br>参考：<a href="https://zhuanlan.zhihu.com/p/137856034">https://zhuanlan.zhihu.com/p/137856034</a></p>]]></content>
+    
+    
+    <summary type="html">一些遇到bug的时候的傻瓜解决策略</summary>
+    
+    
+    
+    <category term="Git" scheme="https://yanjianzhang.github.io/categories/Git/"/>
+    
+    
+    <category term="Git" scheme="https://yanjianzhang.github.io/tags/Git/"/>
     
   </entry>
   
@@ -188,11 +188,11 @@
     <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/categories/Reinforcement-Learning/"/>
     
     
+    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/tags/Natural-Language-Processing/"/>
+    
     <category term="Reinforcement Learning" scheme="https://yanjianzhang.github.io/tags/Reinforcement-Learning/"/>
     
     <category term="Adversarial Learning" scheme="https://yanjianzhang.github.io/tags/Adversarial-Learning/"/>
-    
-    <category term="Natural Language Processing" scheme="https://yanjianzhang.github.io/tags/Natural-Language-Processing/"/>
     
   </entry>
   

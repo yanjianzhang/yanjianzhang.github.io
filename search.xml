@@ -85,31 +85,6 @@
     
     
     <entry>
-      <title>Git傻瓜安全策略</title>
-      <link href="/2021/git/"/>
-      <url>/2021/git/</url>
-      
-        <content type="html"><![CDATA[<p>显示远端</p><pre><code>git show-ref</code></pre><p>当你晚于remote的时候，会出现</p><pre><code>git statusHEAD detached from 65dcb8a</code></pre><p>于是我们需要</p><pre><code>git checkout -b newbranchgit checkout mastergit merge newbranchgit branch -d newbranch</code></pre><p>边看边学吧，之前看过一个好网站：<a href="https://learngitbranching.js.org/">https://learngitbranching.js.org</a><br>不过内容还挺繁多</p><p>revert 和 reset的区别<br>revert是用来消除某个commit的影响，<br>reset用来会退到某个版本<br>参考：<a href="https://zhuanlan.zhihu.com/p/137856034">https://zhuanlan.zhihu.com/p/137856034</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo博客搭建的一些坑</title>
       <link href="/2021/hexo/"/>
       <url>/2021/hexo/</url>
@@ -127,6 +102,31 @@
         <tags>
             
             <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git傻瓜安全策略</title>
+      <link href="/2021/git/"/>
+      <url>/2021/git/</url>
+      
+        <content type="html"><![CDATA[<p>显示远端</p><pre><code>git show-ref</code></pre><p>当你晚于remote的时候，会出现</p><pre><code>git statusHEAD detached from 65dcb8a</code></pre><p>于是我们需要</p><pre><code>git checkout -b newbranchgit checkout mastergit merge newbranchgit branch -d newbranch</code></pre><p>边看边学吧，之前看过一个好网站：<a href="https://learngitbranching.js.org/">https://learngitbranching.js.org</a><br>不过内容还挺繁多</p><p>revert 和 reset的区别<br>revert是用来消除某个commit的影响，<br>reset用来会退到某个版本<br>参考：<a href="https://zhuanlan.zhihu.com/p/137856034">https://zhuanlan.zhihu.com/p/137856034</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
             
         </tags>
       
@@ -203,11 +203,11 @@
       
         <tags>
             
+            <tag> Natural Language Processing </tag>
+            
             <tag> Reinforcement Learning </tag>
             
             <tag> Adversarial Learning </tag>
-            
-            <tag> Natural Language Processing </tag>
             
         </tags>
       

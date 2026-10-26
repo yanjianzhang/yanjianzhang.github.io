@@ -10,3 +10,112 @@
 .about-page .about-title {
   font-weight: normal;
 }
+
+.about-page .profile-content {
+  width: 82%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+.about-page .profile-content .profile-links, .about-page .profile-content .affiliation-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+.about-page .profile-content .profile-links a {
+  border: 1px solid rgba(128, 149, 170, 0.3333333333);
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.about-page .profile-content .affiliation-strip {
+  padding: 18px 0;
+  border-top: 1px solid rgba(128, 149, 170, 0.2);
+  border-bottom: 1px solid rgba(128, 149, 170, 0.2);
+  gap: 18px 26px;
+}
+.about-page .profile-content .affiliation-strip a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+.about-page .profile-content .affiliation-strip img, .about-page .profile-content .organization img {
+  object-fit: contain;
+  background: white;
+  border-radius: 5px;
+  padding: 2px;
+  flex-shrink: 0;
+}
+.about-page .profile-content .organization {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  vertical-align: middle;
+}
+.about-page .profile-content .thesis-card {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  border: 1px solid rgba(128, 149, 170, 0.2666666667);
+  border-radius: 14px;
+  padding: 24px;
+  margin: 30px 0;
+  background: rgba(128, 149, 170, 0.031372549);
+}
+.about-page .profile-content .thesis-preview {
+  flex: 0 0 130px;
+}
+.about-page .profile-content .thesis-preview img {
+  display: block;
+  width: 130px;
+  border: 1px solid rgba(128, 149, 170, 0.2);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.0705882353);
+}
+.about-page .profile-content .publication-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+.about-page .profile-content .thesis-card h3 {
+  font-size: 1.08rem;
+  line-height: 1.5;
+  margin: 8px 0;
+}
+.about-page .profile-content .thesis-card p {
+  font-size: 0.9rem;
+}
+.about-page .profile-content .pdf-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.about-page .profile-content a {
+  transition: opacity 0.18s ease;
+}
+.about-page .profile-content a:hover {
+  opacity: 0.72;
+}
+.about-page .profile-content [id] {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 640px) {
+  .about-page .profile-content {
+    width: 100%;
+    padding: 16px 8px 32px;
+  }
+  .about-page .profile-content .thesis-card {
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+  }
+  .about-page .profile-content .thesis-preview {
+    flex-basis: 80px;
+  }
+  .about-page .profile-content .thesis-preview img {
+    width: 80px;
+  }
+}

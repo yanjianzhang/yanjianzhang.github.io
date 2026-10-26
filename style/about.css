@@ -1,121 +1,372 @@
 .about-page {
-  height: 100%;
+  height: auto;
 }
 .about-page aside img {
   width: 100%;
-  height: 100%;
-  padding: 5px;
   object-fit: cover;
 }
-.about-page .about-title {
-  font-weight: normal;
-}
-
 .about-page .profile-content {
-  width: 82%;
+  --profile-muted: var(--second-text-color, #657080);
+  --profile-line: #8994a52b;
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 24px 20px 48px;
+  padding: 62px 28px 72px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
 }
-.about-page .profile-content .profile-links, .about-page .profile-content .affiliation-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 24px 0;
-}
-.about-page .profile-content .profile-links a {
-  border: 1px solid rgba(128, 149, 170, 0.3333333333);
-  border-radius: 20px;
-  padding: 7px 16px;
-  font-size: 0.9rem;
-  text-decoration: none;
-}
-.about-page .profile-content .affiliation-strip {
-  padding: 18px 0;
-  border-top: 1px solid rgba(128, 149, 170, 0.2);
-  border-bottom: 1px solid rgba(128, 149, 170, 0.2);
-  gap: 18px 26px;
-}
-.about-page .profile-content .affiliation-strip a {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 0.88rem;
-  text-decoration: none;
-}
-.about-page .profile-content .affiliation-strip img, .about-page .profile-content .organization img {
-  object-fit: contain;
-  background: white;
-  border-radius: 5px;
-  padding: 2px;
-  flex-shrink: 0;
-}
-.about-page .profile-content .organization {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  vertical-align: middle;
-}
-.about-page .profile-content .thesis-card {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  border: 1px solid rgba(128, 149, 170, 0.2666666667);
-  border-radius: 14px;
-  padding: 24px;
-  margin: 30px 0;
-  background: rgba(128, 149, 170, 0.031372549);
-}
-.about-page .profile-content .thesis-preview {
-  flex: 0 0 130px;
-}
-.about-page .profile-content .thesis-preview img {
-  display: block;
-  width: 130px;
-  border: 1px solid rgba(128, 149, 170, 0.2);
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.0705882353);
-}
-.about-page .profile-content .publication-label {
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  opacity: 0.7;
-}
-.about-page .profile-content .thesis-card h3 {
-  font-size: 1.08rem;
-  line-height: 1.5;
-  margin: 8px 0;
-}
-.about-page .profile-content .thesis-card p {
-  font-size: 0.9rem;
-}
-.about-page .profile-content .pdf-link {
-  font-size: 0.88rem;
-  font-weight: 600;
+.about-page .profile-content h1, .about-page .profile-content h2, .about-page .profile-content h3, .about-page .profile-content p {
+  margin: 0;
 }
 .about-page .profile-content a {
-  transition: opacity 0.18s ease;
+  color: #3273bc;
+  text-decoration: none;
+  transition: color 0.15s;
 }
 .about-page .profile-content a:hover {
-  opacity: 0.72;
+  color: #20538b;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
-.about-page .profile-content [id] {
-  scroll-margin-top: 90px;
+.about-page .profile-content a:focus-visible {
+  outline: 2px solid #3273bc;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+.about-page .profile-content strong {
+  font-weight: 600;
+  color: inherit;
+}
+.about-page .profile-content img {
+  max-width: 100%;
+}
+.about-page .profile-content .profile-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 56px;
+  align-items: center;
+}
+.about-page .profile-content .profile-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  color: var(--profile-muted);
+  margin-bottom: 13px;
+}
+.about-page .profile-content h1 {
+  font-size: 36px;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  margin-bottom: 10px;
+}
+.about-page .profile-content h1 span {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--profile-muted);
+  white-space: nowrap;
+  display: inline-block;
+}
+.about-page .profile-content .profile-role {
+  color: var(--profile-muted);
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+.about-page .profile-content .profile-intro > p:not([class]) {
+  margin-top: 14px;
+}
+.about-page .profile-content .profile-photo img {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  display: block;
+}
+.about-page .profile-content .profile-photo > span {
+  display: block;
+  color: var(--profile-muted);
+  font-size: 11px;
+  line-height: 1.65;
+  margin-top: 12px;
+}
+.about-page .profile-content .profile-links {
+  display: flex;
+  gap: 23px;
+  margin-top: 22px;
+  font-weight: 600;
+  font-size: 13px;
+}
+.about-page .profile-content .profile-links span {
+  font-weight: 400;
+}
+.about-page .profile-content .profile-section-nav {
+  display: flex;
+  gap: 28px;
+  padding: 18px 0;
+  margin-top: 38px;
+  border-top: 1px solid var(--profile-line);
+  border-bottom: 1px solid var(--profile-line);
+  font-size: 13px;
+}
+.about-page .profile-content .profile-section-nav a {
+  color: var(--profile-muted);
+}
+.about-page .profile-content .profile-section {
+  padding-top: 42px;
+  scroll-margin-top: 66px;
+}
+.about-page .profile-content .section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.about-page .profile-content h2 {
+  font-size: 23px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.about-page .profile-content .section-heading > span {
+  color: var(--profile-muted);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+.about-page .profile-content .paper-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--profile-line);
+}
+.about-page .profile-content .row-year {
+  color: var(--profile-muted);
+  font-size: 12px;
+  padding-top: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.about-page .profile-content h3 {
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 600;
+}
+.about-page .profile-content .paper-body h3 a {
+  color: inherit;
+}
+.about-page .profile-content .paper-authors {
+  margin-top: 7px;
+  color: var(--profile-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.about-page .profile-content .paper-status {
+  margin-top: 7px;
+  color: #3273bc;
+  font-size: 11px;
+  font-weight: 500;
+}
+.about-page .profile-content .paper-note {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--profile-muted);
+}
+.about-page .profile-content .paper-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 11px;
+  border: 1px solid rgba(50, 115, 188, 0.2509803922);
+  padding: 2px 9px;
+  border-radius: 4px;
+}
+.about-page .profile-content .paper-row:has(.paper-cover) {
+  grid-template-columns: 54px minmax(0, 1fr) 88px;
+}
+.about-page .profile-content .paper-cover {
+  align-self: center;
+}
+.about-page .profile-content .paper-cover img {
+  display: block;
+  width: 88px;
+  height: auto;
+  border: 1px solid var(--profile-line);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.0509803922);
+}
+.about-page .profile-content .section-note {
+  font-size: 10px;
+  color: var(--profile-muted);
+  margin-top: 12px;
+}
+.about-page .profile-content .experience-row {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 20px;
+  padding: 22px 0;
+}
+.about-page .profile-content .experience-row + .experience-row {
+  border-top: 1px solid var(--profile-line);
+}
+.about-page .profile-content .org-mark {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--profile-line);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.about-page .profile-content .org-mark img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 3px;
+  background: white;
+}
+.about-page .profile-content .org-mark span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--profile-muted);
+}
+.about-page .profile-content .experience-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+.about-page .profile-content .experience-heading h3 a {
+  color: inherit;
+}
+.about-page .profile-content .experience-date {
+  color: var(--profile-muted);
+  font-size: 11px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.about-page .profile-content .experience-role {
+  font-size: 12px;
+  margin-top: 3px;
+}
+.about-page .profile-content .experience-description {
+  color: var(--profile-muted);
+  font-size: 12px;
+  margin-top: 6px;
+  line-height: 1.8;
+  max-width: 650px;
+}
+.about-page .profile-content .honor-row {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 20px;
+  padding: 18px 0;
+}
+.about-page .profile-content .honor-symbol {
+  font-size: 26px;
+  color: #b08a4b;
+}
+.about-page .profile-content .honor-row h3 {
+  font-size: 14px;
+}
+.about-page .profile-content .honor-row p {
+  font-size: 12px;
+  color: var(--profile-muted);
+  margin-top: 3px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   .about-page .profile-content {
-    width: 100%;
-    padding: 16px 8px 32px;
+    padding: 28px 12px 48px;
+    font-size: 14px;
   }
-  .about-page .profile-content .thesis-card {
-    align-items: flex-start;
-    gap: 16px;
-    padding: 16px;
+  .about-page .profile-content .profile-hero {
+    grid-template-columns: minmax(0, 1fr) 112px;
+    gap: 22px;
+    align-items: start;
   }
-  .about-page .profile-content .thesis-preview {
-    flex-basis: 80px;
+  .about-page .profile-content .profile-photo img {
+    width: 112px;
+    height: 140px;
+    border-radius: 8px;
   }
-  .about-page .profile-content .thesis-preview img {
-    width: 80px;
+  .about-page .profile-content .profile-photo > span {
+    display: none;
+  }
+  .about-page .profile-content h1 {
+    font-size: 28px;
+  }
+  .about-page .profile-content h1 span {
+    font-size: 16px;
+  }
+  .about-page .profile-content .profile-role {
+    font-size: 11px;
+    margin-bottom: 18px;
+  }
+  .about-page .profile-content .profile-intro {
+    display: contents;
+  }
+  .about-page .profile-content .profile-eyebrow, .about-page .profile-content h1, .about-page .profile-content .profile-role {
+    grid-column: 1;
+  }
+  .about-page .profile-content .profile-eyebrow {
+    margin: 0;
+    font-size: 9px;
+  }
+  .about-page .profile-content .profile-hero {
+    gap: 8px 18px;
+  }
+  .about-page .profile-content .profile-photo {
+    grid-column: 2;
+    grid-row: 1/4;
+  }
+  .about-page .profile-content .profile-intro > p:not([class]), .about-page .profile-content .profile-links {
+    grid-column: 1/-1;
+  }
+  .about-page .profile-content .profile-intro > p:not([class]) {
+    margin-top: 8px;
+  }
+  .about-page .profile-content .profile-links {
+    margin-top: 14px;
+  }
+  .about-page .profile-content .profile-section-nav {
+    gap: 22px;
+    margin-top: 28px;
+  }
+  .about-page .profile-content .profile-section {
+    padding-top: 32px;
+  }
+  .about-page .profile-content h2 {
+    font-size: 21px;
+  }
+  .about-page .profile-content .paper-row, .about-page .profile-content .experience-row, .about-page .profile-content .honor-row {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 13px;
+  }
+  .about-page .profile-content .paper-row:has(.paper-cover) {
+    grid-template-columns: 36px minmax(0, 1fr);
+  }
+  .about-page .profile-content .paper-cover {
+    grid-column: 2;
+  }
+  .about-page .profile-content .paper-cover img {
+    width: 64px;
+  }
+  .about-page .profile-content .experience-heading {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .about-page .profile-content .experience-date {
+    font-size: 10px;
+  }
+  .about-page .profile-content .org-mark {
+    width: 32px;
+    height: 32px;
+  }
+  .about-page .profile-content .org-mark img {
+    width: 22px;
+    height: 22px;
   }
 }

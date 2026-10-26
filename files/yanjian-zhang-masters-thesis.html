@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data-to-Text Generation for Games: Factual Verbalization and Character-Conditioned Commentary | Yanjian Zhang</title>
+<link rel="canonical" href="https://yanjianzhang.github.io/files/yanjian-zhang-masters-thesis.html">
+<meta name="description" content="Master’s thesis by Yanjian Zhang, CentraleSupélec, August 2023. Factual game-data verbalization and character-conditioned commentary.">
+<meta name="citation_title" content="Data-to-Text Generation for Games: Factual Verbalization and Character-Conditioned Commentary">
+<meta name="citation_author" content="Yanjian Zhang">
+<meta name="citation_publication_date" content="2023">
+<meta name="citation_online_date" content="2026/10/26">
+<meta name="citation_dissertation_institution" content="CentraleSupélec">
+<meta name="citation_pdf_url" content="https://yanjianzhang.github.io/files/yanjian-zhang-masters-thesis.pdf">
+<meta name="citation_abstract_html_url" content="https://yanjianzhang.github.io/files/yanjian-zhang-masters-thesis.html">
+<meta name="citation_language" content="en">
+<style>
+body{font:17px/1.65 system-ui,sans-serif;color:#202b35;background:#faf9f6;margin:0}
+main{max-width:850px;margin:auto;padding:36px 24px 64px}a{color:#215c7b;text-underline-offset:3px}
+h1{font:700 clamp(26px,4vw,36px)/1.2 Georgia,serif;margin:24px 0 12px}
+.author{font-size:21px;margin:0}.details{color:#52606b;margin:6px 0 18px}
+h2{font-size:21px;margin:24px 0 8px}.abstract{margin-top:0}
+.note{font-size:14px;color:#52606b;border-top:1px solid #d7dde0;padding-top:16px}
+</style></head><body><main>
+<nav><a href="/#publications">← Publications</a></nav>
+<article><h1>Data-to-Text Generation for Games: Factual Verbalization and Character-Conditioned Commentary</h1>
+<p class="author">Yanjian Zhang</p>
+<p class="details">Master’s thesis · CentraleSupélec · August 2023<br>BDMA programme · Research conducted at Ubisoft Paris Studio<br>Advisor: Mélanie Lopez Malet</p>
+<p><a href="https://yanjianzhang.github.io/files/yanjian-zhang-masters-thesis.pdf">Read the full thesis (PDF, 4.66 MB)</a></p>
+<h2>Abstract</h2><p class="abstract">Generating language from game data requires both preserving event information and expressing it in a voice appropriate to the speaker. This thesis investigates these requirements through two complementary tasks: factual verbalization of game-event records and tone-controlled or character-conditioned commentary. For factual verbalization, we implement a modular pipeline that serializes records, generates individual sentences, and combines them through sentence fusion. For commentary, we condition generation on tone descriptions and character profiles, then construct a synthetic corpus through API-generated seeds, human review, few-shot expansion with Llama 2, model-based filtering, and text cleaning. The resulting corpus contains 8,881 training, 426 validation, and 304 test examples covering seven characters. We use this corpus to train character-specific low-rank adapters for a FLAN-T5-based model. Evaluation of 30,000 verbalized records finds that 94.5% retain every input value under a value-matching criterion. Held-out commentary evaluation combines MAUVE, ROUGE-L, and BLEU-4 with qualitative analysis of shared-scene outputs. The examples exhibit character-associated expressions, while the different metric rankings distinguish distributional similarity from lexical overlap. Together, the study provides a documented workflow connecting structured game data, explicit style conditioning, and compact model adaptation, with an empirical account of the resulting descriptions and commentary.</p>
+<p><strong>Keywords:</strong> data-to-text generation; game commentary; character conditioning; synthetic data; parameter-efficient fine-tuning.</p>
+<h2>Suggested citation</h2><p>Zhang, Yanjian. 2023. <cite>Data-to-Text Generation for Games: Factual Verbalization and Character-Conditioned Commentary</cite>. Master’s thesis, CentraleSupélec.</p>
+<p class="note">This thesis reports work completed in August 2023. The publicly available PDF is a revised edition prepared in October 2026.</p>
+</article></main></body></html>

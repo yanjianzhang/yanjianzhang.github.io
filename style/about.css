@@ -473,3 +473,26 @@
     height: 26px;
   }
 }
+.about-page .profile-content .portrait-frame {
+  width: 200px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.about-page .profile-content .portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 76% 45%;
+  transform: scale(1.35);
+  transform-origin: 76% 45%;
+  border-radius: 0;
+}
+
+@media (max-width: 700px) {
+  .about-page .profile-content .portrait-frame {
+    width: 112px;
+    height: 140px;
+    border-radius: 8px;
+  }
+}

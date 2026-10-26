@@ -370,3 +370,106 @@
     height: 22px;
   }
 }
+.about-page .profile-content .affiliation-logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 20px;
+  margin-top: 32px;
+}
+.about-page .profile-content .affiliation-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.about-page .profile-content .affiliation-logo-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 46px;
+  flex: 0 0 66px;
+  background: #fff;
+  border: 1px solid rgba(137, 148, 165, 0.168627451);
+  border-radius: 6px;
+  padding: 5px;
+}
+.about-page .profile-content .affiliation-logo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.about-page .profile-content .org-mark {
+  width: 54px;
+  height: 42px;
+  background: #fff;
+}
+.about-page .profile-content .org-mark img {
+  width: 46px;
+  height: 32px;
+  background: transparent;
+}
+.about-page .profile-content .org-mark.logo-on-dark {
+  background: #163653;
+}
+.about-page .profile-content .org-mark.logo-on-dark img {
+  width: 48px;
+}
+.about-page .profile-content .venue-logo {
+  width: 24px;
+  height: 18px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+  background: #fff;
+  padding: 2px;
+  border-radius: 3px;
+}
+.about-page .profile-content .inline-institution {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: baseline;
+}
+.about-page .profile-content .inline-institution img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 3px;
+  background: #fff;
+}
+.about-page .profile-content .honor-symbol img {
+  display: block;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+  .about-page .profile-content .affiliation-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .about-page .profile-content .affiliation-logo {
+    gap: 7px;
+    font-size: 10px;
+  }
+  .about-page .profile-content .affiliation-logo-frame {
+    width: 48px;
+    height: 38px;
+    flex-basis: 48px;
+  }
+  .about-page .profile-content .org-mark {
+    width: 36px;
+    height: 36px;
+  }
+  .about-page .profile-content .org-mark img, .about-page .profile-content .org-mark.logo-on-dark img {
+    width: 30px;
+    height: 26px;
+  }
+}
